@@ -1,10 +1,119 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:color="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Tạo_form_đơn_giản</title>
+    <style>
+        .wufoo{
+            font-family: sans-serif, "lucida Grande", "lucida sans unicode", Tahoma;
+        }
+        .boderexam1 {
+            border-top: 10px solid cyan;
+            border-bottom: 10px solid cyan;
+            border-right: 20px solid cyan;
+            border-left: 20px solid cyan;
+        }
+        .boderexam2 {
+            border: 5px solid yellow;
+
+        }
+    </style>
+
 </head>
 <body>
-$END$
+<form method="post" action="Tao_form_don_gian.html" class="wufoo">
+<table class="boderexam1" cellspacing="0">
+    <colgroup>
+        <col width="100" span="1">
+        <col width="150" span="3">
+    </colgroup>
+    <tr>
+        <th colspan="4" style="text-align: center; background-color: red; color: white "> SỞ THÍCH CỦA BẠN</th>
+    </tr>
+    <tr>
+        <td style="text-align: right; color: blue"> Họ và tên </td>
+        <td colspan="3"><input type="text" name="yourname" size="30" /></td>
+    </tr>
+    <tr>
+        <td style="text-align: right; color: blue"> Email </td>
+        <td colspan="3"><input type="text" name="email" size="20" /></td>
+    </tr>
+    <tr>
+        <td rowspan="4" style="text-align: right; color: blue ; vertical-align: top"> Sở thích </td>
+        <td style="color: orangered"><input type="checkbox" name="hobby" value="on"/> Thể thao</td>
+        <td style="color: orangered"><input type="checkbox" name="hobby" value="on"/> Âm nhạc</td>
+        <td style="color: orangered"><input type="checkbox" name="hobby" value="on"/> Đọc sách</td>
+    </tr>
+    <tr>
+        <td style="color: orangered"><input type="checkbox" name="hobby" value="on"/> Lướt web</td>
+        <td style="color: orangered"><input type="checkbox" name="hobby" value="on"/> Chơi game</td>
+        <td style="color: orangered"><input type="checkbox" name="hobby" value="on"/> Điện ảnh</td>
+    </tr>
+    <tr>
+        <td colspan="3" style="color: orangered"><input type="checkbox" name="hobby" value="on"/> Du lịch</td>
+    </tr>
+    <tr>
+        <td colspan="3"><input type="button" name="Submit form" value="Gửi thông tin"/> <input type="reset" name="Reset" value="Nhập lại"/> </td>
+    </tr>
+</table>
+    <br>
+    <br>
+    <br>
+</form>
+<form method="post" action="Tao_form_don_gian.html" class="wufoo">
+
+<table style="background-color: yellow; color: yellow" class="boderexam2" cellspacing="0">
+    <colgroup>
+        <col width="100" span="1">
+        <col width="400" span="1">
+    </colgroup>
+    <tr>
+        <th colspan="2" style="text-align: left; background-color: cyan; color: blue "> ĐĂNG KÝ HỌC VIÊN</th>
+    </tr>
+    <tr>
+        <td style="text-align: left; color: blue"> Họ và tên </td>
+        <td><input type="text" name="yourname" size="30" /></td>
+    </tr>
+    <tr>
+        <td style="text-align: left; color: blue"> Ngày sinh </td>
+        <td><input type="text" name="birth" size="20" /></td>
+    </tr>
+    <tr>
+        <td style="text-align: left; color: blue"> Giới tính </td>
+        <td style="color: black"><input type="radio" name="gender" value="nam"> Nam
+            <input type="radio" name="gender" value="nu"> Nữ
+        </td>
+    </tr>
+    <tr>
+        <td style="text-align: left; color: blue ; vertical-align: top"> Địa chỉ </td>
+        <td><textarea rows="3" cols="50" name="address"></textarea>  </td>
+    </tr>
+    <tr>
+        <td style="text-align: left; color: blue"> Lớp </td>
+        <td> <select name="dropdown">
+        <option value = "Chọn lớp" >-Chọn lớp-</option>
+        <option value = "Lớp A" >Lớp A</option>
+        <option value = "Lớp B" >Lớp B</option>
+        <option value = "Lớp C" >Lớp C</option>
+        </select>  </td>
+    </tr>
+    <tr>
+        <td style="text-align: left; color: blue"> Email </td>
+        <td><input type="text" name="email" size="25" /></td>
+    </tr>
+    <tr>
+        <td style="text-align: left; color: blue"> Điện thoại </td>
+        <td><input type="text" name="phone" size="25" /></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><input type="button" name="Submit form" value="Đăng ký"/> <input type="reset" name="Reset" value="Nhập lại"/> </td>
+    </tr>
+
+
+</table>
+
+
+</form>
 </body>
 </html>

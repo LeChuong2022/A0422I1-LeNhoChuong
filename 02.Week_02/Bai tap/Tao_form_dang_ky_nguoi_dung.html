@@ -2,9 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Tạo form đăng ký người dùng</title>
+    <style>
+        .wufoo{
+            font-family: Tahoma, sans-serif, "Lucida Sans", "Lucida Sans Unicode";
+        }
+    </style>
 </head>
 <body>
-$END$
+<form method="post" action="http://demo.codegym.vn/6/registration_form/register.php">
+Họ và tên: <br> <input name="name" type="text"> <br>
+Email: <br> <input name="email" type="text"> <br>
+Số điện thoại: <br> <input name="phone" type="text"> <br>
+Giới tính: <br> <input type="radio" name="gender" value="nam"> Nam
+    <input type="radio" name="gender" value="nu"> Nữ <br>
+    <input type="submit" name="Submit form" value="Đăng ký"/>
+
+</form>
 </body>
 </html>
