@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đổi_tiền tệ</title>
+    <style>
+        .borderE{
+            border-right: 1px solid black;
+            border-left: 1px solid black;
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<h3>Đổi tiền tệ VND - USD</h3>
+
+<table >
+    <colgroup>
+        <col width="150" span="1">
+        <col width="20" span="1">
+        <col width="150" span="1">
+        <col width="20" span="1">
+        <col width="150" span="1">
+
+    </colgroup>
+    <tr>
+        <th> Amount</th>
+        <td></td>
+        <th> From Currency</th>
+        <td></td>
+        <th> To Currency</th>
+    </tr>
+    <tr>
+        <td class="borderE"> <input type="text" id="amount"></td>
+        <td></td>
+        <td align="center"> <select id="fromC">
+            <option> VND</option>
+            <option> USD</option>
+        </select></td>
+        <td></td>
+        <td align="center"> <select id="toC">
+            <option> USD</option>
+            <option> VND</option>
+        </select></td>
+        <td > <button style="background-color: cornflowerblue; color: white"  type="button" onclick="convert()">Convert</button> </td>
+    </tr>
+    <tr>
+        <td colspan="5" id="result"></td>
+    </tr>
+<script>
+    function convert(){
+        let amount = parseInt(document.getElementById("amount").value);
+        if (isNaN(amount) || amount <0){
+            document.getElementById("result").innerHTML = "Vui lòng nhập giá trị  là chữ số > 0";
+
+        }
+        else {
+            let fromC = document.getElementById("fromC").value;
+            let toC = document.getElementById("toC").value;
+            let result;
+            if (fromC == "VND" && toC == "USD"){
+                result = amount / 23000;
+                document.getElementById("result").innerHTML = "Result: " + result + "USD";
+            }
+            else if (fromC == "USD" && toC == "VND"){
+                result = amount * 23000;
+                document.getElementById("result").innerHTML = "Result: " + result + "VND";
+            }
+            else {
+                document.getElementById("result").innerHTML = "Result: ";
+
+            }
+        }
+
+    }
+
+
+
+
+</script>
+
+</table>
+</body>
+</html>

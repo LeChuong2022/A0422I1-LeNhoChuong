@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Biến_Kiểu dữ liệu_Toán tử</title>
+
+</head>
+<body>
+
+<h3> Tính trung bình tổng điểm 3 môn </h3>
+<table border="1" >
+    <tr>
+        <th>Điểm Vật Lý</th>
+        <th>Điểm Hóa Học</th>
+        <th>Điểm Sinh Học</th>
+        <th>Điểm Trung Bình</th>
+    </tr>
+    <tr>
+        <td ><input type="text" id="vatLy"> </td>
+        <td ><input type="text" id="hoaHoc">  </td>
+        <td ><input type="text" id="sinhHoc">  </td>
+        <td id="diemTrungBinh"> </td>
+    </tr>
+</table>
+<button type="button" onclick="showDiemTrungBinh();">Kết quả</button>
+
+</body>
+
+
+<br>
+<br>
+<br>
+<h3>Chuyển độ C sang độ F</h3>
+<table border="1" >
+    <tr>
+        <th>Nhập giá trị nhiệt độ C</th>
+        <th>Nhiệt độ F</th>
+    </tr>
+    <tr>
+        <td><input type="text" id = "doC"></td>
+        <td id="doF"></td>
+    </tr>
+</table>
+<button type="button" onclick="showDoF()";>Kết quả</button>
+
+<br>
+<br>
+<br>
+<h3>Tính bán kính hình tròn và chu vi hình tròn</h3>
+<table border="1">
+    <tr>
+        <th> Bán kính hình tròn R</th>
+        <th> Diện tích hình tròn R</th>
+        <th> Chu vi hình tròn R</th>
+    </tr>
+    <tr>
+        <td> <input type="text" id="banKinhR"> </td>
+        <td id="dienTichHinhTron"></td>
+        <td id="chuViHinhTron"></td>
+
+    </tr>
+
+
+</table>
+<button type="button" onclick="showSP()";>Kết quả</button>
+
+<script>
+    function showDiemTrungBinh(){
+        let diemVatLy = parseInt(document.getElementById("vatLy").value);
+        let diemHoaHoc = parseInt(document.getElementById("hoaHoc").value);
+        let diemSinhHoc = parseInt(document.getElementById("sinhHoc").value);
+        let diemTrungBinh = (diemVatLy + diemHoaHoc + diemSinhHoc)/3;
+        document.getElementById("diemTrungBinh").innerHTML = diemTrungBinh;
+    }
+    function showDoF(){
+        let doC = parseInt(document.getElementById("doC").value);
+        let doF = doC*9/5+32;
+        document.getElementById("doF").innerHTML = doF;
+    }
+    function showSP() {
+        let banKinh = parseInt(document.getElementById("banKinhR").value);
+        let dienTich = 3.14*banKinh*banKinh;
+        let chuVi = 3.14*2*banKinh;
+        document.getElementById("dienTichHinhTron").innerHTML = dienTich;
+        document.getElementById("chuViHinhTron").innerHTML = chuVi;
+    }
+
+</script>
+</html>
+
