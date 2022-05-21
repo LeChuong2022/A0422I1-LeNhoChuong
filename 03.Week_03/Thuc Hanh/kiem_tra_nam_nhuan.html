@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiem_tra_nam_nhuan</title>
+</head>
+<body>
+<script>
+    let year = parseInt(prompt("Enter a year"));
+    let isDivBy4 = year % 4 == 0;
+    let isDivBy100 = year % 100 == 0;
+    let isDivBy400 = year % 400 == 0;
+    if (isDivBy100){
+        if (!isDivBy400){
+            alert(year + " Đây không phải là năm nhuận")
+        }
+        else {
+            alert(year + " Đây là năm nhuận")
+        }
+    }
+    else {
+        if (isDivBy4){
+            alert(year + " Đây là năm nhuận")
+        }
+        else {
+            alert(year + " Đây không phải là năm nhuận")
+        }
+    }
+
+
+</script>
+</body>
+</html>
