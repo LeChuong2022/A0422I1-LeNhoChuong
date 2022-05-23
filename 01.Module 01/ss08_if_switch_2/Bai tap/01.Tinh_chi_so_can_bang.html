@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính chỉ số cân nặng</title>
+</head>
+<body>
+<form method="get" action="01.Tinh_chi_so_can_bang.html">
+    <table>
+        <tr>
+            <td style="font-weight: bold">Enter weight:      </td>
+            <td> <input type="text" id="weight"/></td>
+        </tr>
+        <tr>
+            <td style="font-weight: bold">Enter height: </td>
+            <td> <input type="text" id="height"></td>
+        </tr>
+        <tr>
+            <td style="font-weight: bold" > BMI:</td>
+            <td id="BMI"></td>
+        </tr>
+        <tr>
+            <td style="font-weight: bold"> <input type="button" value="Result:" onclick="calc();"/> </td>
+            <td id="result"> </td>
+        </tr>
+
+    </table>
+
+</form>
+<script>
+    function calc() {
+        let weight = parseFloat(document.getElementById("weight").value);
+        let height = parseFloat(document.getElementById("height").value);
+        let BMI = weight / (height*height);
+        if (BMI<18.5){
+            document.getElementById("BMI").innerHTML = BMI;
+            document.getElementById("result").innerHTML = "Underweight";
+        }
+        else if (BMI>=18.5 && BMI<25){
+            document.getElementById("BMI").innerHTML = BMI;
+            document.getElementById("result").innerHTML = "Normal";
+        }
+        else if (BMI>=25 && BMI<30){
+            document.getElementById("BMI").innerHTML = BMI;
+            document.getElementById("result").innerHTML = "Overweight";
+        }
+        else{
+            document.getElementById("BMI").innerHTML = BMI;
+            document.getElementById("result").innerHTML = "Obese";
+        }
+    }
+
+
+
+</script>
+
+</body>
+</html>

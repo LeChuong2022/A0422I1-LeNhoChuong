@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sự kiện chuôt</title>
+</head>
+<body>
+<form method="get" action="01.Su_kien_chuot.html">
+    <img id="ball" src="https://m.media-amazon.com/images/I/61Jigwd1kKL._AC_SX425_.jpg" style="width: 100px"/>
+    <p>Click button below to move the image to right</p>
+<!--<button type="button" onclick="right();"> Click Me</button>-->
+<input type="button" onclick="right();" value="Click Me"/>
+
+
+</form>
+
+<script>
+    let imgBall =null;
+    function init() {
+        imgBall = document.getElementById("ball");
+        imgBall.style.position = 'relative';
+        imgBall.style.left = '0px';
+    }
+    
+    function right() {
+        imgBall.style.left = parseInt(imgBall.style.left) + 10 + 'px';
+    }
+    window.onload = init;
+
+</script>
+</body>
+</html>

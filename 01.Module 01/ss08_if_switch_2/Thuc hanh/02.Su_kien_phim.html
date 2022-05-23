@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sự kiện phím</title>
+</head>
+<body onload="docReady()">
+<form method="get" action="02.Su_kien_phim.html">
+<img id="nobita" style="width: 300px; position: absolute; left: 0; top: 0;" src="https://ae01.alicdn.com/kf/HTB1pmY1MpXXXXawXpXXq6xXFXXXK/Doraemon-Nobita-Nobi-Trang-Ph-c-H-a-Trang-Anime-T-L-m-ng-Ph-c.jpg"/>
+
+
+
+
+</form>
+<script>
+    let imgNo = null;
+    function upArrowPressed() {
+        imgNo = document.getElementById("nobita");
+        imgNo.style.top = parseInt(imgNo.style.top) - 5 + 'px';
+    }
+    function downArrowPressed() {
+        imgNo = document.getElementById("nobita");
+        imgNo.style.top = parseInt(imgNo.style.top) + 5 + 'px';
+    }
+    function leftArrowPressed() {
+        imgNo = document.getElementById("nobita");
+        imgNo.style.left = parseInt(imgNo.style.left) - 5 + 'px';
+    }
+    function rightArrowPressed() {
+        imgNo = document.getElementById("nobita");
+        imgNo.style.left = parseInt(imgNo.style.left) + 5 + 'px';
+    }
+    function moveSelection(evt) {
+        switch (evt.keyCode) {
+            case 37:
+                leftArrowPressed();
+                break;
+            case 39:
+                rightArrowPressed();
+                break;
+            case 38:
+                upArrowPressed();
+                break;
+            case 40:
+                downArrowPressed();
+            break;
+        }
+    }
+    function docReady() {
+        window.addEventListener('keydown',moveSelection);
+    }
+</script>
+
+</body>
+</html>
