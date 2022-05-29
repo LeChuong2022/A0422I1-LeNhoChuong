@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cấu trúc điều kiện 2</title>
+</head>
+<body>
+<h4>Bài 1: Chuyển từ độ C sang độ F</h4>
+<p style="height: 10px; font-size: 15px"> Enter <sup>o</sup>C = <input type="text" id="valueTemp"></p>
+<p style="height: 10px; font-size: 15px"> Formula: <sup>o</sup>F = <sup>o</sup>C x 9/5 + 32 </p>
+<p style="height: 10px; font-size: 15px" id="result1"> Result: <sup>o</sup>F = </p>
+<p style="height: 10px; font-size: 15px"><input style="font-size: 15px" type="button" onclick="ex1()" value="Show"></p>
+<br><br><br>
+
+<h4>Bài 2: Chuyển từ mét sang feet</h4>
+<p style="height: 10px; font-size: 15px"> Enter Distance <input type="text" id="valueDistance"> m </p>
+<p style="height: 10px; font-size: 15px"> Formula: ft =m * 3.2808 </p>
+<p style="height: 10px; font-size: 15px" id="result2"> Result: </p>
+<p style="height: 10px; font-size: 15px"><input style="font-size: 15px" type="button" onclick="ex2()" value="Show"></p>
+<br><br><br>
+
+<h4>Bài 3: Tính diện tích hình vuông khi biết cạnh a.</h4>
+<p style="height: 10px; font-size: 15px"> Enter a =<input type="text" id="valueASquare"> m </p>
+<p style="height: 10px; font-size: 15px" id="result3"> Result: </p>
+<p style="height: 10px; font-size: 15px"><input style="font-size: 15px" type="button" onclick="ex3()" value="Show"></p>
+<br><br><br>
+
+<h4>Bài 4: Tính diện tích hình chữ nhật khi biết 02 cạnh a, b.</h4>
+<p style="height: 10px; font-size: 15px"> Enter a =<input type="text" id="valueARectangle"> m </p>
+<p style="height: 10px; font-size: 15px"> Enter b =<input type="text" id="valueBRectangle"> m </p>
+<p style="height: 10px; font-size: 15px" id="result4"> Result: </p>
+<p style="height: 10px; font-size: 15px"><input style="font-size: 15px" type="button" onclick="ex4()" value="Show"></p>
+<br><br><br>
+
+<h4>Bài 5: Tính diện tích tam giác vuông khi biết 02 cạnh kề a, b.</h4>
+<p style="height: 10px; font-size: 15px"> Enter a =<input type="text" id="valueATriangle"> m </p>
+<p style="height: 10px; font-size: 15px"> Enter b =<input type="text" id="valueBTriangle"> m </p>
+<p style="height: 10px; font-size: 15px" id="result5"> Result: </p>
+<p style="height: 10px; font-size: 15px"><input style="font-size: 15px" type="button" onclick="ex5()" value="Show"></p>
+<br><br><br>
+
+<h4>Bài 6: Giải phương trình bậc 1:</h4>
+<p style="height: 10px; font-size: 15px"> Enter a =<input type="text" id="valueALevel1"></p>
+<p style="height: 10px; font-size: 15px"> Enter b =<input type="text" id="valueBLevel1"></p>
+<p style="height: 10px; font-size: 15px" id="inputLevel1"> Equations of degree 1: ax + b = 0</p>
+<p style="height: 10px; font-size: 15px" id="result6"> Result: </p>
+<p style="height: 10px; font-size: 15px"><input style="font-size: 15px" type="button" onclick="ex6()" value="Show"></p>
+<br><br><br>
+
+<h4>Bài 7: Giải phương trình bậc 2:</h4>
+<p style="height: 10px; font-size: 15px"> Enter a =<input type="text" id="valueALevel2"></p>
+<p style="height: 10px; font-size: 15px"> Enter b =<input type="text" id="valueBLevel2"></p>
+<p style="height: 10px; font-size: 15px"> Enter c =<input type="text" id="valueCLevel2"></p>
+<p style="height: 10px; font-size: 15px" id="inputLevel2"> Equations of degree 2: ax<sup>2</sup> + bx + c = 0</p>
+<p style="height: 10px; font-size: 15px" id="result7"> Result: </p>
+<p style="height: 10px; font-size: 15px"><input style="font-size: 15px" type="button" onclick="ex7()" value="Show"></p>
+<br><br><br>
+
+<h4>Bài 8: Kiểm tra xem một số nhập vào có phải là tuổi của một người không. Một số nguyên là tuổi của một người khi nhỏ
+    120 và lớn hơn 0.</h4>
+<p style="height: 10px; font-size: 15px"> Enter age =<input type="text" id="numberAge"></p>
+<p style="height: 10px; font-size: 15px" id="result8"> Result: </p>
+<p style="height: 10px; font-size: 15px"><input style="font-size: 15px" type="button" onclick="ex8()" value="Show"></p>
+<br><br><br>
+
+<h4>Bài 9: Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam giác. Điều kiện để a,b,c là cạnh của một
+    tam giác là:</h4>
+<p style="height: 10px; font-size: 15px">a,b,c > 0</p>
+<p style="height: 10px; font-size: 15px">a + b > c</p>
+<p style="height: 10px; font-size: 15px">b + c > a</p>
+<p style="height: 10px; font-size: 15px">a + c > b</p>
+<p style="height: 10px; font-size: 15px"> Enter a =<input type="text" id="valueATriangleEx9"></p>
+<p style="height: 10px; font-size: 15px"> Enter b =<input type="text" id="valueBTriangleEx9"></p>
+<p style="height: 10px; font-size: 15px"> Enter c =<input type="text" id="valueCTriangleEx9"></p>
+<p style="height: 10px; font-size: 15px" id="result9"> Result: </p>
+<p style="height: 10px; font-size: 15px"><input style="font-size: 15px" type="button" onclick="ex9()" value="Show"></p>
+<br><br><br>
+
+<h4>Bài 10: Viết chương trình tính giá điện.</h4>
+<p style="height: 10px; font-size: 15px"> Enter number of tariff meter =<input type="text" id="numberMeter"> kWh </p>
+<p style="height: 10px; font-size: 15px"> Retail price of domestic electricity: </p>
+<table id="tableElectrical" border="1" cellspacing="0">
+    <tr>
+        <td style="height: 10px; font-size: 15px; font-weight: bold">UNIT PRICE</td>
+        <td style="height: 10px; font-size: 15px; font-weight: bold">QUANTITY</td>
+        <td style="height: 10px; font-size: 15px; font-weight: bold">INTO MONEY</td>
+    </tr>
+    <tr>
+        <td style="height: 10px; font-size: 15px">Level 1: For kWh from 0 - 50: 1,678d</td>
+        <td style="height: 10px; font-size: 15px; text-align: right" id="quantityLevel1"></td>
+        <td style="height: 10px; font-size: 15px; text-align: right" id="priceLevel1"></td>
+    </tr>
+    <tr>
+        <td style="height: 10px; font-size: 15px">Level 2: For kWh from 51 - 100: 1,734d</td>
+        <td style="height: 10px; font-size: 15px; text-align: right" id="quantityLevel2"></td>
+        <td style="height: 10px; font-size: 15px; text-align: right" id="priceLevel2"></td>
+    </tr>
+    <tr>
+        <td style="height: 10px; font-size: 15px">Level 3: For kWh from 101 - 200: 2,014d</td>
+        <td style="height: 10px; font-size: 15px; text-align: right" id="quantityLevel3"></td>
+        <td style="height: 10px; font-size: 15px; text-align: right" id="priceLevel3"></td>
+    </tr>
+    <tr>
+        <td style="height: 10px; font-size: 15px">Level 4: For kWh from 201 - 300: 2,536d</td>
+        <td style="height: 10px; font-size: 15px; text-align: right" id="quantityLevel4"></td>
+        <td style="height: 10px; font-size: 15px; text-align: right" id="priceLevel4"></td>
+    </tr>
+    <tr>
+        <td style="height: 10px; font-size: 15px">Level 5: For kWh from 301 - 400: 2,834d</td>
+        <td style="height: 10px; font-size: 15px; text-align: right" id="quantityLevel5"></td>
+        <td style="height: 10px; font-size: 15px; text-align: right" id="priceLevel5"></td>
+    </tr>
+    <tr>
+        <td style="height: 10px; font-size: 15px">Level 6: For kWh over 400: 2,927d</td>
+        <td style="height: 10px; font-size: 15px; text-align: right" id="quantityLevel6"></td>
+        <td style="height: 10px; font-size: 15px; text-align: right" id="priceLevel6"></td>
+    </tr>
+    <tr>
+        <td style="height: 10px; font-size: 15px; font-weight: bold">Total power consumption</td>
+        <td style="height: 10px; font-size: 15px; text-align: right; font-weight: bold" id="totalPower"></td>
+        <td style="height: 10px; font-size: 15px"></td>
+    </tr>
+    <tr>
+        <td style="height: 10px; font-size: 15px; font-weight: bold">Total electricity bill excluding tax</td>
+        <td style="height: 10px; font-size: 15px"></td>
+        <td style="height: 10px; font-size: 15px; text-align: right; font-weight: bold" id="totalBillWithoutTax"></td>
+    </tr>
+    <tr>
+        <td style="height: 10px; font-size: 15px; font-weight: bold">%Tax</td>
+        <td style="height: 10px; font-size: 15px"></td>
+        <td style="height: 10px; font-size: 15px; text-align: right; font-weight: bold" id="percentTax"></td>
+    </tr>
+    <td style="height: 10px; font-size: 15px; font-weight: bold">Tax (VND)</td>
+    <td style="height: 10px; font-size: 15px"></td>
+    <td style="height: 10px; font-size: 15px; text-align: right; font-weight: bold" id="taxVND"></td>
+    </tr>
+    </tr>
+    <td style="height: 10px; font-size: 15px; font-weight: bold">Total payment</td>
+    <td style="height: 10px; font-size: 15px"></td>
+    <td style="height: 10px; font-size: 15px; text-align: right; font-weight: bold" id="totalPayment"></td>
+    </tr>
+
+
+</table>
+<p style="height: 10px; font-size: 15px"><input style="font-size: 15px" type="button" onclick="ex10()" value="Show"></p>
+<br><br><br>
+
+<h4>Bài 11: Viết chương trình tính thuế thu nhập cá nhân.</h4>
+<p style="height: 10px; font-size: 15px"> Enter taxable income =<input type="text" id="taxableIncome"> Vnd </p>
+<table id="tableTaxableIncome" border="1" cellspacing="0">
+    <tr>
+        <td style="height: 10px; font-size: 15px; font-weight: bold; text-align: center">STEP</td>
+        <td style="height: 10px; font-size: 15px; font-weight: bold; text-align: center">TAXABLE INCOME/MONTH</td>
+        <td style="height: 10px; font-size: 15px; font-weight: bold; text-align: center">TAX</td>
+        <td style="height: 10px; font-size: 15px; font-weight: bold; text-align: center">INTO MONEY (VDN)</td>
+    </tr>
+    <tr>
+        <td style="height: 10px; font-size: 15px; text-align: center">1</td>
+        <td style="height: 10px; font-size: 15px; text-align: left"> Below 5 million</td>
+        <td style="height: 10px; font-size: 15px; text-align: center">5%</td>
+        <td style="height: 10px; font-size: 15px; text-align: right" id="incomeLevel1"></td>
+
+    </tr>
+    <tr>
+        <td style="height: 10px; font-size: 15px; text-align: center">2</td>
+        <td style="height: 10px; font-size: 15px; text-align: left"> From 5 million VND to 10 million VND</td>
+        <td style="height: 10px; font-size: 15px; text-align: center">10%</td>
+        <td style="height: 10px; font-size: 15px; text-align: right" id="incomeLevel2"></td>
+
+    </tr>
+    <tr>
+        <td style="height: 10px; font-size: 15px; text-align: center">3</td>
+        <td style="height: 10px; font-size: 15px; text-align: left"> From 10 million VND to 18 million VND</td>
+        <td style="height: 10px; font-size: 15px; text-align: center">15%</td>
+        <td style="height: 10px; font-size: 15px; text-align: right" id="incomeLevel3"></td>
+
+    </tr>
+    <tr>
+        <td style="height: 10px; font-size: 15px; text-align: center">4</td>
+        <td style="height: 10px; font-size: 15px; text-align: left"> From 18 million VND to 32 million VND</td>
+        <td style="height: 10px; font-size: 15px; text-align: center">20%</td>
+        <td style="height: 10px; font-size: 15px; text-align: right" id="incomeLevel4"></td>
+
+    </tr>
+    <tr>
+        <td style="height: 10px; font-size: 15px; text-align: center">5</td>
+        <td style="height: 10px; font-size: 15px; text-align: left"> From 32 million VND to 52 million VND</td>
+        <td style="height: 10px; font-size: 15px; text-align: center">25%</td>
+        <td style="height: 10px; font-size: 15px; text-align: right" id="incomeLevel5"></td>
+
+    </tr>
+    <tr>
+        <td style="height: 10px; font-size: 15px; text-align: center">6</td>
+        <td style="height: 10px; font-size: 15px; text-align: left"> From 52 million VND to 80 million VND</td>
+        <td style="height: 10px; font-size: 15px; text-align: center">30%</td>
+        <td style="height: 10px; font-size: 15px; text-align: right" id="incomeLevel6"></td>
+
+    </tr>
+    <tr>
+        <td style="height: 10px; font-size: 15px; text-align: center">7</td>
+        <td style="height: 10px; font-size: 15px; text-align: left"> Over 80 million VND</td>
+        <td style="height: 10px; font-size: 15px; text-align: center">35%</td>
+        <td style="height: 10px; font-size: 15px; text-align: right" id="incomeLevel7"></td>
+
+    </tr>
+
+
+    <tr>
+        <td colspan="3" style="height: 10px; font-size: 15px; font-weight: bold">Tax amount</td>
+        <td style="height: 10px; font-size: 15px; text-align: right; font-weight: bold" id="result11"></td>
+    </tr>
+
+
+</table>
+<p style="height: 10px; font-size: 15px"><input style="font-size: 15px" type="button" onclick="ex11()" value="Show"></p>
+<br><br><br>
+
+<h4>Bài 12: Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lãi con) khi biết số tiền ban đầu, số tháng cho vay và lãi suất hàng tháng.</h4>
+<p style="height: 10px; font-size: 15px"> Loan amount =<input type="text" id="loanAmount"> VND</p>
+<p style="height: 10px; font-size: 15px"> Interest rates =<input type="text" id="interestRates"> %/month</p>
+<p style="height: 10px; font-size: 15px"> Loan term =<input type="text" id="loanTerm"> Months</p>
+<p style="height: 10px; font-size: 15px" id="result12"> Result: </p>
+<p style="height: 10px; font-size: 15px"><input style="font-size: 15px" type="button" onclick="ex12()" value="Show"></p>
+<br><br><br>
+
+<script>
+    function ex1() {
+        let tempC = parseInt(document.getElementById("valueTemp").value);
+        if (isNaN(tempC)) {
+            document.getElementById("result1").innerHTML = "Result: Please enter temperature is a number"
+        } else {
+            let tempF = tempC * 9 / 5 + 32;
+            document.getElementById("result1").innerHTML = "Result: °F = " + tempF;
+        }
+    }
+
+    function ex2() {
+        let distanceMet = parseInt(document.getElementById("valueDistance").value);
+        if (isNaN(distanceMet)) {
+            document.getElementById("result2").innerHTML = "Result: Please enter distance is a number"
+        } else if (distanceMet < 0) {
+            document.getElementById("result2").innerHTML = "Result: Please enter distance is a number >0"
+
+        } else {
+            let distanceFeet = distanceMet * 3.2808;
+            distanceFeet = distanceFeet.toFixed(2);
+            document.getElementById("result2").innerHTML = "Result: " + distanceMet + "m = " + distanceFeet + " feet";
+        }
+    }
+
+    function ex3() {
+        let aSquare = parseFloat(document.getElementById("valueASquare").value);
+        if (isNaN(aSquare)) {
+            document.getElementById("result3").innerHTML = "Result: Please enter a is a number"
+        } else if (aSquare < 0) {
+            document.getElementById("result3").innerHTML = "Result: Please enter a is a number >0"
+
+        } else {
+            let square = aSquare * aSquare;
+            square = square.toFixed(2);
+            document.getElementById("result3").innerHTML = "Result: Area of square = " + square + " m2";
+        }
+
+    }
+
+    function ex4() {
+        let aRectangle = parseFloat(document.getElementById("valueARectangle").value);
+        let bRectangle = parseFloat(document.getElementById("valueBRectangle").value);
+        if (isNaN(aRectangle) || isNaN(bRectangle)) {
+            document.getElementById("result4").innerHTML = "Result: Please enter a, b  is a number"
+        } else if (aRectangle < 0 || bRectangle < 0) {
+            document.getElementById("result4").innerHTML = "Result: Please enter a, b is a number >0"
+
+        } else {
+            let rectangular = aRectangle * bRectangle;
+            rectangular = rectangular.toFixed(2);
+            document.getElementById("result4").innerHTML = "Result: Area of rectangular = " + rectangular + " m2";
+        }
+
+    }
+
+    function ex5() {
+        let aTriangle = parseFloat(document.getElementById("valueATriangle").value);
+        let bTriangle = parseFloat(document.getElementById("valueBTriangle").value);
+        if (isNaN(aTriangle) || isNaN(bTriangle)) {
+            document.getElementById("result5").innerHTML = "Result: Please enter a, b  is a number"
+        } else if (aTriangle < 0 || bTriangle < 0) {
+            document.getElementById("result5").innerHTML = "Result: Please enter a, b is a number >0"
+
+        } else {
+            let triangle = aTriangle * bTriangle / 2;
+            triangle = triangle.toFixed(2);
+            document.getElementById("result5").innerHTML = "Result: Area of triangle = " + triangle + " m2";
+        }
+
+    }
+
+    function ex6() {
+        let aLevel1 = parseFloat(document.getElementById("valueALevel1").value);
+        let bLevel1 = parseFloat(document.getElementById("valueBLevel1").value);
+        if (bLevel1 >= 0) {
+            document.getElementById("inputLevel1").innerHTML = "Equations of degree 1: " + aLevel1 + "x + " + bLevel1 + " = 0";
+        } else {
+            let showBLevel1 = -1 * bLevel1;
+            document.getElementById("inputLevel1").innerHTML = "Equations of degree 1: " + aLevel1 + "x - " + showBLevel1 + " = 0";
+        }
+
+        if (isNaN(aLevel1) || isNaN(bLevel1)) {
+            document.getElementById("result6").innerHTML = "Result: Please enter a, b  is a number";
+        } else {
+            if (aLevel1 == 0) {
+                if (bLevel1 == 0) {
+                    document.getElementById("result6").innerHTML = "Result: Equation with infinite solutions";
+                } else {
+                    document.getElementById("result6").innerHTML = "Result: The equation has no solution";
+                }
+            } else {
+                let xLevel1 = -bLevel1 / aLevel1;
+                xLevel1 = xLevel1.toFixed(2);
+                document.getElementById("result6").innerHTML = "Result: The solution of the first degree equation: x = " + xLevel1;
+
+            }
+        }
+    }
+
+    function ex7() {
+        let aLevel2 = parseFloat(document.getElementById("valueALevel2").value);
+        let bLevel2 = parseFloat(document.getElementById("valueBLevel2").value);
+        let cLevel2 = parseFloat(document.getElementById("valueCLevel2").value);
+        let showBLevel2;
+        let showCLevel2;
+        if (bLevel2 >= 0) {
+            showBLevel2 = " + " + bLevel2;
+        } else {
+            showBLevel2 = " - " + -bLevel2;
+        }
+        if (cLevel2 >= 0) {
+            showCLevel2 = " + " + cLevel2;
+        } else {
+            showCLevel2 = " - " + -cLevel2;
+        }
+
+        document.getElementById("inputLevel2").innerHTML = "Equations of degree 2: " + aLevel2 + "x2" + showBLevel2 + "x" + showCLevel2 + " = 0";
+
+        if (isNaN(aLevel2) || isNaN(bLevel2) || isNaN(cLevel2)) {
+            document.getElementById("result7").innerHTML = "Result: Please enter a, b, c  is a number";
+        } else {
+            let delta = bLevel2 * bLevel2 - 4 * aLevel2 * cLevel2;
+            if (delta < 0) {
+                document.getElementById("result7").innerHTML = "Result: The equation has no solution";
+            } else if (delta == 0) {
+                let xResult = -bLevel2 / 2 / aLevel2;
+                document.getElementById("result7").innerHTML = "Result: The equation with double solution x1 = x2 = " + xResult;
+            } else {
+                let x1Result = (-bLevel2 + Math.sqrt(delta)) / 2 / aLevel2;
+                let x2Result = (-bLevel2 - Math.sqrt(delta)) / 2 / aLevel2;
+                document.getElementById("result7").innerHTML = "Result: The solution of the second degree equation: x1 = " + x1Result + "; x2 = " + x2Result;
+
+            }
+        }
+    }
+
+    function ex8() {
+        let age = parseFloat(document.getElementById("numberAge").value);
+        let compareAge = parseInt(age);
+        if (isNaN(compareAge) || compareAge != age || compareAge < 0 || compareAge > 120) {
+            document.getElementById("result8").innerHTML = "It is not people's age"
+        } else if (compareAge >= 0 && compareAge <= 120) {
+            document.getElementById("result8").innerHTML = "It is people's age"
+        }
+    }
+
+    function ex9() {
+        let aTriangleEx9 = parseFloat(document.getElementById("valueATriangleEx9").value);
+        let bTriangleEx9 = parseFloat(document.getElementById("valueBTriangleEx9").value);
+        let cTriangleEx9 = parseFloat(document.getElementById("valueCTriangleEx9").value);
+
+        if (isNaN(aTriangleEx9) || isNaN(bTriangleEx9) || isNaN(cTriangleEx9)) {
+            document.getElementById("result9").innerHTML = "Result: Please enter a, b, c  is a number";
+        } else {
+            if (aTriangleEx9 <= 0 || bTriangleEx9 <= 0 || cTriangleEx9 <= 0) {
+                document.getElementById("result9").innerHTML = "Result: Please enter a, b, c  is a number >0";
+            } else if (aTriangleEx9 + bTriangleEx9 > cTriangleEx9 && bTriangleEx9 + cTriangleEx9 > aTriangleEx9 && cTriangleEx9 + aTriangleEx9 > bTriangleEx9) {
+                document.getElementById("result9").innerHTML = "Result: It is the sides of the triangle";
+            } else {
+                document.getElementById("result9").innerHTML = "Result: It is not the sides of the triangle";
+            }
+        }
+    }
+
+    function ex10() {
+        let numberMeterF = parseFloat(document.getElementById("numberMeter").value);
+        let compareF = parseInt(numberMeterF);
+        let price;
+        document.getElementById("quantityLevel1").innerHTML = "";
+        document.getElementById("priceLevel1").innerHTML = "";
+        document.getElementById("quantityLevel2").innerHTML = "";
+        document.getElementById("priceLevel2").innerHTML = "";
+        document.getElementById("quantityLevel3").innerHTML = "";
+        document.getElementById("priceLevel3").innerHTML = "";
+        document.getElementById("quantityLevel4").innerHTML = "";
+        document.getElementById("priceLevel4").innerHTML = "";
+        document.getElementById("quantityLevel5").innerHTML = "";
+        document.getElementById("priceLevel5").innerHTML = "";
+        document.getElementById("quantityLevel6").innerHTML = "";
+        document.getElementById("priceLevel6").innerHTML = "";
+        if (isNaN(numberMeterF)) {
+            document.getElementById("result10").innerHTML = "Result: Please enter the number";
+        } else if (numberMeterF < 0) {
+            document.getElementById("result10").innerHTML = "Result: Please enter the number >0";
+        } else if (compareF != numberMeterF) {
+            document.getElementById("result10").innerHTML = "Result: Please enter integer value";
+
+        } else {
+            if (numberMeterF <= 50) {
+                price = numberMeterF * 1678;
+                document.getElementById("quantityLevel1").innerHTML = numberMeterF;
+                document.getElementById("priceLevel1").innerHTML = price.toLocaleString();
+                // for (let i = 1; i <= 5; i++) {
+                //     document.getElementById("tableElectrical").deleteRow(2);
+                // }
+            } else if (numberMeterF <= 100) {
+                let price1 = 50 * 1678;
+                price = price1 + (numberMeterF - 50) * 1734;
+                document.getElementById("quantityLevel1").innerHTML = 50;
+                document.getElementById("priceLevel1").innerHTML = price1.toLocaleString();
+                document.getElementById("quantityLevel2").innerHTML = numberMeterF - 50;
+                document.getElementById("priceLevel2").innerHTML = (price - price1).toLocaleString();
+                // for (let i = 1; i <= 4; i++) {
+                //     document.getElementById("tableElectrical").deleteRow(3);
+                // }
+            } else if (numberMeterF <= 200) {
+                let price1 = 50 * 1678;
+                let price2 = 50 * 1734;
+                price = price1 + price2 + (numberMeterF - 100) * 2014;
+                document.getElementById("quantityLevel1").innerHTML = 50;
+                document.getElementById("priceLevel1").innerHTML = price1.toLocaleString();
+                document.getElementById("quantityLevel2").innerHTML = 50;
+                document.getElementById("priceLevel2").innerHTML = price2.toLocaleString();
+                document.getElementById("quantityLevel3").innerHTML = numberMeterF - 100;
+                document.getElementById("priceLevel3").innerHTML = (price - price1 - price2).toLocaleString();
+                // for (let i = 1; i <= 3; i++) {
+                //     document.getElementById("tableElectrical").deleteRow(4);
+                // }
+            } else if (numberMeterF <= 300) {
+                let price1 = 50 * 1678;
+                let price2 = 50 * 1734;
+                let price3 = 100 * 2014;
+                price = price1 + price2 + price3 + (numberMeterF - 200) * 2536;
+                document.getElementById("quantityLevel1").innerHTML = 50;
+                document.getElementById("priceLevel1").innerHTML = price1.toLocaleString();
+                document.getElementById("quantityLevel2").innerHTML = 50;
+                document.getElementById("priceLevel2").innerHTML = price2.toLocaleString();
+                document.getElementById("quantityLevel3").innerHTML = 100;
+                document.getElementById("priceLevel3").innerHTML = price3.toLocaleString();
+                document.getElementById("quantityLevel4").innerHTML = numberMeterF - 200;
+                document.getElementById("priceLevel4").innerHTML = (price - price1 - price2 - price3).toLocaleString();
+                // for (let i = 1; i <= 2; i++) {
+                //     document.getElementById("tableElectrical").deleteRow(5);
+                // }
+            } else if (numberMeterF <= 400) {
+                let price1 = 50 * 1678;
+                let price2 = 50 * 1734;
+                let price3 = 100 * 2014;
+                let price4 = 100 * 2536;
+                price = price1 + price2 + price3 + price4 + (numberMeterF - 300) * 2834;
+                document.getElementById("quantityLevel1").innerHTML = 50;
+                document.getElementById("priceLevel1").innerHTML = price1.toLocaleString();
+                document.getElementById("quantityLevel2").innerHTML = 50;
+                document.getElementById("priceLevel2").innerHTML = price2.toLocaleString();
+                document.getElementById("quantityLevel3").innerHTML = 100;
+                document.getElementById("priceLevel3").innerHTML = price3.toLocaleString();
+                document.getElementById("quantityLevel4").innerHTML = 100;
+                document.getElementById("priceLevel4").innerHTML = price4.toLocaleString();
+                document.getElementById("quantityLevel5").innerHTML = numberMeterF - 300;
+                document.getElementById("priceLevel5").innerHTML = (price - price1 - price2 - price3 - price4).toLocaleString();
+                // document.getElementById("tableElectrical").deleteRow(6);
+            } else {
+                let price1 = 50 * 1678;
+                let price2 = 50 * 1734;
+                let price3 = 100 * 2014;
+                let price4 = 100 * 2536;
+                let price5 = 100 * 2834;
+                price = price1 + price2 + price3 + price4 + price5 + (numberMeterF - 400) * 2927;
+                document.getElementById("quantityLevel1").innerHTML = 50;
+                document.getElementById("priceLevel1").innerHTML = price1.toLocaleString();
+                document.getElementById("quantityLevel2").innerHTML = 50;
+                document.getElementById("priceLevel2").innerHTML = price2.toLocaleString();
+                document.getElementById("quantityLevel3").innerHTML = 100;
+                document.getElementById("priceLevel3").innerHTML = price3.toLocaleString();
+                document.getElementById("quantityLevel4").innerHTML = 100;
+                document.getElementById("priceLevel4").innerHTML = price4.toLocaleString();
+                document.getElementById("quantityLevel5").innerHTML = 100;
+                document.getElementById("priceLevel5").innerHTML = price5.toLocaleString();
+                document.getElementById("quantityLevel6").innerHTML = numberMeterF - 400;
+                document.getElementById("priceLevel6").innerHTML = (price - price1 - price2 - price3 - price4 - price5).toLocaleString();
+
+            }
+            document.getElementById("totalPower").innerHTML = numberMeterF;
+            document.getElementById("totalBillWithoutTax").innerHTML = price.toLocaleString();
+            document.getElementById("percentTax").innerHTML = "8%";
+            document.getElementById("taxVND").innerHTML = ((price * 0.08).toLocaleString());
+            document.getElementById("totalPayment").innerHTML = (price * 0.08 + price).toLocaleString();
+        }
+    }
+
+    function ex11() {
+        let taxIncome = document.getElementById("taxableIncome").value;
+        taxIncome = taxIncome.replace(/,/g, "");
+        taxIncome = parseInt(taxIncome);
+        let taxAmount;
+        document.getElementById("incomeLevel1").innerHTML = "";
+        document.getElementById("incomeLevel2").innerHTML = "";
+        document.getElementById("incomeLevel3").innerHTML = "";
+        document.getElementById("incomeLevel4").innerHTML = "";
+        document.getElementById("incomeLevel5").innerHTML = "";
+        document.getElementById("incomeLevel6").innerHTML = "";
+        document.getElementById("incomeLevel7").innerHTML = "";
+        if (isNaN(taxIncome)) {
+            document.getElementById("result10").innerHTML = "Result: Please enter the number";
+        } else if (taxIncome < 0) {
+            document.getElementById("result10").innerHTML = "Result: Please enter the number >0";
+        } else {
+            if (taxIncome <= 5000000) {
+                taxAmount = taxIncome * 0.05;
+                document.getElementById("incomeLevel1").innerHTML = taxAmount.toLocaleString();
+                // for (let i = 1; i <= 6; i++) {
+                //     document.getElementById("taxableIncome").deleteRow(2);
+                // }
+            } else if (taxIncome <= 10000000) {
+                taxAmount = 250000 + (taxIncome - 5000000) * 0.1;
+                document.getElementById("incomeLevel2").innerHTML = taxAmount.toLocaleString();
+                //     document.getElementById("taxableIncome").deleteRow(1);
+                // for (let i = 1; i <= 5; i++) {
+                //     document.getElementById("taxableIncome").deleteRow(3);
+                // }
+            } else if (taxIncome <= 18000000) {
+                taxAmount = 750000 + (taxIncome - 10000000) * 0.15;
+                document.getElementById("incomeLevel3").innerHTML = taxAmount.toLocaleString();
+
+                // for (let i = 1; i <= 2; i++) {
+                //     document.getElementById("taxableIncome").deleteRow(1);
+                // }
+                // for (let j = 1; j <= 4; j++) {
+                //     document.getElementById("taxableIncome").deleteRow(4);
+                // }
+            } else if (taxIncome <= 32000000) {
+                taxAmount = 1950000 + (taxIncome - 18000000) * 0.2;
+                document.getElementById("incomeLevel4").innerHTML = taxAmount.toLocaleString();
+                // for (let i = 1; i <= 3; i++) {
+                //     document.getElementById("taxableIncome").deleteRow(1);
+                // }
+                // for (let j = 1; j <= 3; j++) {
+                //     document.getElementById("taxableIncome").deleteRow(5);
+                // }
+            } else if (taxIncome <= 52000000) {
+                taxAmount = 4750000 + (taxIncome - 32000000) * 0.25;
+                document.getElementById("incomeLevel5").innerHTML = taxAmount.toLocaleString();
+                // for (let i = 1; i <= 4; i++) {
+                //     document.getElementById("taxableIncome").deleteRow(1);
+                // }
+                // for (let j = 1; j <= 2; j++) {
+                //     document.getElementById("taxableIncome").deleteRow(6);
+                // }
+
+            } else if (taxIncome <= 80000000) {
+                taxAmount = 9750000 + (taxIncome - 52000000) * 0.3;
+                document.getElementById("incomeLevel6").innerHTML = taxAmount.toLocaleString();
+                // for (let i = 1; i <= 5; i++) {
+                //     document.getElementById("taxableIncome").deleteRow(1);
+                // }
+                //     document.getElementById("taxableIncome").deleteRow(7);
+
+            } else {
+                taxAmount = 18150000 + (taxIncome - 80000000) * 0.35;
+                document.getElementById("incomeLevel7").innerHTML = taxAmount.toLocaleString();
+                // for (let i = 1; i <= 6; i++) {
+                //     document.getElementById("taxableIncome").deleteRow(1);
+                // }
+
+            }
+            document.getElementById("result11").innerHTML = taxAmount.toLocaleString() ;
+        }
+    }
+
+    function ex12() {
+        let loanAmount =document.getElementById("loanAmount").value;
+        let interest = parseInt(document.getElementById("interestRates").value);
+        let loanTerm = parseInt(document.getElementById("loanTerm").value);
+        loanAmount = loanAmount.replace(/,/g,"")
+        loanAmount = parseInt(loanAmount);
+        interest /= 100;
+        if (isNaN(loanAmount) || isNaN(interest) || isNaN(loanTerm)) {
+            document.getElementById("result12").innerHTML = "Result: Please enter the number";
+        }
+        else if (loanAmount<=0 || interest<=0 || loanTerm<=0) {
+            document.getElementById("result12").innerHTML = "Result: Please enter the number >= 0";
+        }
+        else {
+            let pow = Math.pow(1+interest, loanTerm);
+            let result12 = pow*loanAmount;
+            document.getElementById("result12").innerHTML = "Result: " + result12.toLocaleString() + "VND";
+        }
+    }
+
+
+</script>
+</body>
+</html>

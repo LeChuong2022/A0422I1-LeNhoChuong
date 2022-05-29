@@ -6,23 +6,174 @@
 </head>
 <body>
 <form method="get" action="03.May_tinh_don_gian.html">
-<table>
+<table width="100px" border="1">
     <tr>
-        <td colspan="4" style="color: blue; text-align: right" id="show">0</td>
+        <td colspan="4" style="color: blue; text-align: right" id="show"> 0</td>
+    </tr>
+    <tr align="center">
+        <td style="color: blue"> <input onclick="calc('one')" type="button" value="1"></td>
+        <td style="color: blue"> <input onclick="calc('two')" type="button" value="2"></td>
+        <td style="color: blue"> <input onclick="calc('three')" type="button" value="3"></td>
+        <td style="color: blue"> <input onclick="calc('add')" type="button" value="+"></td>
+    </tr>
+    <tr align="center">
+        <td style="color: blue"> <input onclick="calc('four')" type="button" value="4"></td>
+        <td style="color: blue"> <input onclick="calc('five')" type="button" value="5"></td>
+        <td style="color: blue"> <input onclick="calc('six')" type="button" value="6"></td>
+        <td style="color: blue"> <input onclick="calc('sub')" type="button" value="-"></td>
+    </tr>
+    <tr align="center">
+        <td style="color: blue"> <input onclick="calc('seven')" type="button" value="7"></td>
+        <td style="color: blue"> <input onclick="calc('eight')" type="button" value="8"></td>
+        <td style="color: blue"> <input onclick="calc('nine')" type="button" value="9"></td>
+        <td style="color: blue"> <input onclick="calc('mul')" type="button" value="x"></td>
+    </tr>
+    <tr align="center">
+        <td style="color: blue"> <input onclick="calc('clear')" type="button" value="AC"></td>
+        <td style="color: blue"> <input onclick="calc('zero')" type="button" value="0"></td>
+        <td style="color: blue"> <input onclick="calc('equal')" type="button" value="="></td>
+        <td style="color: blue"> <input onclick="calc('div')" type="button" value="/"></td>
     </tr>
     <tr>
-        <td style="color: blue"> <input type="button" value="1"></td>
-
-
+        <td colspan="4" style="color: blue; text-align: right" id="valueBefore" hidden> 0</td>
     </tr>
-
-
+    <tr>
+        <td colspan="4" style="color: blue; text-align: right" id="valueMath" hidden> 0</td>
+    </tr>
 
 </table>
-// đang làm
 
 </form>
+<script>
+function calc(a) {
+    var value = a;
+    let value1 = document.getElementById("show").textContent;
+    let valueBefore = document.getElementById("valueBefore").textContent;
+    let valueMath = document.getElementById("valueMath").textContent;
+    if (value1 == 0 || valueMath == " = "){
+        value1 = null;
+    }
 
+        switch (value) {
+            case "zero":
+                value1 += 0;
+                getValue(value1);
+                break;
+            case "one":
+                value1 += 1;
+                getValue(value1);
+                break;
+            case "two":
+                value1 += 2;
+                getValue(value1);
+                break;
+            case "three":
+                value1 += 3;
+                getValue(value1);
+                break;
+            case "four":
+                value1 += 4;
+                getValue(value1);
+                break;
+            case "five":
+                value1 += 5;
+                getValue(value1);
+                break;
+            case "six":
+                value1 += 6;
+                getValue(value1);
+                break;
+            case "seven":
+                value1 += 7;
+                getValue(value1);
+                break;
+            case "eight":
+                value1 += 8;
+                getValue(value1);
+                break;
+            case "nine":
+                value1 += 9;
+                getValue(value1);
+                break;
+            case "add":
+                if (valueMath == "noMath"){
+                    value1 += " + ";
+                    valueMath = "math";
+                    document.getElementById("valueMath").innerHTML = valueMath;
+                }
+                else {
+                    value1 = valueBefore + " + ";
+                    valueMath = "math";
+                    document.getElementById("valueMath").innerHTML = valueMath;
+                }
+                break;
+            case "sub":
+                if (valueMath == "noMath"){
+                    value1 += " - ";
+                    valueMath = "math";
+                    document.getElementById("valueMath").innerHTML = valueMath;
+                }
+                else {
+                    value1 = valueBefore + " - ";
+                    valueMath = "math";
+                    document.getElementById("valueMath").innerHTML = valueMath;
+                }
+                break;
+            case "mul":
+                if (valueMath == "noMath"){
+                    value1 += " * ";
+                    valueMath = "math";
+                    document.getElementById("valueMath").innerHTML = valueMath;
+                }
+                else {
+                    value1 = valueBefore + " * ";
+                    valueMath = "math";
+                    document.getElementById("valueMath").innerHTML = valueMath;
+                }
+                break;
+            case "div":
+                if (valueMath == "noMath"){
+                    value1 += " / ";
+                    valueMath = "math";
+                    document.getElementById("valueMath").innerHTML = valueMath;
+                }
+                else {
+                    value1 = valueBefore + " / ";
+                    valueMath = "math";
+                    document.getElementById("valueMath").innerHTML = valueMath;
+                }
+                break;
+            case "equal":
+                value1 = valueBefore;
+                valueMath = " = ";
+                document.getElementById("valueMath").innerHTML = valueMath;
+                break;
+            case "clear":
+                value1 = 0;
+                break;
+
+        }
+        if (valueMath == " = "){
+            let result = eval(value1);
+            document.getElementById("show").innerHTML = result;
+            document.getElementById("valueBefore").innerHTML = result;
+        }
+        else {
+            document.getElementById("show").innerHTML = value1;
+
+        }
+}
+function getValue(value1) {
+    valueBefore = value1;
+    valueMath = "noMath";
+    document.getElementById("valueBefore").innerHTML = valueBefore;
+    document.getElementById("valueMath").innerHTML = valueMath;
+}
+/* function getMath() {
+    valueMath = "math";
+    document.getElementById("valueMath").innerHTML = valueMath;
+} */
+</script>
 
 </body>
 </html>
