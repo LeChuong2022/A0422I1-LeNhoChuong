@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DoYouloveMe</title>
+</head>
+<body>
+<h1>Do you love me?</h1>
+<input type="button" value="YES" onclick="doing()"/>
+<input type="button" value="NO" onmouseover="move()" style="position: relative; left: 0; top: 0;" id="positionNo" />
+<p id="demo"></p>
+
+</body>
+
+
+<script>
+    let positionNo;
+    function doing() {
+        alert("<3");
+    }
+    function move() {
+        positionNo = document.getElementById("positionNo");
+        let w = window.innerWidth;
+        let h = window.innerHeight;
+        positionNo.style.left = Math.random()*w + "px";
+        positionNo.style.top = Math.random()*h + "px";
+    }
+
+</script>
+</html>

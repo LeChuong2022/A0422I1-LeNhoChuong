@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GamePuzzle</title>///
+    <style>
+        #myDiv1 {
+            border: 20px solid white;
+            height: 282px;
+            width: 1414px;
+        }
+        #myDiv2 {
+            border: 20px solid white;
+            height: 282px;
+            width: 1414px;
+        }
+        #myDiv3 {
+            border: 20px solid white;
+            height: 282px;
+            width: 1414px;
+        }
+        #myDiv4 {
+            border: 20px solid white;
+            height: 282px;
+            width: 1414px;
+        }
+        #myDiv5 {
+            border: 20px solid white;
+            height: 282px;
+            width: 1414px;
+        }
+    </style>
+</head>
+<body>
+<p id="myDiv1" style="height: 282px"><img id="img1" src="../Img/Cat (1).png" height="282" width="1414" onclick="changeImage1()"/></p>
+<p id="myDiv2" style="height: 282px"><img id="img2" src="../Img/Giraffe (2).png" height="282" width="1414" onclick="changeImage2()"/></p>
+<p id="myDiv3" style="height: 282px"><img id="img3" src="../Img/Horse (3).png" height="282" width="1414" onclick="changeImage3()"/></p>
+<p id="myDiv4" style="height: 282px"><img id="img4" src="../Img/Cat (4).png" height="282" width="1414" onclick="changeImage4()"/></p>
+<p id="myDiv5" style="height: 282px"><img id="img5" src="../Img/Horse (5).png" height="282" width="1414" onclick="changeImage5()"/></p>
+<br><br><br>
+</body>
+
+
+
+<script>
+    let tempImage1 = 1;
+    let tempImage2 = 2;
+    let tempImage3 = 0;
+    let tempImage4 = 1;
+    let tempImage5 = 0;
+
+    function changeImage1() {
+        if (tempImage1 == 0) {
+            document.getElementById("img1").src = "../Img/Cat (1).png";
+            tempImage1++;
+        } else if (tempImage1 == 1) {
+            document.getElementById("img1").src = "../Img/Giraffe (1).png";
+            tempImage1++;
+        } else {
+            document.getElementById("img1").src = "../Img/Horse (1).png";
+            tempImage1 = 0;
+        }
+        check();
+    }
+
+    function changeImage2() {
+        if (tempImage2 == 0) {
+            document.getElementById("img2").src = "../Img/Cat (2).png";
+            tempImage2++;
+        } else if (tempImage2 == 1) {
+            document.getElementById("img2").src = "../Img/Giraffe (2).png";
+            tempImage2++;
+        } else {
+            document.getElementById("img2").src = "../Img/Horse (2).png";
+            tempImage2 = 0;
+        }
+        check();
+    }
+
+    function changeImage3() {
+        if (tempImage3 == 0) {
+            document.getElementById("img3").src = "../Img/Cat (3).png";
+            tempImage3++;
+        } else if (tempImage3 == 1) {
+            document.getElementById("img3").src = "../Img/Giraffe (3).png";
+            tempImage3++;
+        } else {
+            document.getElementById("img3").src = "../Img/Horse (3).png";
+            tempImage3 = 0;
+        }
+        check();
+    }
+
+    function changeImage4() {
+        if (tempImage4 == 0) {
+            document.getElementById("img4").src = "../Img/Cat (4).png";
+            tempImage4++;
+        } else if (tempImage4 == 1) {
+            document.getElementById("img4").src = "../Img/Giraffe (4).png";
+            tempImage4++;
+        } else {
+            document.getElementById("img4").src = "../Img/Horse (4).png";
+            tempImage4 = 0;
+        }
+        check();
+    }
+
+    function changeImage5() {
+        if (tempImage5 == 0) {
+            document.getElementById("img5").src = "../Img/Cat (5).png";
+            tempImage5++;
+        } else if (tempImage5 == 1) {
+            document.getElementById("img5").src = "../Img/Giraffe (5).png";
+            tempImage5++;
+        } else {
+            document.getElementById("img5").src = "../Img/Horse (5).png";
+            tempImage5 = 0;
+        }
+        check();
+    }
+    function check() {
+        resetColor();
+        if (tempImage1 == tempImage2 && tempImage2 == tempImage3 && tempImage3 == tempImage4 && tempImage4 == tempImage5){
+            // alert("Finished");
+            document.getElementById("myDiv1").style.borderColor = "lightgreen";
+            document.getElementById("myDiv2").style.borderColor = "lightgreen";
+            document.getElementById("myDiv3").style.borderColor = "lightgreen";
+            document.getElementById("myDiv4").style.borderColor = "lightgreen";
+            document.getElementById("myDiv5").style.borderColor = "lightgreen";
+        }
+    }
+    function resetColor() {
+            document.getElementById("myDiv1").style.borderColor = "white";
+            document.getElementById("myDiv2").style.borderColor = "white";
+            document.getElementById("myDiv3").style.borderColor = "white";
+            document.getElementById("myDiv4").style.borderColor = "white";
+            document.getElementById("myDiv5").style.borderColor = "white";
+    }
+
+</script>
