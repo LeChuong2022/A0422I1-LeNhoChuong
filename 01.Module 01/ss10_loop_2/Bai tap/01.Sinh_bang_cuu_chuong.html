@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Sinh bảng cửu chương</title>
-    <style>
-        table, td {
-            border: 1px solid black;
-        }
-    </style>
+<!--        <style>-->
+<!--            table, td {-->
+<!--                border: 1px solid black;-->
+<!--            }-->
+<!--        </style>-->
 </head>
 <body>
 <table id="myTable">
 </table>
 <br>
-<!--<button type="button" onclick="myFunction()">Try it</button>-->
 <script>
+    /*
     function myFunction() {
         for (let i = 0; i<=8; i++){
             var table = document.getElementById("myTable");
@@ -36,6 +36,21 @@
             cell7.innerHTML = "8 x " + (i+1) + " = " + (i+1)*8;
             cell8.innerHTML = "9 x " + (i+1) + " = " + (i+1)*9;
         }
+    }
+    */
+    function myFunction() {
+        let sout;
+        sout = "<table border='1' width ='1000' cellspacing = '0' cellpadding = '3' style='text-align: center'>"
+        for (let i = 1; i <= 9; i++) {
+            sout = sout + "<tr>";
+            for (let j = 2; j <= 9; j++) {
+                sout = sout + "<td>" + j + " * " + i + " = " + i * j + "</td>";
+
+            }
+            sout = sout + "</tr>";
+        }
+        sout = sout + "</table>";
+        document.write(sout);
     }
     window.onload = myFunction;
 </script>
