@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị số nguyên tố</title>
+</head>
+<body>
+<script>
+    let number = parseInt(prompt("How many first prime numbers to find? "));
+    let count = 1;
+    if (number <= 0) {
+        alert("Please type the number >=0")
+    } else if (isNaN(number)) {
+        alert("Please type the number")
+    } else {
+        document.write("The first " + number + " primes are: ");
+        let primeNumber = 2;
+        while (count <= number) {
+            let j = 1;
+            let numberOfTimeDivisible = 0;
+            while (j <= primeNumber / 2) {
+                if (primeNumber % j == 0) {
+                    numberOfTimeDivisible++;
+                }
+                j++;
+
+            }
+            if (numberOfTimeDivisible == 1) {
+                if (count == number) {
+                    document.write(primeNumber);
+                } else {
+                    document.write(primeNumber + ", ");
+                }
+                count++;
+
+            }
+            primeNumber++;
+
+
+        }
+    }
+
+</script>
+</body>
+</html>

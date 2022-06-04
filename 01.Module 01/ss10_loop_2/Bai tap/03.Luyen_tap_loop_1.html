@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Bài 1: Sử dụng vòng lặp để đếm từ 1 đến 100. Khi số là 99, hiển thị hộp thoại thông báo là đã hoàn thành.</p>
+<input type="button" onclick="ex1()" value="Show ex1">
+<br><br><br>
+
+<p>Bài 2: Sử dụng hàm prompt() để lấy thông tin nhiệt độ hiện tại được nhập bởi người truy cập. Nếu nhiệt độ nhập vào
+    trên 100, yêu cầu người dùng giảm nhiệt độ. Nếu nhiệt độ dưới 20, yêu cầu người dùng tăng nhiệt độ.</p>
+<input type="button" onclick="ex2()" value="Show ex2">
+<br><br><br>
+
+<p>Bài 3: Hiển thị ra 20 số trong dãy fibonacci đầu tiên</p>
+<input type="button" onclick="ex3()" value="Show ex3">
+<br><br><br>
+
+<p>Bài 4: Tìm số đầu tiên trong dãy fibonacci chia hết cho 5.</p>
+<input type="button" onclick="ex4()" value="Show ex4">
+<br><br><br>
+
+<p>Bài 5: Tính tổng của 20 số đầu tiên trong dãy fibonacci.</p>
+<input type="button" onclick="ex5()" value="Show ex5">
+<br><br><br>
+
+<p>Bài 6: Tính tổng của 30 số chia hết cho 7 đầu tiên trong các số tự nhiên.</p>
+<input type="button" onclick="ex6()" value="Show ex6">
+<br><br><br>
+
+<p>Bài 7: Hãy viết một chương trình in ra các số từ 1 đến 100. Nhưng nếu số chia hết cho 3 thì in ra "Fizz", 5 thì in ra
+    "Buzz" thay vì in ra số đó.
+    Và nếu số đó chia hết cho cả 3 và 5 thì in ra chữ "FizzBuzz".</p>
+<input type="button" onclick="ex7()" value="Show ex7">
+<br><br><br>
+
+<p>Bài 8: Game đoán số.</p>
+<div id="displayPlayButton"> <input type="button" onclick="ex8()" value="Play"></div>
+<div id="displayPlayAgainButton" style="display: none"> <input type="button" onclick="ex8()" value="PlayAgain"></div>
+<br><br><br>
+
+
+<script>
+    function ex1() {
+        document.write("Bài 1: Đếm số từ 1 đến 100 <br>");
+        let number = 1;
+        for (number; number <= 100; number++) {
+            if (number == 99) {
+                document.write(number)
+
+            } else {
+                document.write(number + ", ");
+            }
+            if (number == 99) {
+                alert("Finished");
+                break;
+            }
+        }
+    }
+
+    function ex2() {
+        let getValue;
+        let getTemperature;
+        do {
+            getValue = prompt("Type temperature");
+            getTemperature = parseFloat(getValue);
+            if (getValue == "quit") {
+                break;
+            } else if (isNaN(getTemperature)) {
+                alert("Please type the number");
+            } else {
+                if (getTemperature > 100) {
+                    alert("Please lower the temperature")
+                } else if (getTemperature < 20) {
+                    alert("Please raiser the temperature")
+                } else {
+                    alert("Temperature ok")
+                }
+            }
+        }
+        while (1)
+    }
+
+    function ex3() {
+        document.write("Bài 3: Hiển thị ra 20 số trong dãy fibonacci đầu tiên: <br>");
+        document.write("0, 1, ");
+        let numberA = 0;
+        let numberB = 1;
+        let numberC;
+        for (let i = 0; i < 18; i++) {
+            numberC = numberA + numberB;
+            if (i == 17) {
+                document.write(numberC);
+            } else {
+                document.write(numberC + ", ");
+            }
+            numberA = numberB;
+            numberB = numberC;
+        }
+    }
+
+    function ex4() {
+        document.write("Bài 4: Tìm số đầu tiên trong dãy fibonacci chia hết cho 5.: <br>");
+        let numberAEx4 = 0;
+        let numberBEx4 = 1;
+        let numberCEx4 = 1;
+        while (numberCEx4 % 5 != 0) {
+            numberCEx4 = numberAEx4 + numberBEx4;
+            numberAEx4 = numberBEx4;
+            numberBEx4 = numberCEx4;
+        }
+        document.write(numberCEx4);
+
+    }
+
+    function ex5() {
+        document.write("Bài 5: Tính tổng của 20 số đầu tiên trong dãy fibonacci: <br>");
+        document.write("sum = 0 + 1 + ");
+        let numberAEx5 = 0;
+        let numberBEx5 = 1;
+        let numberCEx5;
+        let sumFibonacci = 1;
+        for (let i = 0; i < 18; i++) {
+            numberCEx5 = numberAEx5 + numberBEx5;
+            sumFibonacci += numberCEx5;
+            if (i == 17) {
+                document.write(numberCEx5 + " = " + sumFibonacci);
+            } else {
+                document.write(numberCEx5 + " + ");
+            }
+            numberAEx5 = numberBEx5;
+            numberBEx5 = numberCEx5;
+        }
+    }
+
+    function ex6() {
+        document.write("Bài 6: Tính tổng của 30 số chia hết cho 7 đầu tiên trong các số tự nhiên: <br>");
+        document.write("sum = ");
+        let mul7 = 1;
+        let sumNumberDivisibleBy7 = 0;
+        for (let i = 1; i <= 30; i++) {
+            mul7 = i * 7;
+            sumNumberDivisibleBy7 += mul7;
+            if (i == 30) {
+                document.write(mul7 + " = " + sumNumberDivisibleBy7);
+            } else {
+                document.write(mul7 + " + ");
+            }
+
+        }
+    }
+
+    function ex7() {
+        document.write("Bài 7: Hãy viết một chương trình in ra các số từ 1 đến 100. Nhưng nếu số chia hết cho 3 thì in ra " +
+            "&quot" + "Fizz" + "&quot" + ", 5 thì in ra " + "&quot" + "Buzz" + "&quot" + " thay vì in ra số đó. " +
+            "Và nếu số đó chia hết cho cả 3 và 5 thì in ra chữ " + "&quot" + "FizzBuzz" + "&quot" + ":<br>"
+    )
+        ;
+        let numberEx7 = 1;
+        for (numberEx7; numberEx7 <= 100; numberEx7++) {
+            if (numberEx7 % 3 == 0 && numberEx7 % 5 == 0) {
+                document.write("&quotFizzBuzz&quot, ")
+
+            } else if (numberEx7 % 3 == 0) {
+                document.write("&quotFizz&quot, ");
+            }
+            else if (numberEx7 % 5 == 0 && numberEx7 != 100) {
+                document.write("&quotBuzz&quot, ");
+            }
+            else if (numberEx7 == 100){
+                document.write("&quotBuzz&quot.");
+            }
+            else{
+                document.write(numberEx7 + ", ");
+
+            }
+
+        }
+    }
+
+    function ex8() {
+        let guess;
+        let numberRandom = parseInt(Math.random() * 11);
+        for (let i = 1; i <= 3; i++) {
+            guess = prompt("Which number do you predict? (0-10)");
+            let compareEx8 = parseFloat(guess);
+            guess = parseInt(guess);
+            if (isNaN(guess) || guess != compareEx8 || guess < 0 || guess > 10) {
+                alert("please enter an integer from 0 to 10");
+                break;
+            } else {
+                if (guess == numberRandom) {
+                    alert("Congratulations on your correct guess");
+                    break;
+                } else if (guess < numberRandom) {
+                    alert("The selected number is smaller than random number");
+
+                } else {
+                    alert("The selected number is bigger than random number");
+                }
+            }
+        }
+        alert("The random number: " + numberRandom);
+        document.getElementById("displayPlayButton").style.display = "none";
+        document.getElementById("displayPlayAgainButton").style.display = "block";
+    }
+
+
+</script>
+
+
+</body>
+</html>

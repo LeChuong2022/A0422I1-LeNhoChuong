@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập vòng lặp 02</title>
+</head>
+<body>
+<p>Bài 1: Sử dụng vòng lặp để đếm từ 1 đến 100. Khi số là 99, hiển thị hộp thoại thông báo là đã hoàn thành.</p>
+<input type="button" onclick="ex1()" value="Show ex1">
+
+<p>Bài 2: Tính giai thừa của một số nguyên dương.</p>
+<input type="button" onclick="ex2()" value="Show ex2">
+
+<p>Bài 3: In tam giác vuông. Các góc vuông nằm ở các vị trí khác nhau.</p>
+<input type="button" onclick="ex3()" value="Show ex3">
+
+<p>Bài 4: In hình chữ nhật rỗng.</p>
+<input type="button" onclick="ex4()" value="Show ex4">
+
+<p>Bài 5: Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lại con) khi biết số tiền ban đầu, số tháng cho vay và lãi
+    xuất hàng tháng.</p>
+<p>Số tiền ban đầu: <input type="text" id="money"> VND</p>
+<p>Số tháng cho vay: <input type="text" id="month"> Tháng</p>
+<p>Lãi suất hàng tháng: <input type="text" id="interest"> %/tháng</p>
+<p id="moneyToBePaid">Số tiền phải trả là: </p>
+<input type="button" onclick="ex5()" value="Show ex5">
+
+<p>Bài 6: In hình trái tim.</p>
+<input type="button" onclick="ex6()" value="Show ex6">
+
+</body>
+
+<script>
+    function ex1() {
+        let n = prompt("Nhập số Fibonacci hiển thị: ");
+        let numberA = 0;
+        let numberB = 1;
+        let numberC;
+        let compareEx1 = parseFloat(n);
+        n = parseInt(n);
+        if (isNaN(n) || n <= 0 || compareEx1 != n) {
+            alert("Type an integer >0")
+        } else {
+            document.write("Hiển thị Fibonacci " + n + " số đầu tiên:<br>");
+            if (n == 1) {
+                document.write("0");
+            } else if (n == 2) {
+                document.write("0, 1");
+            } else {
+                document.write("0, 1, ");
+                for (let i = 1; i <= (n - 2); i++) {
+                    numberC = numberA + numberB;
+                    numberA = numberB;
+                    numberB = numberC;
+                    if (i == (n - 2)) {
+                        document.write(numberC);
+                    } else {
+                        document.write(numberC + ", ");
+                    }
+
+                }
+            }
+        }
+    }
+
+    function ex2() {
+        let numberEx2 = prompt("Số nguyên dương cần tính giai thừa là: ")
+        let factorial = 1;
+        let compareEx2 = parseFloat(numberEx2);
+        numberEx2 = parseInt(numberEx2);
+        if (isNaN(numberEx2) || numberEx2 <= 0 || compareEx2 != numberEx2) {
+            alert("Please enter the integer >0");
+        } else {
+            document.write("Giai thừa của " + numberEx2 + " :<br>");
+            document.write(numberEx2 + "! = ");
+            for (let i = numberEx2; i > 0; i--) {
+                if (i == 1) {
+                    document.write("1 = ");
+                } else {
+                    document.write(i + " *");
+                    factorial *= i;
+                }
+            }
+            document.write(factorial);
+        }
+
+    }
+
+    function ex3() {
+        let i;
+        let j;
+        for (i = 1; i <= 5; i++) {
+            for (j = 1; j <= i; j++) {
+                document.write(" * ");
+            }
+            document.write("<br>");
+        }
+        document.write("<br>");
+        document.write("<br>");
+
+        for (i = 5; i >= 1; i--) {
+            for (j = 1; j <= i; j++) {
+                document.write(" * ");
+            }
+            document.write("<br>");
+        }
+        document.write("<br>");
+        document.write("<br>");
+
+        for (i = 5; i >= 1; i--) {
+            for (j = 1; j <= 5; j++) {
+                if (i <= j) {
+                    document.write(" * ");
+                } else {
+                    document.write(" &nbsp&nbsp ");
+                }
+            }
+            document.write("<br>");
+        }
+        document.write("<br>");
+        document.write("<br>");
+
+        for (i = 1; i <= 5; i++) {
+            for (j = 1; j <= 5; j++) {
+                if (i <= j) {
+                    document.write(" * ");
+                } else {
+                    document.write(" &nbsp&nbsp ");
+                }
+            }
+            document.write("<br>");
+        }
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function ex4() {
+        let i;
+        let j;
+        for (i = 1; i <= 7; i++) {
+            for (j = 1; j <= 21; j++) {
+                if (i == 1 || i == 7 || j == 1 || j == 21) {
+                    document.write(" * ");
+                } else {
+                    document.write(" &nbsp&nbsp ");
+                }
+            }
+            document.write("<br>");
+        }
+    }
+
+    function ex5() {
+        let getMoney = parseInt(document.getElementById("money").value);
+        let getMonth = document.getElementById("month").value;
+        let getInterest = parseInt(document.getElementById("interest").value) / 100;
+        let compareEx5 = parseFloat(getMonth);
+        let moneyToBePaid = 1;
+        getMonth = parseInt(getMonth);
+        if (isNaN(getMoney) || isNaN(getMonth) || isNaN(getInterest) || getMoney <= 0 || getMonth <= 0 || getInterest <= 0) {
+            alert("Please enter the number >0");
+        } else if (compareEx5 != getMonth) {
+            alert("Please enter month is the integer ");
+        } else {
+            for (let i = 1; i <= getMonth; i++) {
+                getMoney = getMoney + getMoney * getInterest;
+            }
+            getMoney = getMoney.toLocaleString("en");
+            document.getElementById("moneyToBePaid").innerHTML = "Số tiền phải trả là: " + getMoney + "VND";
+
+        }
+    }
+
+    function ex6() {
+        let n = (prompt("Nhập kích thước trái tim: "));
+        let compareEx6 = parseFloat(n);
+        n = parseInt(n);
+        if (isNaN(n) || n <= 1 || compareEx6 != n) {
+            alert("Nhập số nguyên dương >1")
+        } else {
+            let n2 = n * 2 - 1;
+            let i;
+            let j;
+            for (i = n; i >= 1; i--) {
+                for (j = 1; j <= n; j++) {
+                    if (i == j) {
+                        document.write(" * ");
+                    } else {
+                        document.write(" &nbsp&nbsp ");
+                    }
+                }
+                for (j = n; j >= 1; j--) {
+                    if (j == n) {
+                        continue;
+                    } else if (i == j) {
+                        document.write(" * ");
+                    } else {
+                        document.write(" &nbsp&nbsp ");
+                    }
+                }
+                for (j = 1; j <= n; j++) {
+                    if (j == 1) {
+                        continue;
+                    } else if (i == j) {
+                        document.write(" * ");
+                    } else {
+                        document.write(" &nbsp&nbsp ");
+                    }
+                }
+                for (j = n; j >= 1; j--) {
+                    if (j == n) {
+                        continue;
+                    } else if (i == j) {
+                        document.write(" * ");
+                    } else {
+                        document.write(" &nbsp&nbsp ");
+                    }
+                }
+                document.write("<br>");
+            }
+
+            for (i = n2; i >= 1; i--) {
+                if (i == n2) {
+                    continue;
+                } else {
+                    for (j = n2; j >= 1; j--) {
+                        if (i == j) {
+                            document.write(" * ");
+                        } else {
+                            document.write(" &nbsp&nbsp ");
+                        }
+                    }
+                    for (j = 1; j <= n2; j++) {
+                        if (j == 1) {
+                            continue;
+                        } else if (i == j) {
+                            document.write(" * ");
+                        } else {
+                            document.write(" &nbsp&nbsp ");
+                        }
+                    }
+
+
+                    document.write("<br>");
+                }
+
+            }
+
+
+        }
+
+
+    }
+</script>
+</html>
