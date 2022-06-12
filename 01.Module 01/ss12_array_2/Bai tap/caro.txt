@@ -1,0 +1,51 @@
+let iCheck;
+        let jCheck;
+        let checkWin = board[iPosition][jPosition];
+        if (iPosition >= jPosition){
+            if(jPosition <2){
+                jCheck = 0;
+                iCheck = iPosition - jPosition;
+            }
+            else {
+                iCheck = iPosition - 2;
+                jCheck = jPosition -2;
+            }
+        }
+        else {
+            if(iPosition <2){
+                iCheck = 0;
+                jCheck = jPosition - iPosition;
+            }
+            else {
+                iCheck = iPosition - 2;
+                jCheck = jPosition -2;
+            }
+        }
+
+        let win = 0;
+        for (; iCheck <= iPosition; iCheck++, jCheck++) {
+            for (let i = iCheck, j = jCheck; i <= iCheck + 2; i++, j++) {
+                if (board[i][j] == checkWin) {
+                    win++;
+                } else {
+                    win = 0;
+                    break;
+                }
+                if (win == 3 || i == n || j ==n) {
+                    break;
+                }
+            }
+            if (win == 3) {
+                break;
+            }
+        }
+
+        if (win == 3){
+           if (checkWin == "X"){
+               data += "<p></br></br> <b>X Team Win</b></p>";
+           }
+           else {
+               data += "<p></br></br> <b>O Team Win</b></p>";
+
+           }
+        }

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập mảng 2</title>
+</head>
+<body>
+<p>Bài 1: Viết chương trình khởi tạo mảng 2 chiều, gồm một bộ các phần tử có sẵn, in ra các phần tử trong mảng. Chú ý:
+    Sử dụng
+    vòng lặp for lồng nhau.</p>
+<input type="button" onclick="ex1()" value="Show ex1">
+
+<p>Bài 2: Viết một chương trình để in các ký tự trong một mảng theo thứ tự đảo ngược.
+    Ví dụ, nếu một mảng chứa các ký tự [ 'c', 's', 'c', '2', '6', '1' ] sau khi thực hiện đảo ngược sẽ là "162csc"</p>
+<input type="button" onclick="ex2()" value="Show ex2">
+
+<p>Bài 3: Viết một chương trình khai báo một mảng ký tự và kích thước của mảng. Chương trình này đếm số ký tự số trong
+    mảng.</p>
+<input type="button" onclick="ex3()" value="Show ex3">
+
+<p>Bài 4: Viết một chương trình để đếm số từ trong một chuỗi.</p>
+<input type="button" onclick="ex4()" value="Show ex4">
+
+<p>Bài 5: Viết một chương trình nhập vào 2 chuỗi, sau đó kiểm tra xem hai chuỗi có giống nhau hay không.</p>
+<input type="button" onclick="ex5()" value="Show ex5">
+
+<p>Bài 6: Viết chương trình nhập vào một mảng ký tự, tìm tất cả các ký tự trong mảng là (-) và thay thế các ký tự này
+    bởi ký tự ( _ )</p>
+<input type="button" onclick="ex6()" value="Show ex6">
+
+
+</body>
+<script>
+    function ex1() {
+        let a = [
+            [1, 2, 1, 24],
+            [8, 11, 9, 4],
+            [7, 0, 7, 27],
+            [7, 4, 28, 14],
+            [3, 10, 26, 7]
+        ];
+        let showResult = "Bài 1: <br>";
+        for (let i = 0; i < a.length; i++) {
+            showResult += "row " + i + "<br>";
+            for (let j = 0; j < a[i].length; j++) {
+                showResult += a[i][j] + "<br>"
+            }
+        }
+        document.write(showResult);
+    }
+
+    function ex2() {
+        let array = ['c', 's', 'c', '2', '6', '1'];
+        let reverseArray = array.reverse();
+        let showTitle = "Bài 2: <br> Original array: [ c, s, c, 2, 6, 1]";
+        let showResult = "<br>Reverse array: [";
+        for (let i = 0; i < array.length; i++) {
+            if (i == 0) {
+                showResult += reverseArray[i];
+            } else {
+                showResult += ", " + reverseArray[i];
+            }
+        }
+        showResult += "]";
+        document.write(showTitle);
+        document.write(showResult);
+    }
+
+    function ex3() {
+        let n = parseInt(prompt("Amount elements in array: "));
+        let array = new Array(n);
+        let showTitle = "Bài 3: <br> Original array: [";
+        let showResult = "<br>Numeric characters in array: ";
+        let countShow = 0;
+        for (let i = 0; i < array.length; i++) {
+            array[i] = prompt("Enter a character: ")
+            if (i == 0) {
+                showTitle += array[i];
+            } else {
+                showTitle += ", " + array[i];
+            }
+            if (!isNaN(array[i])) {
+                if (countShow == 0) {
+                    showResult += array[i];
+                } else {
+                    showResult += ", " + array[i];
+                }
+                countShow++;
+            }
+
+        }
+        showTitle += "]";
+        document.write(showTitle);
+        document.write(showResult);
+    }
+
+    function ex4() {
+        let string = prompt("Enter string: ");
+        let countWord = 0;
+        let newString = string;
+        let index;
+        let checkSpace;
+        if (string != "") {
+            do {
+                index = newString.indexOf(" ");
+                if (index != -1) {
+                    while (1) {
+                        checkSpace = newString.charAt(index + 1);
+                        if (checkSpace != " ") {
+                            newString = newString.slice(index + 1);
+                            break;
+                        } else {
+                            index++;
+                        }
+                    }
+                }
+                countWord++;
+            }
+            while (index != -1)
+        }
+        if (checkSpace == "") {
+            countWord--;
+        }
+        document.write("Bài 4: " + string);
+        if (countWord == 1 || countWord == 0) {
+            document.write("<br>&quot;" + string + "&quot; have " + countWord + " world");
+        } else {
+            document.write("<br>&quot;" + string + "&quot; have " + countWord + " worlds");
+        }
+    }
+
+    function ex5() {
+        let aString = prompt("Enter A string: ");
+        let bString = prompt("Enter B string: ");
+        document.write("A string: " + aString);
+        document.write("<br>B string: " + bString);
+        if (aString === bString) {
+            document.write("<br>A string is same B string");
+        } else {
+            document.write("<br>A string is different B string");
+        }
+
+    }
+
+    function ex6() {
+        let n = parseInt(prompt("Amount elements in array: "));
+        let array = new Array(n);
+        let newArray = new Array(n);
+        let showTitle = "Bài 6: <br> Original array: [";
+        let showResult = "<br> New array: [";
+        let index = 0;
+        for (let i = 0; i < array.length; i++) {
+            array[i] = prompt("Enter the string: ");
+            index = array[i].indexOf("-");
+            if (index != -1) {
+                newArray[i] =  array[i].replace("-","_");
+            }
+            else {
+                newArray[i] = array[i];
+            }
+            if (i == 0) {
+                showTitle += array[i];
+                showResult += newArray[i];
+            } else {
+                showTitle += ", " + array[i];
+                showResult += ", " + newArray[i];
+            }
+        }
+        showTitle += "]";
+        showResult += "]";
+        document.write(showTitle);
+        document.write(showResult);
+    }
+
+
+</script>
+
+
+</html>

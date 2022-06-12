@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo bàn cờ ca ro</title>
+</head>
+<body>
+<h3>Caro game</h3>
+<p id="caroGame"></p>
+
+
+</body>
+
+<script>
+    let n = parseInt(prompt("Enter the caro board size:"));
+    let caroShow = document.getElementById("caroGame");
+    let board = [n];
+    let data = "<table border='1' width ='1200' height = '1200' cellspacing = '0' cellpadding = '30' style='text-align: center'>";
+    let count = 0;
+    for (let i = 0; i < n; i++) {
+        board[i] = [n];
+    }
+    for (let i = 0; i < n; i++) {
+        data += "<tr>";
+        for (let j = 0; j < n; j++) {
+            board[i][j] = "&nbsp;.&nbsp;";
+            let jExtra = j;
+            if (jExtra % 10 == 0) {
+                jExtra += 111111;
+            }
+            data += "<td onclick='myFunction(" + i + "." + jExtra + ")' >" + board[i][j] + "</td>";
+        }
+        data += "</tr>";
+    }
+    data += "</table>";
+    caroShow.innerHTML = data;
+
+    function myFunction(idValue) {
+        let string = idValue + "";
+        let index = string.indexOf(".");
+        let iPosition = parseInt(string.slice(0, index));
+        let jPosition = parseInt(string.slice(index + 1));
+        if (jPosition >= 111111) {
+            jPosition = jPosition - 111111;
+        }
+        let data = "<table border='1' width ='1200' height = '1200' cellspacing = '0' cellpadding = '30' style='text-align: center'>";
+        if (board[iPosition][jPosition] != "X" && board[iPosition][jPosition] != "O") {
+            if (count == 0) {
+                board[iPosition][jPosition] = "X";
+                count = 1;
+            } else {
+                board[iPosition][jPosition] = "O";
+                count = 0;
+            }
+        }
+        let iCheck;
+        let jCheck;
+        let iWinCheck;
+        let jWinCheck;
+        let checkWin = board[iPosition][jPosition];
+        if (iPosition >= jPosition) {  // Check theo cheo xuong
+            if (jPosition < 2) {
+                jCheck = 0;
+                iCheck = iPosition - jPosition;
+            } else {
+                iCheck = iPosition - 2;
+                jCheck = jPosition - 2;
+            }
+        } else {
+            if (iPosition < 2) {
+                iCheck = 0;
+                jCheck = jPosition - iPosition;
+            } else {
+                iCheck = iPosition - 2;
+                jCheck = jPosition - 2;
+            }
+        }
+
+        let win0 = 0;
+        for (; iCheck <= iPosition; iCheck++, jCheck++) { // Check theo cheo xuong
+            for (let i = iCheck, j = jCheck; i <= iCheck + 2; i++, j++) {
+                if (i >= board.length || j >= board[i].length) {
+                    break;
+                }
+                if (board[i][j] == checkWin) {
+                    win0++;
+                } else {
+                    win0 = 0;
+                    break;
+                }
+                if (win0 == 3) {
+                    iWinCheck = i;
+                    jWinCheck = i;
+                    break;
+                }
+            }
+            if (win0 == 3) {
+                iWinCheck = iCheck;
+                jWinCheck = jCheck;
+                break;
+            }
+        }
+
+
+        let win1 = 0; // Check theo cheo len
+        let change1 = 2;
+        do {
+            iCheck = iPosition + change1;
+            jCheck = jPosition - change1;
+            change1--;
+        }
+        while (iCheck >= board.length || jCheck <0)
+
+
+        for (; jCheck <= jPosition; iCheck--, jCheck++) { // Check theo cheo len
+            for (let i = iCheck, j = jCheck; j <= jCheck + 2; i--, j++) {
+                if (i < 0 || j >= board[i].length) {
+                    break;
+                }
+                if (board[i][j] == checkWin) {
+                    win1++;
+                } else {
+                    win1 = 0;
+                    break;
+                }
+                if (win1 == 3) {
+                    iWinCheck = i;
+                    jWinCheck = i;
+                    break;
+                }
+            }
+            if (win1 == 3) {
+                iWinCheck = iCheck;
+                jWinCheck = jCheck;
+                break;
+            }
+        }
+
+        let win2 = 0; // Check theo ngang
+        let change2 = 2;
+        do {
+            iCheck = iPosition;
+            jCheck = jPosition - change2;
+            change2--;
+        }
+        while (jCheck <0)
+
+
+        for (; jCheck <= jPosition; jCheck++) { // Check theo ngang
+            for (let i = iCheck, j = jCheck; j <= jCheck + 2; j++) {
+                if (j >= board[i].length) {
+                    break;
+                }
+                if (board[i][j] == checkWin) {
+                    win2++;
+                } else {
+                    win2 = 0;
+                    break;
+                }
+                if (win2 == 3) {
+                    iWinCheck = i;
+                    jWinCheck = i;
+                    break;
+                }
+            }
+            if (win2 == 3) {
+                iWinCheck = iCheck;
+                jWinCheck = jCheck;
+                break;
+            }
+        }
+
+        let win3 = 0; // Check theo doc
+        let change3 = 2;
+        do {
+            jCheck = jPosition;
+            iCheck = iPosition - change3;
+            change3--;
+        }
+        while (iCheck <0)
+
+
+        for (; iCheck <= iPosition; iCheck++) { // Check theo ngang
+            for (let i = iCheck, j = jCheck; i <= iCheck + 2; i++) {
+                if (i >= board[i].length) {
+                    break;
+                }
+                if (board[i][j] == checkWin) {
+                    win3++;
+                } else {
+                    win3 = 0;
+                    break;
+                }
+                if (win3 == 3) {
+                    iWinCheck = i;
+                    jWinCheck = i;
+                    break;
+                }
+            }
+            if (win3 == 3) {
+                iWinCheck = iCheck;
+                jWinCheck = jCheck;
+                break;
+            }
+        }
+
+
+
+
+
+
+        for (let i = 0; i < n; i++) {
+            data += "<tr>";
+            for (let j = 0; j < n; j++) {
+                let jExtra = j;
+                if (jExtra % 10 == 0) {
+                    jExtra += 111111;
+                }
+                if (i == iWinCheck && j == jWinCheck && win0 == 3) {
+                    data += "<td onclick='myFunction(" + i + "." + jExtra + ")' bgcolor='red'>" + board[i][j] + "</td>";
+
+                } else if (i == iWinCheck + 1 && j == jWinCheck + 1 && win0 == 3) {
+                    data += "<td onclick='myFunction(" + i + "." + jExtra + ")' bgcolor='red'>" + board[i][j] + "</td>";
+
+                } else if (i == iWinCheck + 2 && j == jWinCheck + 2 && win0 == 3) {
+                    data += "<td onclick='myFunction(" + i + "." + jExtra + ")' bgcolor='red'>" + board[i][j] + "</td>";
+
+                }
+
+
+                else if (i == iWinCheck && j == jWinCheck && win1 == 3) {
+                    data += "<td onclick='myFunction(" + i + "." + jExtra + ")' bgcolor='red'>" + board[i][j] + "</td>";
+
+                } else if (i == iWinCheck - 1 && j == jWinCheck + 1 && win1 == 3) {
+                    data += "<td onclick='myFunction(" + i + "." + jExtra + ")' bgcolor='red'>" + board[i][j] + "</td>";
+
+                } else if (i == iWinCheck - 2 && j == jWinCheck + 2 && win1 == 3) {
+                    data += "<td onclick='myFunction(" + i + "." + jExtra + ")' bgcolor='red'>" + board[i][j] + "</td>";
+
+                }
+
+               else if (i == iWinCheck && j == jWinCheck && win2 == 3) {
+                    data += "<td onclick='myFunction(" + i + "." + jExtra + ")' bgcolor='red'>" + board[i][j] + "</td>";
+
+                } else if (i == iWinCheck && j == jWinCheck + 1 && win2 == 3) {
+                    data += "<td onclick='myFunction(" + i + "." + jExtra + ")' bgcolor='red'>" + board[i][j] + "</td>";
+
+                } else if (i == iWinCheck && j == jWinCheck + 2 && win2 == 3) {
+                    data += "<td onclick='myFunction(" + i + "." + jExtra + ")' bgcolor='red'>" + board[i][j] + "</td>";
+
+                }
+
+                else if (i == iWinCheck && j == jWinCheck && win3 == 3) {
+                    data += "<td onclick='myFunction(" + i + "." + jExtra + ")' bgcolor='red'>" + board[i][j] + "</td>";
+
+                } else if (i == iWinCheck +1 && j == jWinCheck  && win3 == 3) {
+                    data += "<td onclick='myFunction(" + i + "." + jExtra + ")' bgcolor='red'>" + board[i][j] + "</td>";
+
+                } else if (i == iWinCheck + 2&& j == jWinCheck  && win3 == 3) {
+                    data += "<td onclick='myFunction(" + i + "." + jExtra + ")' bgcolor='red'>" + board[i][j] + "</td>";
+
+                }
+
+
+                else {
+                    data += "<td onclick='myFunction(" + i + "." + jExtra + ")' >" + board[i][j] + "</td>";
+                }
+            }
+        }
+
+        if (win0 == 3 || win1 == 3 || win2 == 3 || win3 == 3) {
+            if (checkWin == "X") {
+                alert("X Team Win");
+            } else {
+                alert("O Team Win");
+            }
+        }
+
+        caroShow.innerHTML = data;
+
+
+    }
+
+
+</script>
+
+
+</html>

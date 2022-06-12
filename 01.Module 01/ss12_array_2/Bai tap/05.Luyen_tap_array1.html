@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập mảng 01</title>
+</head>
+<body>
+<p>Bài 1- Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử. Chương trình thực hiện tính và hiển thị xem có bao
+    nhiêu số nguyên lớn hơn hoặc bằng 10.</p>
+<input type="button" onclick="ex1()" value="Show ex1">
+
+<p>Bài 2- Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử khác nhau.
+    Chương trình hiển thị ra được phần tử có giá trị lớn nhất trong mảng và vị trí của phần tử đó.</p>
+<input type="button" onclick="ex2()" value="Show ex2">
+
+<p>Bài 3- Viết chương trình khởi tạo mảng số nguyên.
+    Hiển hiện giá trị lớn nhất trong mảng đó. In ra giá trị trung bình của các phần tử trong mảng.</p>
+<input type="button" onclick="ex3()" value="Show ex3">
+
+<p>Bài 4- Viết chương trình khởi tạo/nhập vào một mảng số nguyên và đảo ngược các phần tử trong mảng đó.</p>
+<input type="button" onclick="ex4()" value="Show ex4">
+
+<p>Bài 5- Viết chương trình đếm số nguyên âm trong một chuỗi.</p>
+<input type="button" onclick="ex5()" value="Show ex5">
+
+<p>Bài 6- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử,
+    nhập/tạo phần tử số nguyên V. Chương trình tìm xem V có nằm trong mảng số nguyên không?
+    Nếu V thuộc mảng số nguyên thì in ra "V is in the array" còn lại in ra "V is not in the array".</p>
+<input type="button" onclick="ex6()" value="Show ex6">
+
+<p>Bài 7- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V.
+    Chương trình kiểm tra xem V có thuộc mảng đã cho không, nếu V thuộc mảng đã cho xoá V khỏi mảng (Bản chất
+    việc xoá ở đây tức là dịch phần tử ở bên phải V sang vị trí của V, và gán 0 cho phần tử cuối cùng của mảng)
+</p>
+<input type="button" onclick="ex7()" value="Show ex7">
+
+<p>Bài 8- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử. Chương trình sắp xếp
+    mảng theo thứ tự giảm dần và hiển thị ra mảng đã được sắp xếp.
+</p>
+<input type="button" onclick="ex8()" value="Show ex8">
+
+<p>Bài 9- Viết chương trình khởi tạo/nhập vào 2 mảng số nguyên gồm 10 phần tử, gọi là mảng a và b. Mảng c là
+    một mảng được khai báo gồm 20 phần tử số nguyên. Chương trình sẽ lưu các phần tử được nối từ hai mảng b
+    và a vào mảng c. Hiển thị mảng c.
+</p>
+<input type="button" onclick="ex9()" value="Show ex9">
+
+
+</body>
+
+<script>
+
+    function ex1() {
+        let numbers = new Array();
+        for (let i = 0; i < 10; i++) {
+            numbers[i] = parseInt(prompt("Enter a number: "));
+        }
+        document.write("Bài 1: Numbers are entered: ");
+        let showNumbersAreEntered = "";
+        let showResult = "";
+        for (let i = 0, count = 0; i < numbers.length; i++) {
+            if (i == 0) {
+                showNumbersAreEntered += numbers[i];
+            } else {
+                showNumbersAreEntered += ", " + numbers[i];
+            }
+            if (numbers[i] >= 10) {
+                if (count == 0) {
+                    showResult += numbers[i];
+                    count++;
+                } else {
+                    showResult += ", " + numbers[i];
+                }
+            }
+        }
+        document.write(showNumbersAreEntered + "<br>Numbers>=10: " + showResult);
+    }
+
+    function ex2() {
+        let numbers = new Array();
+        for (let i = 0; i < 10; i++) {
+            numbers[i] = parseInt(prompt("Enter a number: "));
+        }
+        document.write("Bài 2: Numbers are entered: ");
+        let showNumbersAreEntered = "";
+        let maxNumber = numbers[0];
+        let index;
+
+        for (let i = 0, count = 0; i < numbers.length; i++) {
+            if (i == 0) {
+                showNumbersAreEntered += numbers[i];
+            } else {
+                showNumbersAreEntered += ", " + numbers[i];
+                if (numbers[i] > maxNumber) {
+                    maxNumber = numbers[i];
+                    index = i;
+                }
+            }
+        }
+        document.write(showNumbersAreEntered + "<br>Maximum number: " + maxNumber + "<br>Index: " + index);
+    }
+
+    function ex3() {
+        let numbers = new Array();
+        let i = 0;
+        let showNumbersAreEntered = "";
+        let sum = 0;
+        let avarage = 0;
+        do {
+            numbers[i] = prompt("Enter a number: (enter quit if you want to exit)");
+            i++;
+        }
+        while (numbers[i - 1] != "quit" && numbers[i - 1] != null)
+        if (numbers[0] == "quit" || numbers[0] == null) {
+            alert("Please enter the numbers")
+        } else {
+            numbers.pop();
+            let maxNumber = parseInt(numbers[0]);
+            for (let j = 0; j < numbers.length; j++) {
+                numbers[j] = parseInt(numbers[j]);
+                if (j == 0) {
+                    showNumbersAreEntered += numbers[j];
+                } else {
+                    showNumbersAreEntered += ", " + numbers[j];
+                }
+                if (numbers[j] > maxNumber) {
+                    maxNumber = numbers[j];
+                }
+                sum += numbers[j];
+            }
+            avarage = sum / numbers.length;
+            document.write("Bài 3: Numbers are entered: " + showNumbersAreEntered);
+            document.write("<br>Maximum number: " + maxNumber + "<br>Avarage: " + avarage);
+        }
+    }
+
+    function ex4() {
+        let n = parseInt(prompt("Amount elements in array:"));
+        let array = new Array(n);
+        let showTitle = "Bài 4: </br> Orriginal array: ";
+        let showResult = "</br>Reverse array: ";
+        let reverseArray;
+        for (let i = 0; i < array.length; i++) {
+            array[i] = parseInt(prompt("Enter a number: "));
+            if (i == 0) {
+                showTitle += array[i];
+            } else {
+                showTitle += ", " + array[i];
+            }
+        }
+        reverseArray = array.reverse();
+        for (let i = 0; i < reverseArray.length; i++) {
+            if (i == 0) {
+                showResult += reverseArray[i];
+            } else {
+                showResult += ", " + reverseArray[i];
+            }
+        }
+        document.write(showTitle);
+        document.write(showResult);
+    }
+
+    function ex5() {
+        let n = parseInt(prompt("Amount elements in array:"));
+        let array = new Array(n);
+        let showTitle = "Bài 5: </br> Original array: ";
+        let showResult = "</br>";
+        let negativeNumbers = "";
+        let countNegativeNumbers = 0;
+        for (let i = 0; i < array.length; i++) {
+            array[i] = parseInt(prompt("Enter a number: "));
+            if (i == 0) {
+                showTitle += array [i];
+            } else {
+                showTitle += ", " + array[i];
+            }
+            if (array[i] < 0) {
+                if (countNegativeNumbers == 0) {
+                    negativeNumbers += array[i];
+                } else {
+                    negativeNumbers += ", " + array[i];
+                }
+                countNegativeNumbers++;
+            }
+        }
+        showResult += "Amount negative numbers: " + countNegativeNumbers + ". That is: " + negativeNumbers;
+        document.write(showTitle);
+        document.write(showResult);
+    }
+
+    function ex6() {
+        let n = parseInt(prompt("Amount elements in array:"));
+        let array = new Array(n);
+        let showTitle = "Bài 6: </br>Original array: ";
+        let enterNumberCheck = "<br>Enter number V: <input type='text' id='getNumber'> <input type='button' value='ShowResult' onclick='ex6Extra()'>";
+        for (let i = 0; i < array.length; i++) {
+            array[i] = parseInt(prompt("Enter a number: "));
+            if (i == 0) {
+                showTitle += "<b id='check" + i + "'>" + array[i] + "</b>";
+            } else {
+                showTitle += ", " + "<b id='check" + i + "'>" + array[i] + "</b>";
+            }
+
+        }
+        showTitle += "<b id='arrayLength' style='display: none'>  " + array.length + "</b>";
+        document.write(showTitle);
+        document.write(enterNumberCheck);
+        document.write("<p id='resetFunction'/>")
+    }
+
+    function ex6Extra() {
+        let array = new Array();
+        let count = 0;
+        let arrayLength = parseInt(document.getElementById("arrayLength").textContent);
+        let getNumberCheck = parseInt(document.getElementById("getNumber").value);
+        let showResult = "<p id='resetFunction'> No. " + getNumberCheck + " is in the array. Index: ";
+
+        for (let i = 0; i < arrayLength; i++) {
+            array[i] = parseInt(document.getElementById("check" + i).textContent);
+            if (getNumberCheck == array[i]) {
+                if (count == 0) {
+                    showResult += i;
+                } else {
+                    showResult += ", " + i;
+                }
+                count++;
+            }
+        }
+        if (count > 0) {
+            showResult += "</p>";
+        } else {
+            showResult = "<p id='resetFunction'> No. " + getNumberCheck + " is not in the array.</p>";
+        }
+        document.getElementById("resetFunction").innerHTML = showResult;
+    }
+
+    function ex7() {
+        let n = parseInt(prompt("Amount elements in array:"));
+        let array = new Array(n);
+        let showTitle = "Bài 7: </br>Original array: ";
+        let enterNumberCheck = "<br>Enter number V: <input type='text' id='getNumber'> <input type='button' value='ShowResult' onclick='ex7Extra()'>";
+        for (let i = 0; i < array.length; i++) {
+            array[i] = parseInt(prompt("Enter a number: "));
+            if (i == 0) {
+                showTitle += "<b id='check" + i + "'>" + array[i] + "</b>";
+            } else {
+                showTitle += ", " + "<b id='check" + i + "'>" + array[i] + "</b>";
+            }
+        }
+        showTitle += "<b id='arrayLength' style='display: none'>  " + array.length + "</b>";
+        document.write(showTitle);
+        document.write(enterNumberCheck);
+        document.write("<p id='resetFunction'/>")
+        document.write("<p id='resetNewArray'/>")
+    }
+
+    function ex7Extra() {
+        let array = new Array();
+        let index = new Array();
+        let newArray = new Array();
+        let count = 0;
+        let arrayLength = parseInt(document.getElementById("arrayLength").textContent);
+        let getNumberCheck = parseInt(document.getElementById("getNumber").value);
+        let showResult = "<p id='resetFunction'> No. " + getNumberCheck + " is in the array. Index: ";
+        let showNewArray = "<p id='resetNewArray'> NewArray: [ ";
+        for (let i = 0; i < arrayLength; i++) {
+            array[i] = parseInt(document.getElementById("check" + i).textContent);
+            if (getNumberCheck == array[i]) {
+                if (count == 0) {
+                    showResult += i;
+                } else {
+                    showResult += ", " + i;
+                }
+                index[count] = i;
+                count++;
+            }
+        }
+        if (count > 0) {
+            showResult += "</p>";
+            for (let i = 0; i < count; i++) {
+                array.splice(index[i] - i, 1);
+                array.push(0);
+            }
+        } else {
+            showResult = "<p id='resetFunction'> No. " + getNumberCheck + " is not in the array.</p>";
+        }
+        for (let i = 0; i < arrayLength; i++) {
+            newArray[i] = array [i];
+            if (i == 0) {
+                showNewArray += newArray[i];
+            } else {
+                showNewArray += ", " + newArray[i];
+            }
+        }
+        showNewArray += " ] </p>"
+        document.getElementById("resetFunction").innerHTML = showResult;
+        document.getElementById("resetNewArray").innerHTML = showNewArray;
+    }
+
+    function ex8() {
+        let n = parseInt(prompt("Amount elements in array:"));
+        let array = new Array(n);
+        let showTitle = "Bài 8: </br>Original array: ";
+        let showResult = "</br>New array (decrease): "
+        let mediate;
+        let countToExitWhile;
+        for (let i = 0; i < array.length; i++) {
+            array[i] = parseInt(prompt("Enter a number: "));
+            if (i == 0) {
+                showTitle += array[i];
+            } else {
+                showTitle += ", " + array[i];
+            }
+        }
+        while (1) {
+            countToExitWhile = 0;
+            for (let i = 0; i < array.length - 1; i++) {
+                if (array[i] < array[i + 1]) {
+                    mediate = array[i];
+                    array[i] = array[i + 1];
+                    array[i + 1] = mediate;
+                }
+            }
+            for (let i = 0; i < array.length - 1; i++) {
+                if (array[i] >= array[i + 1]) {
+                    countToExitWhile++;
+                } else {
+                    break;
+                }
+            }
+            if (countToExitWhile == array.length - 1) {
+                break;
+            }
+        }
+        for (let i = 0; i < array.length; i++) {
+            if (i == 0) {
+                showResult += array[i];
+            } else {
+                showResult += ", " + array[i];
+            }
+        }
+        document.write(showTitle);
+        document.write(showResult);
+    }
+
+    function ex9() {
+        let aArray = new Array(10);
+        let bArray = new Array(10);
+        let cArray = new Array(20);
+        let resultArray = new Array();
+        let showTitle = "Bài 9: </br>Original A array: [";
+        let showResult = "<br>New array: ["
+
+
+        for (let i = 0; i < aArray.length; i++) {
+            aArray[i] = parseInt(prompt("Enter a number (A array): "));
+            if (i == 0) {
+                showTitle += aArray[i];
+            } else {
+                showTitle += ", " + aArray[i];
+            }
+        }
+        showTitle += "] <br>Original B array: [";
+        for (let i = 0; i < bArray.length; i++) {
+            bArray[i] = parseInt(prompt("Enter a number (B array): "));
+            if (i == 0) {
+                showTitle += bArray[i];
+            } else {
+                showTitle += ", " + bArray[i];
+            }
+        }
+        showTitle += "] <br>Original C array: [";
+        for (let i = 0; i < cArray.length; i++) {
+            cArray[i] = parseInt(prompt("Enter a number (C array): "));
+            if (i == 0) {
+                showTitle += cArray[i];
+            } else {
+                showTitle += ", " + cArray[i];
+            }
+        }
+        showTitle += "]";
+        resultArray = cArray.concat(bArray.concat(aArray));
+        for (let i = 0; i < resultArray.length; i++) {
+            if (i == 0) {
+                showResult += resultArray[i];
+            } else {
+                showResult += ", " + resultArray[i];
+            }
+        }
+        showResult += "]";
+        document.write(showTitle);
+        document.write(showResult);
+    }
+
+
+</script>
+</html>
