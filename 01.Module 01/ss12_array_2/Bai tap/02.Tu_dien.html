@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ Điển</title>
+</head>
+<body>
+<h4>Từ điển Anh Việt</h4>
+
+<p><b> English: </b><input type="text" placeholder="Enter a world"  id="inputEnglishWord"></p>
+<input type="button" value="Transalte" onclick="dictionary()">
+<p id="vietnamese"><b> Vietnamese:</b></p>
+
+</body>
+
+
+<script>
+
+
+    function dictionary() {
+        let englishWord = document.getElementById("inputEnglishWord").value;
+        let englishArray = ["abandon", "abandoned", "ability", "able", "unable", "about", "above", "abroad" , "absence",
+            "absent", "absolute","absolutely","absorb","abuse","academic", "accent","accept","acceptable",
+            "access","accident","accidental","accidentally", "accommodation","accompany", "account", "accurate",
+            "accurately", "accuse", "achieve","achievement", "acid", "acknowledge", "acquire", "across",  "act",
+            "action", "active"];
+        englishWord = toLowerCase(englishWord);
+        let index = englishArray.indexOf(englishWord);
+        let vietArray = ["bỏ, từ bỏ","bị bỏ rơi, bị ruồng bỏ", "khả năng, năng lực", "có năng lực, có tài", "không có năng lực, không có tài", "khoảng, về", "ở trên, lên trên", "ở, ra nước ngoài, ngoài trời", "sự vắng mặt",
+            "vắng mặt, nghỉ", "tuyệt đối, hoàn toàn","tuyệt đối, hoàn toàn","thu hút, hấp thu, lôi cuốn", "lộng hành, lạm dụng","thuộc học viện, ĐH, viện hàn lâm","trọng âm, dấu trọng âm","chấp nhận, chấp thuận","có thể chấp nhận, chấp thuận",
+            "lối, cửa, đường vào", "tai nạn, rủi ro","tình cờ, bất ngờ","tình cờ, ngẫu nhiên","sự thích nghi, điều tiết","đi theo, đi cùng, kèm theo", "tài khoản, kế toán; tính toán, tính đến", "đúng đắn, chính xác, xác đáng",
+            "đúng đắn, chính xác", "tố cáo, buộc tội, kết tội", "đạt được, dành được", "thành tích, thành tựu", "axit","công nhận, thừa nhận", "dành được, đạt được, kiếm được", "qua, ngang qua", "hành động, hành vi, cử chỉ, đối xử",
+            "hành động, hành vi, tác động","tích cực hoạt động, nhanh nhẹn"];
+        let result = vietArray[index];
+        if (index == -1){
+            document.getElementById("vietnamese").innerHTML = "<b> Vietnamese: </b>" +englishWord + " (Vietnamese word have been not found)";
+
+        }
+        else {
+            document.getElementById("vietnamese").innerHTML = "<b>Vietnamese: </b>" + result;
+        }
+    }
+
+    function toLowerCase(word) {
+        let result = new Array();
+        for (let i = 0; i< word.length; i++){
+            if (word[i] === word[i].toLocaleUpperCase()){
+                result[i] = word[i].toLowerCase();
+            }
+            else {
+                result[i] = word[i];
+            }
+        }
+        return result.join("");
+    }
+
+
+
+</script>
+</html>

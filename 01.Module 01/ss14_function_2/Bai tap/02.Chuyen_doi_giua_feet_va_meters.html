@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi giữa feet và meters</title>
+</head>
+<body>
+<h3> Converter feet to meters & meters to meet</h3>
+<p><input type="number" placeholder="enter value > 0" oninput="footToMeter(this.value)"> Feet</p>
+<p> <span id="resultMeter">0 meters</span> </p>
+
+
+<p><input type="number" placeholder="enter value > 0" oninput="meterToFoot(this.value)"> Meters</p>
+<p> <span id="resultFoot">0 foot</span> </p>
+
+
+
+</body>
+
+<script>
+    function footToMeter(foot) {
+        let getFoot = parseFloat(foot);
+        if (getFoot<0){
+            document.getElementById("resultMeter").innerText = "Enter value > 0";
+        }
+        else {
+            document.getElementById("resultMeter").innerText = 0.305*getFoot + " meters";
+        }
+    }
+
+    function meterToFoot(meter) {
+        let getMeter = parseFloat(meter);
+        if (getMeter<0){
+            document.getElementById("resultFoot").innerText = "Enter value > 0";
+        }
+        else {
+            document.getElementById("resultFoot").innerText = 3.279*getMeter + " meters";
+        }
+    }
+
+
+</script>
+
+</html>

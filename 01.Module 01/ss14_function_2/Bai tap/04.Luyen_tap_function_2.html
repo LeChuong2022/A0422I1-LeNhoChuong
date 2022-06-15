@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập tạo và sử dụng hàm 2</title>
+</head>
+<body>
+<p><b>Bài 1:</b> Viết hàm tính bình phương của một số bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.</p>
+<p>Enter a number: <input type="number" placeholder="Enter a number" id="idGetValueEx1"></p>
+<input type="button" value="Show Ex1" onclick="ex1()">
+<p id="resultEx1"> Result: </p>
+
+<p><b>Bài 2:</b> Viết hàm tính diện tích, hàm tính chu vi hình tròn. Gọi hàm vừa xây dựng được.</p>
+<p>Enter the radius of the circle: <input type="number" placeholder="Enter a number >0" id="idGetValueEx2"></p>
+<input type="button" value="Show Ex2" onclick="ex2()">
+<p id="resultEx2A"> Result: </p>
+<p id="resultEx2B"></p>
+
+<p><b>Bài 3:</b> Viết hàm tính giai thừa của một số nguyên bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.</p>
+<p>Enter a number: <input type="number" placeholder="Enter a number" id="idGetValueEx3"></p>
+<input type="button" value="Show Ex3" onclick="ex3()">
+<p id="resultEx3"> Result: </p>
+
+<p><b>Bài 4:</b> Viết hàm kiểm tra xem ký tự nhập vào có phải là ký tự số không. Nếu là ký tự số hàm trả về true,
+    ngược lại trả về false.
+</p>
+<p>Enter value: <input type="text" id="idGetValueEx4"></p>
+<input type="button" value="Show Ex4" onclick="ex4()">
+<p id="resultEx4"> Result: </p>
+
+<p><b>Bài 5:</b> Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất.
+</p>
+<p>Enter value 1: <input type="number" id="idGetValueEx5.1"></p>
+<p>Enter value 2: <input type="number" id="idGetValueEx5.2"></p>
+<p>Enter value 3: <input type="number" id="idGetValueEx5.3"></p>
+<input type="button" value="Show Ex5" onclick="ex5()">
+<p id="resultEx5"> Result: </p>
+
+<p><b>Bài 6:</b> Viết hàm nhận vào một số, kiểm tra xem nếu số đưa vào có phải là nguyên dương không.
+    Nếu là nguyên dương trả về true, ngược lại trả về false.
+</p>
+<p>Enter value: <input type="number" id="idGetValueEx6"></p>
+<input type="button" value="Show Ex6" onclick="ex6()">
+<p id="resultEx6"> Result: </p>
+
+<p><b>Bài 7:</b> Viết hàm truyền vào 2 số nguyên bất kì, thực hiện đổi chỗ hai số nguyên đó.
+</p>
+<p>Enter value A: <input type="number" id="idGetValueEx7A"></p>
+<p>Enter value B: <input type="number" id="idGetValueEx7B"></p>
+<input type="button" value="Show Ex7" onclick="ex7()">
+<p id="resultEx7A"> Original: </p>
+<p id="resultEx7B"> After swap: </p>
+
+<p><b>Bài 8:</b> >Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số nguyên đó.
+</p>
+<input type="button" value="Show Ex8" onclick="ex8()">
+<p id="originalArrayEx8"> Original array: </p>
+<p id="resultEx8"> Result: </p>
+
+</body>
+
+<p><b>Bài 9:</b> Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ, kiểm tra xem ký tự bất kỳ đó có nằm trong mảng không.
+    Nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về -1.
+
+</p>
+<input type="button" value="Show Ex9" onclick="ex9()">
+<p id="originalArrayEx9"> Original array: </p>
+<p id="characterEx9"> Enter character: </p>
+<p id="resultEx9"> Result: </p>
+
+</body>
+
+
+<script>
+    //Exercise 1:
+    function ex1() {
+        let number = parseFloat(document.getElementById("idGetValueEx1").value);
+        let result = squareEx1(number);
+        document.getElementById("resultEx1").innerHTML = "Result: Square(" + number + ") = " + result;
+    }
+
+    function squareEx1(a) {
+        a = a * a;
+        return a;
+    }
+
+    //Exercise 2:
+    function ex2() {
+        let number = parseFloat(document.getElementById("idGetValueEx2").value);
+        let circumferenceOfCircle = calculateTheCircumferenceOfCircle(number);
+        let areaOfCircle = calculateTheArea(number);
+        document.getElementById("resultEx2A").innerHTML = "Result: Circumference of a circle = " + circumferenceOfCircle;
+        document.getElementById("resultEx2B").innerHTML = "Result: Area of a circle = " + areaOfCircle;
+    }
+
+    function calculateTheCircumferenceOfCircle(radius) {
+        return radius * 2 * 3.14;
+    }
+
+    function calculateTheArea(radius) {
+        return radius * radius * 3.14;
+    }
+
+    //Exercise 3:
+    function ex3() {
+        let compare = parseFloat(document.getElementById("idGetValueEx3").value);
+        let number = parseInt(document.getElementById("idGetValueEx3").value);
+        if (compare != number || number < 0) {
+            alert("Please enter the integer >= 0")
+        } else {
+            let result = factorialCalculation(number);
+            document.getElementById("resultEx3").innerHTML = "Result: " + number + "! = " + result;
+        }
+    }
+
+    function factorialCalculation(value) {
+        let resultFactorial = 1;
+        for (let i = 2; i <= value; i++) {
+            resultFactorial *= i;
+        }
+        return resultFactorial;
+    }
+
+    //Exercise 4:
+    function ex4() {
+        let value = parseInt(document.getElementById("idGetValueEx4").value);
+        let result = checkValueEx4(value);
+        document.getElementById("resultEx4").innerHTML = "Result: " + result;
+    }
+
+    function checkValueEx4(value) {
+        let getValue = value;
+        if (isNaN(getValue)) {
+            return "False";
+        } else {
+            return "True";
+        }
+    }
+
+    //Exercise 5:
+    function ex5() {
+        let n = 3;
+        let value = new Array(n);
+        for (let i = 0; i < value.length; i++) {
+            value[i] = parseFloat(document.getElementById("idGetValueEx5." + (i + 1)).value)
+        }
+        console.log(value);
+        let result = compareValueEx5(value);
+        document.getElementById("resultEx5").innerHTML = "Result: Minimum number: " + result;
+    }
+
+    function compareValueEx5(numbers) {
+        let getValue = new Array();
+        for (let i = 0; i < numbers.length; i++) {
+            getValue[i] = numbers[i];
+        }
+        let minNumber = getValue[0];
+        for (let i = 1; i < numbers.length; i++) {
+            if (getValue[i] < minNumber) {
+                minNumber = getValue[i];
+            }
+        }
+        return minNumber;
+    }
+
+    //Exercise 6:
+    function ex6() {
+        let value = parseInt(document.getElementById("idGetValueEx6").value);
+        let result = checkValueEx6(value);
+        document.getElementById("resultEx6").innerHTML = "Result: " + result;
+    }
+
+    function checkValueEx6(a) {
+        let getValue = a;
+        if (getValue > 0) {
+            return "True";
+        } else if (getValue < 0) {
+            return "False";
+        } else {
+            return 0;
+        }
+    }
+
+    //Exercise 7:
+    function ex7() {
+        let array = new Array();
+        array[0] = parseFloat(document.getElementById("idGetValueEx7A").value);
+        array[1] = parseFloat(document.getElementById("idGetValueEx7B").value);
+        let arrayToString = array.join(", ");
+        document.getElementById("resultEx7A").innerHTML = "Original: " + arrayToString;
+        array = swap(array);
+        arrayToString = array.join(", ");
+        document.getElementById("resultEx7B").innerHTML = "After swap: " + arrayToString;
+
+
+
+    }
+    function swap(x) {
+        let temp = x[0];
+        x[0] = x[1];
+        x[1] = temp;
+        return x;
+    }
+
+
+    //Exercise 8:
+    function ex8() {
+        let n = parseInt(prompt("Amount elements of array: "));
+        let array = new Array(n);
+        let newArray = new Array();
+        for (let i = 0; i < array.length; i++) {
+            array[i] = parseInt(prompt("Enter a number: "))
+        }
+        newArray = reverseArray(array);
+        let stringArray = array.join(", ");
+        let stringNewArray = newArray.join(", ");
+        document.getElementById("originalArrayEx8").innerHTML = "Original array: " + stringArray;
+        document.getElementById("resultEx8").innerHTML = "New array: " + stringNewArray;
+    }
+
+    function reverseArray(x) {
+        let getArray = new Array();
+        for (let i = 0; i < x.length; i++) {
+            getArray[i] = x[x.length - 1 - i];
+        }
+        return getArray;
+    }
+
+
+    //Exercise 9:
+    function ex9() {
+        let n = parseInt(prompt("Amount elements in array: "));
+        let array = new Array(n);
+        for (let i = 0; i < array.length; i++){
+            array[i] = prompt("Enter a character(" + i + "): ");
+        }
+        let arrayToString = array.join(", ")
+        indexNumber(array);
+        document.getElementById("originalArrayEx9").innerHTML = "Original array: [" + arrayToString + "]";
+
+
+    }
+    function indexNumber(array) {
+        let characterCheck = prompt("Enter any character: ");
+        let count = 0;
+        let index = 0;
+        do {
+            index = array.indexOf(characterCheck);
+            if (index != -1){
+                count++;
+                array.splice(index, 1);
+            }
+        }
+        while (index != -1)
+        document.getElementById("characterEx9").innerHTML = "Enter character: " + characterCheck;
+        document.getElementById("resultEx9").innerHTML = "Result: &quot;" + characterCheck + "&quot; appears " + count + " times";
+    }
+
+
+</script>
+</html>

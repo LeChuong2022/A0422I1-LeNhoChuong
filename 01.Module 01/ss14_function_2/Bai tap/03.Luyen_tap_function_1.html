@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập tạo và sử dụng hàm 1</title>
+</head>
+<body>
+<p>Bài 1: Tạo hàm alertMessage() hiển thị hộp thoại chứa chuỗi "Xin chao". Gọi hàm từ trong phần &lt;body&gt;
+    của trang web.
+</p>
+<input type="button" value="Show Ex1" onclick="alertMessage()">
+
+
+<p>Bài 2: Tạo hàm nhận vào một đối số dạng số, tăng giá trị đối số đó lên 1 và trả lại giá trị cho lời gọi hàm.
+    Gọi hàm từ trong phần &lt;body&gt; của trang web và hiển thị kết quả lên màn hình.</p>
+<p>Enter a Number <input type='number' id='inputValueEx2'></p>
+<input type="button" value="show result's Ex2" onclick="ex2()">
+<p id='resultEx2'>Result (after increase 1):</p>
+
+<p>Bài 3: Tạo hàm nhận vào hai tham số. Nếu giá trị của tham số thứ nhất lớn hơn tham số thứ hai, hiển thị hộp thoại
+    thông báo cho người dùng. Nếu giá trị của tham số thứ nhất nhỏ hơn hoặc bằng tham số thứ hai, trả về tổng của hai
+    tham số.
+</p>
+<p>Enter a Number (A): <input type='number' id='inputValueEx3A'></p>
+<p>Enter a Number (B): <input type='number' id='inputValueEx3B'></p>
+<input type="button" value="show result's Ex3" onclick="ex3()">
+<p id='resultEx3'>Result (after completion):</p>
+
+<p>Bài 4: Thêm các hàm alert() vào những vị trí thích hợp trong đoạn mã sau
+    để bạn có thể nhìn thấy giá trị của biến result trước và sau lời gọi hàm.
+</p>
+<input type="button" value="Show Ex4" onclick="ex4()">
+
+<p>Bài 5: Tạo một mảng với bảy phần tử dạng chuỗi có giá trị là tên các ngôi sao sau:
+    Polaris, Aldebaran, Deneb, Vega, Altair, Dubhe và Regulus. Tạo một mảng khác với bảy
+    phần tử dạng chuỗi có giá trị là tên các chòm sao tương ứng chứa các ngôi sao: Ursa Minor,
+    Tarurus, Cygnus, Lyra, Aquila, Ursa Major và Leo. Tiếp theo, tạo một hàm nhận vào
+    một tham số dạng chuỗi duy nhất. Trong hàm này, duyệt qua mảng thứ nhất để tìm tên ngôi sao.
+    Nếu tìm thấy, trả lại giá trị tương ứng với chỉ số đó ở mảng thứ hai. Nói cách khác, trả lại
+    tên chòm sao của ngôi sao đó. Trong phần <body> của trang web, dùng hộp thoại prompt để người
+dùng nhập vào tên của ngôi sao, sau đó gọi hàm với thông tin đầu vào. Đừng quên xử lý trong
+trường hợp không tìm thấy ngôi sao nào. Cho kết quả hiển thị trên màn hình.
+</p>
+<input type="button" value="Show Ex5" onclick="ex5()">
+<p id='resultEx5'>Result:</p>
+
+
+
+
+</body>
+
+<script>
+    // Exercise 1:
+    function alertMessage() {
+        alert("Xin chào");
+
+    }
+
+
+    // Exercise 2:
+    function ex2() {
+        let getValueEx2 = parseFloat(document.getElementById("inputValueEx2").value);
+        let resultEx2 = increaseNumber(getValueEx2);
+        document.getElementById("resultEx2").innerHTML = "Result (after increase 1): " + resultEx2;
+    }
+    function increaseNumber(value) {
+        let number = parseFloat(value);
+        number++;
+        return number;
+    }
+
+    // Exercise 3:
+    function ex3() {
+        let getValueEx3A = parseFloat(document.getElementById("inputValueEx3A").value);
+        let getValueEx3B = parseFloat(document.getElementById("inputValueEx3B").value);
+        let resultEx3 = sumEx3(getValueEx3A, getValueEx3B);
+        document.getElementById("resultEx3").innerHTML = "Result (after complete): " + resultEx3;
+    }
+    function sumEx3(value3A, value3B) {
+        let valueA = value3A;
+        let valueB = value3B;
+        if (valueA>valueB){
+            alert("value A > value B" )
+            return "value A > value B";
+        }
+        else{
+            return valueA+valueB;
+        }
+    }
+    // Exercise 4:
+    function addNumbers() {
+        firstNum = 4;
+        secondNum = 8;
+        resultEx4 = firstNum + secondNum;
+        return resultEx4;
+    }
+    function ex4(){
+        resultEx4 = 0;
+        alert(resultEx4);
+        resultEx4 = addNumbers();
+        alert(resultEx4);
+    }
+
+    // Exercise 5:
+    function ex5() {
+        let stringEx5 = prompt("Enter star's name: ");
+        let indexEx5 =  checkStars(stringEx5);
+        let resultEx5;
+        let constellations = [ "Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major" , "Leo"];
+        if (isNaN(indexEx5)){
+            resultEx5 = indexEx5;
+            document.getElementById("resultEx5").innerHTML = "Result: " + resultEx5;
+        }else {
+            resultEx5 = constellations[indexEx5];
+            document.getElementById("resultEx5").innerHTML = "Result: The constellation <b>" + resultEx5 +
+                "</b> belongs to the star <b>" + stringEx5 +"</b>";
+        }
+    }
+
+    function checkStars(nameStar) {
+        let getNameStars = nameStar;
+        let stars = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        for (let i = 0; i<stars.length;i++){
+            if (stars[i] == getNameStars){
+                return i;
+            }
+        }
+        return "Star have been not found"
+    }
+
+
+
+
+
+
+</script>
+
+</html>

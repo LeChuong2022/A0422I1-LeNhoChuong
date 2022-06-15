@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng vui Faking Textarea on Typing</title>
+    <style>
+        p {
+            text-align: center
+        }
+    </style>
+</head>
+<body>
+
+<h2 style="text-align: center"> Type anthing slowly</h2>
+
+<p id="draftID" ><textarea rows="10" cols="50" id="textInput" autofocus oninput="changeWord()" onfocus="this.setSelectionRange(this.value.length,this.value.length);" ></textarea></p>
+
+
+
+
+</body>
+
+<script>
+    let text = "TÔI LÀ MỘT ĐỨA NGỐC!!";
+    let array = new Array();
+    for (let i = 0; i < text.length; i++) {
+        array[i] = text[i];
+    }
+
+    function changeWord() {
+        let result = new Array();
+        let input = document.getElementById("textInput").value;
+        if (input.length <= array.length){
+            for (let i = 0; i < input.length; i++) {
+                result[i] = array[i];
+            }
+        }
+        document.getElementById("textInput").value =  result.join("") ;
+    }
+
+
+</script>
+
+</html>

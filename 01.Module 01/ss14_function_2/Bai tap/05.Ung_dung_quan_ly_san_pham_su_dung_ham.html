@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng quản lý sản phẩm sử dụng hàm</title>
+    <style>
+        .buttonProduct{
+            background-color: limegreen;
+            color: white;
+            height:30px;
+            width:100px;
+        }
+        .inputProduct{
+            height:25px;
+
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+<p id="productManagementApp"></p>
+
+</body>
+
+
+<script>
+    function showData(){
+        let data = "<h3>Add New Product</h3>" + "<table bgcolor='#d3d3d3'  height = '80' width='300' style='text-align: center'><tr><td> <input type='text' id='idNewProduct' class='inputProduct'>" +
+            "<button onclick='addNewProduct()' class='buttonProduct'>Add</button></td></tr></table>" + "<h3>Display All Product</h3>";
+        data += "<table  height='100' cellspacing='0' cellpadding='10' style='text-align: left' >";
+        data += "<colgroup> <col width='300' span='1'> <col width='200' span='2'>"
+
+        data += "<tr> <td colspan='2'><b>Product Name</b></td> <td style='color: #d61b06;  text-align: right' > <b>"+ array.length +" products </b></td> </tr>"
+
+        for (let i = 0; i < array.length; i++) {
+            if (i == 0 || i % 2 == 0){
+                data += "<tr><td>" + array[i] + "</td> <td><button id='buttonEdit" + i + "' onclick='editProduct(this.id)' class='buttonProduct' > Edit </button></td> <td><button id='buttonDelete" + i + "' onclick='deleteProduct(this.id)' class='buttonProduct'> Delete </button></td> </tr>"
+            }
+            else {
+                data += "<tr bgcolor='#d3d3d3'><td>" + array[i] + "</td> <td><button id='buttonEdit" + i + "' onclick='editProduct(this.id)' class='buttonProduct' > Edit </button></td> <td><button id='buttonDelete" + i + "' onclick='deleteProduct(this.id)' class='buttonProduct'> Delete </button></td> </tr>"
+            }
+        }
+        productManagementShow.innerHTML = data;
+    }
+    function addNewProduct() {
+        let getValue = document.getElementById("idNewProduct").value;
+        if (getValue != "") {
+            array.push(getValue);
+            showData();
+        }
+
+    }
+
+    function editProduct(clickedID) {
+        let check = clickedID.slice(10);
+        array[check] = prompt("Edit product");
+        showData();
+    }
+
+
+    function deleteProduct(clickedID) {
+        let check = clickedID.slice(12);
+        array.splice(check,1);
+        showData();
+
+
+
+
+    }
+    let productManagementShow = document.getElementById("productManagementApp");
+    let array = new Array();
+    array = ["Sony Xperia", "Samsung Galaxy", "Nokia 6", "Xiaomi Redmi Note 4",
+        "Apple Iphone 6S", "Xiaomi Mi 5s Plus", "Apple iPhone 8 Plus", "Fujitsu F-04E", "Oppo A71"
+    ]
+    showData();
+
+</script>
+</html>
