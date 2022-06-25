@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vẽ hình chữ nhật rỗng</title>
+</head>
+<body>
+<p>Bài 1: Vẽ hình chữ nhật rỗng chiều dài n và chiều rộng m theo hình dưới đây. </p>
+<p id="ex1"></p>
+
+
+</body>
+<script>
+    let n = prompt("Enter length of the rectangle (integer value>0): ");
+    let m = prompt("Enter width of the rectangle (integer value>0): ");
+    let compareN = parseFloat(n);
+    let compareM = parseFloat(m);
+    n = parseInt(n);
+    m = parseInt(m);
+    let show = "";
+    if (isNaN(n) || isNaN(m) || compareN != n || compareM != m || n <=0 || m<= 0){
+        alert("Please enter integer number >0")
+    }
+    else {
+        for (let i = 1; i <=m; i++){
+            for (let j = 1; j <=n ; j++){
+                if (i ==1 || i == m){
+                    show += " x ";
+                }
+                else {
+                    if (j == 1 || j == n){
+                        show += " x ";
+                    }
+                    else {
+                        show += " &nbsp;&nbsp; ";
+                    }
+
+                }
+            }
+            show += "<br>";
+        }
+        document.getElementById("ex1").innerHTML = show;
+    }
+
+
+</script>
+</html>

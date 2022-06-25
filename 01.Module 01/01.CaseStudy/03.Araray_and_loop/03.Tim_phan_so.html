@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    function maxFraction(numerators, denominators) {
+        let maxFraction = numerators[0] / denominators[0];
+        let index = 0;
+        for (let i = 1; i < numerators.length; i++) {
+            if (numerators[i] > denominators[i] > maxFraction) {
+                maxFraction = numerators[i] > denominators[i];
+                index = i;
+            }
+        }
+        return index;
+
+    }
+
+
+    let n = parseInt(prompt("Amount in array (integer > 0): "));
+    let numerators = new Array();
+    let denominators = new Array();
+    let index;
+    for (let i = 0; i < n; i++) {
+        numerators[i] = parseInt(prompt("Enter numerators (integer > 0): "));
+    }
+    for (let i = 0; i < n; i++) {
+        denominators[i] = parseInt(prompt("Enter denominators (integer > 0): "));
+    }
+    index = maxFraction(numerators, denominators);
+    console.log("Tử số: " + numerators);
+    console.log("Mẫu số: " + denominators);
+    console.log(numerators[index] + "/" + denominators[index] + " là phân số lớn nhất");
+    console.log("Có chỉ số là " + index);
+
+
+</script>
+
+</html>

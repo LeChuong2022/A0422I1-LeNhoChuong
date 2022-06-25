@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class ElectricLamp {
+        constructor(status) {
+            this.status = status;
+        }
+
+        turnOff() {
+            this.status = false;
+        }
+
+        turnOn() {
+            this.status = true;
+        }
+    }
+
+    class SwitchButton{
+        constructor(status, lamp) {
+            this.status = status;
+            this.lamp = lamp;
+        }
+        connectToLamp(electricLamp){
+            this.lamp = electricLamp;
+        }
+        switchOff(){
+            this.status = false;
+            this.lamp.turnOff();
+        }
+        switchOn(){
+            this.status = true;
+            this.lamp.turnOn();
+        }
+    }
+    let electricalLamp = new ElectricLamp(false);
+    let switchButton = new SwitchButton(false, electricalLamp);
+    console.log("Switch: " + switchButton.status);
+    console.log("Lamp: " + electricalLamp.status);
+    switchButton.switchOn();
+    console.log("Switch: " + switchButton.status);
+    console.log("Lamp: " + electricalLamp.status);
+    switchButton.switchOn();
+    console.log("Switch: " + switchButton.status);
+    console.log("Lamp: " + electricalLamp.status);
+    switchButton.switchOff();
+    console.log("Switch: " + switchButton.status);
+    console.log("Lamp: " + electricalLamp.status);
+    let electricalLampA = new ElectricLamp(false);
+    switchButton.connectToLamp(electricalLampA);
+    switchButton.switchOn();
+    console.log("Switch: " + switchButton.status);
+    console.log("Lamp: " + electricalLamp.status);
+    console.log("LampA: " + electricalLampA.status);
+    switchButton.switchOff();
+    console.log("Switch: " + switchButton.status);
+    console.log("Lamp: " + electricalLamp.status);
+    console.log("LampA: " + electricalLampA.status);
+    // switchButton.connectToLamp(8);
+    //
+    // console.log("status: " + switchButton.lamp);
+
+</script>
+</body>
+</html>

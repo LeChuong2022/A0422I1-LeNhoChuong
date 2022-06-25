@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+</head>
+<body>
+<div id="idOrder">
+
+</div>
+</body>
+<script>
+    // function editPrice(i){
+    //     let newPrice = parseInt(prompt("Enter new price: "));
+    //     document.getElementById("priceBeverage" + i).innerHTML = newPrice;
+    //     // showMenuHTML();
+    //
+    // }
+    function showMenuHTML() {
+        document.getElementById("idOrder").innerHTML = showMenu;
+
+    }
+
+    function calTotalPrice() {
+        let quantity = new Array();
+        let totalPrice = 0;
+        for (let i = 0; i < beverages.length; i++) {
+            let priceEachBeverage = 0;
+            if (isNaN(parseInt(document.getElementById("idQuantity" + i).value))) {
+                quantity[i] = 0;
+            } else {
+                quantity[i] = parseInt(document.getElementById("idQuantity" + i).value);
+            }
+            if (quantity[i]<0){
+                quantity[i] = "null";
+            }
+            priceEachBeverage = quantity[i] * priceBeverage[i];
+            if (quantity[i] == 0) {
+                document.getElementById("idPrice" + i).innerHTML = "";
+            } else {
+                document.getElementById("idPrice" + i).innerHTML = priceEachBeverage;
+            }
+            totalPrice += priceEachBeverage;
+        }
+        document.getElementById("idTotalPrice").innerHTML = totalPrice;
+
+    }
+
+
+    let beverages = ["Cafe", "Cam Vắt", "Nước ép cà rốt", "Nước ép cà chua", "Nước lọc", "Nước dừa"];
+    let priceBeverage = [10000, 12000, 15000, 18000, 6000, 20000]
+    let showMenu = "<div id='idOrder'> <h3>MENU</h3> <table border='1'>" +
+        "<td>Đồ uống</td> <td>Giá tiền</td> <td>Số lượng</td> <td>Tổng tiền</td>";
+    for (let i = 0; i < beverages.length; i++) {
+        showMenu += "<tr id='idOrder" + i + "'><td >" + beverages[i] + "</td> <td style='text-align: right' id='idPriceBeverage" + i + "' > " + priceBeverage[i] +
+            " </td><td><input style='text-align: right' type='number' id='idQuantity" + i + "' oninput='calTotalPrice()' value=''> </td> <td style='text-align: right' id='idPrice" + i + "'></td> </tr>";
+    }
+    showMenu += "<tr><td colspan='3'><b>Tổng tiền</b></td> <td style='text-align: right' id='idTotalPrice'></td> </tr></table>" +
+        "<button style='height: 20px; width: 100px' type='button' onclick='showMenuHTML()' name='Reset'>Reset</button>";
+    showMenuHTML();
+
+
+</script>
+
+
+</html>

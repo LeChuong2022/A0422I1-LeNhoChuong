@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chương trình nhập lương nhân viên:</title>
+</head>
+<body>
+<p>Bài 1: Viết một chương trình để nhập lương nhân viên, tính thuế thu nhập và lương ròng (số tiền lương thực sự mà nhân viên đó nhận được).
+    Với các thông số giả sử như sau (không theo luật lương, chỉ là con số giả sử để dễ tính toán):
+    <br> 20% thuế thu nhập nếu lương là 15 triệu.
+    <br> 10% thuế thu nhập nếu lương từ 7 đến 15 triệu.
+    <br> 5% thuế thu nhập nếu lương dưới 7 triệu
+</p>
+<p> Lương nhân viên: </p> <input type="number" id="salary" oninput="salary()"> VNĐ
+<p id="resultTax"> Thuế phải chịu: </p>
+<p id="resultSalary"> Lương sau thuế: </p>
+</body>
+<script>
+    function salary(){
+        let getSalary = document.getElementById("salary").value;
+        let tax;
+        let percentTax;
+        let salary;
+        if (getSalary >= 15000000){
+            percentTax = 20;
+        }
+        else if (getSalary >= 7000000 && getSalary < 15000000){
+            percentTax = 10;
+        }
+        else {
+            percentTax = 5;
+        }
+        tax = getSalary * percentTax/100;
+        salary = getSalary - tax;
+        document.getElementById("resultTax").innerHTML = "Thuế phải chịu: " + tax + "VND (" + percentTax + "%)";
+        document.getElementById("resultSalary").innerHTML = "Lương sau thuế: " + salary + "VND";
+    }
+
+
+
+</script>
+
+</html>

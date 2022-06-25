@@ -62,8 +62,11 @@
 
 
     function deleteProduct(clickedID) {
-        let check = clickedID.slice(12);
-        array.splice(check,1);
+        let check = confirm("Are you sure");
+        if (check == true){
+            let check = clickedID.slice(12);
+            array.splice(check,1);
+        }
         showData();
 
 

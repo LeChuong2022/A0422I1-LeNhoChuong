@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vẽ tam giác vuông cân rỗng</title>
+</head>
+<body>
+<p>Bài 2: Vẽ tam giác vuông cân rỗng có chiều cao h. </p>
+<p id="ex2"></p>
+
+
+
+</body>
+<script>
+    let n = prompt("Enter the length of one side of the triangle (integer value>0): ");
+    let compareN = parseFloat(n);
+    n = parseInt(n);
+    let show = "";
+    if (isNaN(n) || n <=0 || compareN !=n){
+        alert("Please enter integer number >0")
+    }
+    else {
+        for (let i = 1; i <= n; i++){
+            for (let j = 1; j <= i; j++){
+                if (j == 1 || i == j || i == n){
+                    show += " x ";
+                }
+                else {
+                    show += " &nbsp;&nbsp; ";
+                }
+            }
+            show += "<br>";
+        }
+        document.getElementById("ex2").innerHTML = show;
+    }
+
+
+</script>
+
+</html>

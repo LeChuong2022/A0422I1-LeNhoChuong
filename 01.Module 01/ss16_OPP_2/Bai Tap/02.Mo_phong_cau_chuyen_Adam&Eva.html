@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Apple {
+        constructor(weight) {
+            this.weight = weight;
+        }
+
+        decrease() {
+            if (this.isEmpty)
+                this.weight--;
+        }
+
+        isEmpty() {
+            return this.weight === 0;
+        }
+
+        getWeight() {
+            return this.weight
+        }
+    }
+
+    class Human {
+        constructor(name, gender, weight, apple) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+            this.apple = apple;
+        }
+
+        setApple(apple) {
+            this.apple = apple;
+        }
+
+        isMale() {
+            return this.gender === "male";
+        }
+
+        setGender(gender) {
+            this.gender = gender;
+        }
+
+        checkAppleWeight() {
+            return this.apple.isEmpty();
+        }
+
+        eatApple() {
+            if (!this.checkAppleWeight()) {
+                this.apple.decrease();
+                this.weight++;
+            }
+        }
+
+        say(saySomething) {
+            console.log(saySomething);
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        setWeight(weight) {
+            this.weight = weight;
+        }
+
+
+    }
+
+    let apple = new Apple(10);
+    let humanAdam = new Human();
+    let humanEva = new Human();
+    humanAdam.setApple(apple);
+    humanEva.setApple(apple);
+    humanAdam.setName("Adam");
+    humanAdam.setGender("male");
+    humanAdam.setWeight(80);
+    humanEva.setName("Eva");
+    humanEva.setGender("female");
+    humanEva.setWeight(60);
+    humanAdam.say("Hello Eva, Do you eat apple?");
+    humanEva.say("Yes");
+    humanEva.eatApple();
+    console.log("Apple: " + apple.getWeight());
+    console.log("Adam: " + humanAdam.getWeight());
+    console.log("Eva: " + humanEva.getWeight());
+    humanEva.say("You eat apple, don't you?");
+    humanAdam.eatApple();
+    console.log("Apple: " + apple.getWeight());
+    console.log(humanAdam.isMale());
+    console.log(humanEva.isMale());
+    while (!apple.isEmpty()){
+        humanAdam.eatApple();
+        humanEva.eatApple();
+        console.log("Apple: " + apple.getWeight());
+        console.log("Adam: " + humanAdam.getWeight());
+        console.log("Eva: " + humanEva.getWeight());
+    }
+    humanAdam.eatApple();
+    humanEva.eatApple();
+    console.log("Apple: " + apple.getWeight());
+    console.log("Adam: " + humanAdam.getWeight());
+    console.log("Eva: " + humanEva.getWeight());
+    console.log(humanAdam.getName());
+    console.log(humanEva.getName());
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+
+    function prefixSums(a) {
+        let array = new Array();
+        for (let i = 0; i < a.length; i++) {
+            array[i] = 0;
+            for (let j = 0; j <= i; j++) {
+                array[i] += a[j];
+            }
+        }
+        return array;
+    }
+
+    let a = new Array();
+    let n = parseInt(prompt("Amount in array (integer>0): "));
+    for (let i = 0; i < n; i++) {
+        a[i] = parseInt(prompt("Enter a number (integer>0): "));
+    }
+    let b = prefixSums(a)
+    console.log(a);
+    console.log(b);
+
+</script>
+</body>
+</html>

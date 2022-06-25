@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+</head>
+<body>
+<div id="idOrder">
+
+</div>
+</body>
+<script>
+    function showMenuHTML() {
+        document.getElementById("idOrder").innerHTML = showMenu;
+
+    }
+
+    function calTotalPrice(arrayCode, arrayAmount) {
+        let totalPrice = 0;
+        let quantity = new Array();
+        for (let i = 0; i < arrayCode.length; i++) {
+            let priceEachBeverage = 0;
+            quantity[arrayCode[i]] = arrayAmount[i];
+            priceEachBeverage = quantity[arrayCode[i]] * priceBeverage[arrayCode[i]];
+            document.getElementById("idQuantity" + arrayCode[i]).innerHTML = quantity[arrayCode[i]];
+            document.getElementById("idPrice" + arrayCode[i]).innerHTML = priceEachBeverage;
+            totalPrice += priceEachBeverage;
+        }
+        document.getElementById("idTotalPrice").innerHTML = totalPrice;
+    }
+
+    function enterOrderCode() {
+        showMenuHTML();
+        let code;
+        let amount;
+        let arrayCode = new Array();
+        let arrayAmount = new Array();
+        do {
+            code = parseInt(prompt("Nhập mã gọi món: "));
+            if (code < 7 && code>0) {
+                arrayCode.push(code - 1);
+                do {
+                    amount = parseInt(prompt("Nhập số lượng của " + beverages[code - 1] + " (giá tiền của một món là: " + priceBeverage[code - 1] + "):  "));
+                }
+                while (amount < 0)
+                arrayAmount.push(amount);
+            }
+            else if (code !=7) {
+                alert("Vui lòng nhập mã code từ 0 đến 6 để gọi món và 7 để thoát");
+            }
+        }
+        while (code != 7)
+        if (arrayCode.length != 0) {
+            calTotalPrice(arrayCode, arrayAmount);
+        }
+    }
+
+    let beverages = ["Cafe", "Cam Vắt", "Nước ép cà rốt", "Nước ép cà chua", "Nước lọc", "Nước dừa"];
+    let priceBeverage = [10000, 12000, 15000, 18000, 6000, 20000];
+    let showMenu = "<div id='idOrder'> <h3>MENU</h3> <table border='1'>" +
+        "<tr style='text-align: center; background-color: darkgray;'> <th> STT </th> <th>Đồ uống</th> <th>Giá tiền</th> <th style='width: 80px'>Số lượng</th> <th>Tổng tiền</th></tr>";
+    for (let i = 0; i < beverages.length; i++) {
+        showMenu += "<tr id='idOrder" + i + "'> <td style='text-align: center'> " + (i + 1) + " </td> <td >" + beverages[i] + "</td> <td style='text-align: right' id='idPriceBeverage" + i + "' > " + priceBeverage[i] +
+            " </td><td style='text-align: right; width: 20px' id='idQuantity" + i + "' > </td> <td style='text-align: right' id='idPrice" + i + "'></td> " +
+            "</td> </tr>";
+    }
+    showMenu += "<tr><td colspan='4'><b>Tổng tiền</b></td> <td style='text-align: right' id='idTotalPrice'></td> </tr></table> " +
+            "<p>Nhập code từ 1 đến 6 để gọi món và code bằng 7 để thoát<br></p> "+
+        "<button style='height: 20px; width: 100px' type='button' onclick='enterOrderCode()' >Order</button> <br>" +
+        "<button style='height: 20px; width: 100px' type='button' onclick='showMenuHTML()' >Reset</button>";
+    showMenuHTML();
+
+
+</script>
+
+
+</html>

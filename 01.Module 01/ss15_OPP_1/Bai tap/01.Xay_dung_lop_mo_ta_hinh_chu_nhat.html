@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả hình chữ nhật</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1368px" height="768px" style="border: 1px solid #d3d3d3;"></canvas>
+<p> Height of rectangle: <input id="heightRectangle" type="number"></p>
+<p> Width of rectangle: <input id="widthRectangle" type="number"></p>
+<p id="areaRectangle">Area of the rectangle: </p>
+<p id="primeterRectangle">Primeter of the rectangle: </p>
+<input type="button" value="Show Result" onclick="showRectangle()"></input>
+</body>
+<script>
+    class Rectangle {
+        constructor(heightRectangle, widthRectangle) {
+            this.heightRectangle = heightRectangle;
+            this.widthRectangle = widthRectangle;
+        }
+
+        getArea() {
+            return this.heightRectangle * this.widthRectangle;
+        }
+
+        getPerimeter() {
+            return 2 * (this.heightRectangle + this.widthRectangle);
+        }
+
+        createRectangle() {
+            var ctx = document.getElementById("myCanvas").getContext("2d");
+            ctx.beginPath();
+            ctx.fillStyle = "#fa4b2a";
+            ctx.fillRect(0, 0, this.heightRectangle, this.widthRectangle);
+        }
+    }
+    function showRectangle() {
+        let height = parseInt(document.getElementById("heightRectangle").value);
+        let width = parseInt(document.getElementById("widthRectangle").value);
+        var rectangle = new Rectangle(height, width);
+        rectangle.createRectangle();
+        document.getElementById("areaRectangle").innerHTML = "Area of the rectangle: " + rectangle.getArea();
+        document.getElementById("primeterRectangle").innerHTML = "Primeter of the rectangle: " +rectangle.getPerimeter();
+    }
+
+
+
+</script>
+</html>
