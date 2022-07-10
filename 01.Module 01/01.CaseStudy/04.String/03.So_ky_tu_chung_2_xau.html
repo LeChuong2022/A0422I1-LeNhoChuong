@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function getCommonCharacter(str1, str2) {
+        let arr1 = Array.from(str1);
+        let arr2 = Array.from(str2);
+        let commonCharacter = new Array();
+        for (let i = 0; i< arr1.length; i++){
+            let index = arr2.indexOf(arr1[i]);
+            if (index != -1){
+                commonCharacter.push(arr1[i]);
+                arr2.splice(index,1);
+            }
+        }
+        return commonCharacter.join("");
+    }
+    function specificCommonCharacter(string){
+        let arrCommonCharacter = new Array();
+        let arrNumberOfTimesAppear = new Array();
+        let arrString = Array.from(string);
+        let showResult = "";
+        for (let i = 0; i< arrString.length; i++){
+            arrCommonCharacter.push(arrString[i]);
+            let count = 1;
+            let index;
+            do {
+                index = arrString.indexOf(arrString[i],i+1);
+                if (index != -1){
+                    count++;
+                    arrString.splice(index,1);
+                }
+            }
+            while (index != -1)
+            arrNumberOfTimesAppear.push(count);
+        }
+        for (let i = 0; i < arrCommonCharacter.length; i++){
+            showResult += "Ký tự " + arrCommonCharacter[i] + " xuất hiện " + arrNumberOfTimesAppear[i] + " lần. ";
+        }
+        console.log(showResult);
+    }
+
+
+    let str1 = prompt("Nhập 1 chuỗi str1: ");
+    let str2 = prompt("Nhập 1 chuỗi str2: ");
+    console.log("string 1: " + str1);
+    console.log("string 2: " + str2);
+    let commonCharacter = getCommonCharacter(str1, str2);
+    console.log("Chuỗi ký tự chung là: " + commonCharacter);
+    specificCommonCharacter(commonCharacter);
+
+
+
+
+
+
+</script>
+</html>

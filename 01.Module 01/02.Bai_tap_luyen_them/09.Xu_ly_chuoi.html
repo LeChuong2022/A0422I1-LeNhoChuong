@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<span>
+    9.	Nhập vào một chuỗi ký tự  thực hiện công việc sau: <br>
+a.	In ra chuỗi đảo ngược của chuỗi đã cho<br>
+b.	Đổi chuổi đã cho sang chữ hoa<br>
+c.	Đổi chuỗi đã cho sang chữ thường<br>
+d.	Đổi chuỗi đã cho sang vừa chữ hoa vừa chữ thường (các ký tự chữ hoa thì thành chữ thường và ngược lại)
+
+</span>
+</body>
+<script>
+    function reverseString(str) {
+        let string = "";
+        for (let i = str.length - 1; i >= 0; i--) {
+            string = string.concat(str[i]);
+        }
+        return string;
+    }
+
+    function lowerCaseToUpperCase(str) {
+        let string = "";
+        for (let i = 0; i<str.length; i++){
+            string = string.concat(str[i].toUpperCase());
+        }
+        return string;
+    }
+
+    function upperCaseToLowerCase(str) {
+        let string = "";
+        for (let i = 0; i< str.length; i++){
+            string = string.concat(str[i].toLowerCase());
+        }
+        return string;
+    }
+
+    function changeUpperCaseAndLowerCase(str) {
+        let string = "";
+        for (let i = 0; i < str.length; i++){
+            if (str[i].toLowerCase() == str[i]){
+                string = string.concat(str[i].toUpperCase());
+            }
+            else {
+                string = string.concat(str[i].toLowerCase());
+            }
+        }
+        return string;
+    }
+
+    let str = prompt("Nhập 1 chuỗi");
+    document.write("Giá trị của chuỗi: " +str + "<br>");
+    document.write("In ra chuỗi đảo ngược: " + reverseString(str)+ "<br>");
+    document.write("Đổi chuỗi đã cho ra chữ hoa: " + lowerCaseToUpperCase(str)+ "<br>");
+    document.write("Đổi chuỗi đã cho ra chữ thường: " + upperCaseToLowerCase(str)+ "<br>");
+    document.write("Ký tự hoa thành thường và ngược lại: " + changeUpperCaseAndLowerCase(str));
+
+
+</script>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function getGreatestCommonDivisor(a, b) {
+        if (a > b) {
+            for (let i = b; i > 0; i--) {
+                if (b % i == 0 && a % i == 0) {
+                    return i;
+                }
+            }
+        } else {
+            for (let i = a; i > 0; i--) {
+                if (b % i == 0 && a % i == 0) {
+                    return i;
+                }
+            }
+        }
+    }
+
+    function getLeastCommonMultiple(a, b) {
+        if (a > b) {
+            let i = 1;
+            while (1) {
+                if (a * i % b == 0) {
+                    return a * i;
+                }
+                i++;
+            }
+        } else {
+            let i = 1;
+            while (1) {
+                if (b * i % a == 0)
+                    return b * i;
+                i++;
+            }
+        }
+    }
+
+    let a = parseInt(prompt("Nhập giá trị nguyên dương: a = "));
+    let b = parseInt(prompt("Nhập giá trị nguyên dương: b = "));
+    document.write("<br>Giá trị a = " + a);
+    document.write("<br>Giá trị b = " + b);
+    document.write("<br>Ước số chung lớn nhất = " + getGreatestCommonDivisor(a, b));
+    document.write("<br>Bội số chung nhỏ nhất = " + getLeastCommonMultiple(a, b));
+
+
+</script>
+
+
+</html>

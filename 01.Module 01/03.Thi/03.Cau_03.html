@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function getElementInArray(arr, n) {
+        let resultArray = new Array();
+        for (let i = 0; i < arr.length; i++){
+            if (arr[i] % n ==0 ){
+                if (resultArray.indexOf(arr[i]) == -1){
+                    resultArray.push(arr[i]);
+                }
+            }
+        }
+        return resultArray.length;
+    }
+
+    let n = prompt("Nhập số nguyên dương n: ");
+    let checkInteger1 = n;
+    n = parseInt(n);
+    let array = new Array();
+    let amountElementInArray = prompt("Nhập vào số lượng phần tử của mảng: ");
+    let checkInteger2 = amountElementInArray;
+    amountElementInArray = parseInt(amountElementInArray);
+
+    if (isNaN(amountElementInArray) || amountElementInArray != checkInteger2 || amountElementInArray < 0 || isNaN(n) || n != checkInteger1 ) {
+        alert("Vui lòng nhập lại số lượng phần tử của mảng (là số nguyên dương) và số nguyên n (là số nguyên dương)");
+    } else {
+        for (let i = 0; i < amountElementInArray; i++) {
+            array[i] = parseInt(prompt("Nhập giá trị của array[" + i + "]:"));
+        }
+
+        document.write("Số lượng phần tử khác nhau trong mảng [" + array + "] chia hết cho " + n + " là: " + getElementInArray(array, n));
+    }
+
+
+
+
+
+
+</script>
+
+</html>

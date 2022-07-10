@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    10. Nhập một chuổi ký tự tuỳ ý, sau đó thực hiện công việc sau:<br>
+    a. In mỗi từ trên mỗi dòng<br>
+    b. Đếm số từ có trong chuổi đã cho.<br>
+    b. Đưa ra bảng tần số xuất hiện của các từ.<br>
+
+
+</p>
+<script>
+    function checkWords(str) {
+        let checkLowerWord = "qwertyuiopasdfghjklzxcvbnm";
+        let checkUpperWord = checkLowerWord.toUpperCase();
+        let string = "";
+        for (let i = 0; i < str.length; i++) {
+            if (checkLowerWord.indexOf(str[i]) != -1 || checkUpperWord.indexOf(str[i]) != -1) {
+                string = string.concat(str[i]);
+            }
+        }
+        return string;
+    }
+
+    function printString(str) {
+        str = checkWords(str);
+        document.write("In mỗi từ trên mỗi dòng: <br>");
+        for (let i = 0; i < str.length; i++) {
+            document.write(str[i] + "<br>");
+        }
+    }
+
+    function countWord(str) {
+        str = checkWords(str);
+        return str.length;
+    }
+
+    function frequencyOfAppearance(str) {
+        let words = new Array();
+        let timesOfAppearance = new Array();
+        str = checkWords(str);
+        for (let i = 0; i < str.length; i++) {
+            let countWord = 1;
+            let index = i + 1;
+            do {
+                index = str.indexOf(str[i], index);
+                if (index != -1) {
+                    countWord++;
+                    str = str.slice(0, index) + str.slice(index + 1);
+                }
+            }
+            while (str.indexOf(str[i], index) != -1 && index != -1)
+            words.push(str[i]);
+            timesOfAppearance.push(countWord);
+        }
+        document.write("<table border='1'> <tr> <th>STT</th>  <th>Giá trị</th> <th> Số lần xuất hiện</th></tr>")
+        for (let i = 0; i < words.length; i++) {
+            document.write("<tr> <td>" + (i+1) + "</td> <td> " + words[i] + "</td> <td>" + timesOfAppearance[i] + "</td>" );
+        }
+        document.write("</table>");
+
+    }
+
+
+    let string = prompt("Nhập một chuỗi");
+    document.write("Chuỗi nhập là: " + string + "<br>");
+    printString(string);
+    document.write("Số từ trong chuỗi đã cho: " + countWord(string) + "<br>");
+    frequencyOfAppearance(string);
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+
+<script>
+    function enterNumber() {
+        let n = prompt("Nhập số nguyên dương n (với n>0): ");
+        let checkInteger = n;
+        n = parseInt(n);
+        if (isNaN(n) || n != checkInteger || n < 0) {
+            alert("Vui lòng nhập lại n là số nguyên dương (với n>0)");
+            n = enterNumber();
+            return n;
+        } else {
+            return n;
+        }
+    }
+
+    let n = enterNumber();
+    console.log(n);
+    let result = "";
+    result += "Các ước số của " + n + " : <br>";
+    for (let i = 1; i <= n; i++) {
+        if (n % i == 0) {
+            result += i + " ";
+        }
+    }
+
+    document.write(result);
+</script>
+
+</html>

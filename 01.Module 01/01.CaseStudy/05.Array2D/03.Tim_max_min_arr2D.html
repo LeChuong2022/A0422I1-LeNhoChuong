@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function getMaxArr2D(arr) {
+        let maxInArr2D = arr[0][0];
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++) {
+                if (arr[i][j] > maxInArr2D) {
+                    maxInArr2D = arr[i][j];
+                }
+            }
+        }
+        return maxInArr2D;
+    }
+
+    function getMinArr2D(arr) {
+        let minInArr2D = arr[0][0];
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++) {
+                if (arr[i][j] < minInArr2D) {
+                    minInArr2D = arr[i][j];
+                }
+            }
+        }
+        return minInArr2D;
+    }
+
+    let m = parseInt(prompt("Nhập kích thước mảng m x n, với m: "));
+    let n = parseInt(prompt("Nhập kích thước mảng m x n, với n: "));
+    let arr2D = new Array();
+    for (let i = 0; i < m; i++) {
+        arr2D[i] = new Array();
+        for (let j = 0; j < n; j++) {
+            arr2D[i][j] = parseInt(prompt("Nhập giá trị của arr2D[" + i + "][" + j + "]"));
+        }
+    }
+    let maxInArr2D = getMaxArr2D(arr2D);
+    let minInArr2D = getMinArr2D(arr2D);
+    console.log("Giá trị mảng m x n: ");
+    console.log(arr2D);
+    console.log("Giá trị max của mảng: " + maxInArr2D);
+    console.log("Giá trị min của mảng: " + minInArr2D);
+
+
+
+</script>
+</html>

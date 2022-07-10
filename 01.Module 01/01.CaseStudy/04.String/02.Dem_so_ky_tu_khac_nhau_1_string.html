@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+</body>
+<script>
+    function countDifferentCharacter(str) {
+        let arr = Array.from(str);
+        let differentArray = new Array();
+        for (let i = 0; i < arr.length; i++) {
+            differentArray.push(arr[i]);
+            let index;
+            do {
+                index = arr.indexOf(arr[i], i + 1);
+                if (index != -1)
+                    arr.splice(index, 1);
+            }
+            while (index != -1)
+        }
+        return arr;
+    }
+    let str = prompt("Nhập 1 chuỗi kí tự: ");
+    console.log("Chuỗi ký tự đã nhập: " + str);
+    let differentCharacter = countDifferentCharacter(str);
+    console.log("Có " + differentCharacter.length + "ký tự khác nhau là: " + differentCharacter.join(", "));
+</script>
+</html>

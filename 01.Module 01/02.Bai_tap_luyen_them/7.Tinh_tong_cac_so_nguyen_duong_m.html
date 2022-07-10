@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function calSum(arr) {
+        let sum = 0;
+        for (let i = 0; i < arr.length; i++) {
+            sum += arr[i];
+        }
+        return sum;
+    }
+
+    function mulSum(arr) {
+        let mul = 1;
+        for (let i = 0; i < arr.length; i++) {
+            mul *= arr[i];
+        }
+        return mul;
+    }
+
+    let m = parseInt(prompt("Nhập giá trị số nguyên dương m: "));
+    let temp = m;
+    let arr = new Array();
+    let surplus;
+    while (temp != 0) {
+        surplus = temp % 10;
+        temp = Math.floor(temp / 10);
+        arr.push(surplus);
+    }
+    document.write("Nhập một số nguyên dương: m = " + m);
+    document.write("<br>TỔng các chữ số của số nguyên dương " + m + " = " + calSum(arr));
+    document.write("<br>Tích các chữ số của số nguyên dương " + m + " = " + mulSum(arr));
+
+
+</script>
+
+</html>

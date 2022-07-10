@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function getIndexMinAndMaxInArray(arr) {
+        let minInArray = arr[0];
+        let maxInArray = arr[0];
+        let resultArray = new Array();
+        for (let i = 1; i < arr.length; i++) {
+            if (arr[i] < minInArray) {
+                minInArray = arr[i];
+            }
+            if (arr[i] > maxInArray) {
+                maxInArray = arr[i];
+            }
+        }
+        let indexMinInArray = arr.indexOf(minInArray);
+        let indexMaxInArray = arr.indexOf(maxInArray);
+        resultArray[0] = indexMinInArray;
+        resultArray[1] = indexMaxInArray;
+        return resultArray;
+    }
+
+    let array = new Array();
+    let n = prompt("Nhập vào số lượng phần tử của mảng: ");
+    let checkInteger = n;
+    n = parseInt(n);
+    if (isNaN(n) || n != checkInteger || n < 0) {
+        alert("Vui lòng nhập lại số lượng phần tử của mảng là số nguyên dương (với n>0)");
+    } else {
+        for (let i = 0; i < n; i++) {
+            array[i] = parseInt(prompt("Nhập giá trị của array[" + i + "]:"));
+        }
+
+        document.write("Vị trí xuất hiện sớm nhất của phần tử có giá trị nhỏ nhất và lớn nhất của mảng [" + array + "] là:");
+        document.write("<br> [" + getIndexMinAndMaxInArray(array) + "]");
+    }
+
+
+</script>
+</html>

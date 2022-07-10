@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    12.	Viết chương trình thực hiện công việc sau:<br>
+    a.	Nhập ma trận a (m dòng, n cột) gồm các phần tử kiểu int<br>
+    b.	Tính tích các số là bội số của 3 nằm trên dòng đầu tiên của ma trận a.<br>
+    c.	Tạo ra mảng một chiều X[i] với X[i] là các giá trị lớn nhất trên dòng i của ma trận a<br>
+    d.	Xoá đi phần tử đầu tiên của mảng X[i], xuất lại mảng X[i].<br>
+
+    <br>
+</p>
+</body>
+
+<script>
+    function printArray2D(arr2D) {
+        let print = "arr2D = [ <br>";
+        for (let i = 0; i < arr2D.length; i++){
+            print += "["
+            for (let j = 0; j < arr2D[i].length; j++){
+                if (j == arr2D[i].length - 1)
+                    print += arr2D[i][j] + "] <br>";
+                else
+                    print += arr2D[i][j] + ", ";
+            }
+        }
+        print += "] <br>"
+        return print;
+    }
+    function printArray1D(arr) {
+        let print = "arr = [";
+        for (let i = 0; i < arr.length; i++){
+                if (i == arr.length - 1)
+                    print += arr[i];
+                else
+                    print += arr[i] + ", ";
+        }
+        print += "] <br>";
+        return print;
+    }
+
+    function multiplesOf3(arr2D) {
+        let mul = 1;
+        for (let i = 0; i < arr2D[0].length; i++){
+            if (arr2D[0][i] % 3 == 0){
+                mul *= arr2D[0][i];
+            }
+        }
+        if (mul == 1)
+            return "Không có số nào chia hết cho 3";
+        return mul;
+    }
+    function createMaxArray(arr2D) {
+        let maxArr = new Array();
+        for (let i = 0; i< arr2D.length;i++){
+            maxArr[i] = arr2D[i][0];
+            for (let j = 1; j < arr2D[i].length; j++){
+                if (arr2D[i][j]>maxArr[i]){
+                    maxArr[i] = arr2D[i][j];
+                }
+            }
+        }
+        return maxArr;
+
+    }
+    function deleteFirstElementInArray(arr) {
+        return arr.splice(0,1);
+    }
+
+    let m = parseInt(prompt("Nhập số lượng phần tử của mảng m x n, với m = "));
+    let n = parseInt(prompt("Nhập số lượng phần tử của mảng m x n, với n = "));
+    let array2D = new Array();
+    for (let i = 0; i< m; i++){
+        array2D[i] = new Array();
+        for (let j = 0; j < n; j++){
+            array2D[i][j] = parseInt(prompt("Nhập giá trị của array2D[" + i + "][" + j + "]"));
+        }
+    }
+    document.write(printArray2D(array2D));
+    document.write("Tích các bội số của 3 nằm ở dòng đầu tiên của ma trận: " + multiplesOf3(array2D) + "<br>");
+    let maxArray = createMaxArray(array2D);
+    document.write("Mảng chứa các giá trị lớn nhất trên các dòng i: X: " + printArray1D(maxArray));
+    deleteFirstElementInArray(maxArray);
+    document.write("Xóa đi phần tử đầu tiên của mảng X: " + printArray1D(maxArray));
+
+
+
+
+
+
+</script>
+</html>

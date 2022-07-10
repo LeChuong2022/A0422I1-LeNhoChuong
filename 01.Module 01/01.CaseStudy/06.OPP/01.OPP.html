@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .table{
+            width: 1000px;
+            height: 60px;
+        }
+    </style>
+</head>
+<body>
+<h3>
+    Xổ số codegym
+</h3>
+<table border="1" cellpadding="0" style="text-align: center ">
+    <colgroup span="7" width="50px"></colgroup>
+    <tr id="row1">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><input type="button" value="Vé 1" onclick="buyTicket(1)"></td>
+    </tr>
+    <tr id="row2">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><input type="button" value="Vé 2" onclick="buyTicket(2)"></td>
+    </tr>
+    <tr id="row3">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><input type="button" value="Vé 3" onclick="buyTicket(3)"></td>
+    </tr>
+    <tr id="row4">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><input type="button" value="Vé 4" onclick="buyTicket(4)"></td>
+    </tr>
+
+
+</table>
+
+</body>
+
+<script>
+    // class Vietlot{
+    //     constructor() {
+    //     }
+    //     enterNumbers(ticketIsBoughtCustomer){
+    //
+    //     }
+
+
+    //
+    //
+    //
+    // }
+
+
+    function buyTicket(nameTicket) {
+        let code = parseInt(prompt("Bạn có 2 lựa chọn: " +
+            "\n1.Bạn muốn tự chọn số" +
+            "\n2.Hệ thống tự chọn"));
+        let arrTicket = new Array();
+        if (code == 1){
+            for (let i = 0; i < 6; i++){
+                arrTicket[i] = parseInt(prompt("Vui lòng chọn số từ 0 đến 99"));
+                while (arrTicket[i] >99 || arrTicket[i] <0 || isNaN(arrTicket[i]) ){
+                    arrTicket[i] = parseInt(prompt("Vui lòng chọn lại số từ 0 đến 99"));
+                }
+            }
+        }
+        if (code == 2){
+
+        }
+
+
+
+
+    }
+
+</script>
+</html>

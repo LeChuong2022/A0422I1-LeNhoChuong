@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+</body>
+
+<script>
+    function normalization(string) {
+        let array = Array.from(string); // array = string.split('')
+        array[0] = array[0].toUpperCase();
+        for (let i = 1; i < array.length; i++) {
+            if (array[i - 1] == " " && array[i] == " ") {
+                array.splice(i, 1);
+                i--;
+            } else if (array[i - 1] != " ") {
+                array[i] = array[i].toLowerCase();
+            } else {
+                array[i] = array[i].toUpperCase();
+            }
+        }
+        if (array[array.length - 1] == " ") {
+            array.pop();
+        }
+        return array.join("");
+    }
+
+    function longString(string) {
+        let stringInArray = new Array();
+        let index = 0;
+        let start = 0;
+        do {
+            index = string.indexOf(" ", start);
+            if (index == -1) {
+                stringInArray.push(string.slice(start));
+            } else {
+                stringInArray.push(string.slice(start, index));
+                start = index + 1;
+            }
+        }
+        while (index != -1)
+        let maxString = stringInArray[0].length;
+        let indexMaxString = 0;
+        for (let i = 0; i < stringInArray.length; i++) {
+            if (stringInArray[i].length > maxString) {
+                maxString = stringInArray[i].length;
+                indexMaxString = i;
+            }
+        }
+        return stringInArray[indexMaxString];
+
+    }
+
+
+    let string = prompt("Enter a string: ");
+    console.log("Giá trị chuỗi nhập vào: " + string);
+    string = normalization(string);
+    console.log("Chuẩn hóa xâu ký tự: " + string);
+    console.log("Chuỗi kí tự dài nhất: " + longString(string));
+
+
+</script>
+</html>
