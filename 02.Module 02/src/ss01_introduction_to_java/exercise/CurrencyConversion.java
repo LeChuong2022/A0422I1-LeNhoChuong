@@ -10,6 +10,5 @@ public class CurrencyConversion {
         double dollarUSA = scanner.nextDouble();
         double vnd = rate * dollarUSA;
         System.out.printf("=> VND: " + vnd);
-
     }
 }
