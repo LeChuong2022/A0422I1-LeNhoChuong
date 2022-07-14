@@ -1,4 +1,4 @@
-package ss02_loop_and_array.practice;
+package ss02_and_03_loop_array_and_method.practice;
 
 import java.util.Scanner;
 
@@ -16,6 +16,5 @@ public class InterestCalculation {
             totalInterest += totalInterest * interestRate / 100 / 12;
         }
         System.out.println("Total of interest: " + totalInterest);
-
     }
 }

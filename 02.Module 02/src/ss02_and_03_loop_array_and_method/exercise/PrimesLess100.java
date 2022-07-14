@@ -1,4 +1,4 @@
-package ss02_loop_and_array.exercise;
+package ss02_and_03_loop_array_and_method.exercise;
 
 public class PrimesLess100 {
     public static void main(String[] args) {
@@ -6,16 +6,16 @@ public class PrimesLess100 {
         int prime = 2;
         System.out.println("Primes less than 100: ");
         while (prime < number) {
-            int checkPrime = 0;
+            boolean checkPrime = true;
             int i = 2;
             while (i <= Math.sqrt(prime)) {
                 if (prime % i == 0) {
-                    checkPrime++;
+                    checkPrime = false;
                     break;
                 }
                 i++;
             }
-            if (checkPrime == 0)
+            if (checkPrime)
                 System.out.print(prime + " ");
             prime++;
         }

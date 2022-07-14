@@ -1,4 +1,4 @@
-package ss02_loop_and_array.exercise;
+package ss02_and_03_loop_array_and_method.exercise;
 
 import java.util.Scanner;
 
@@ -60,7 +60,6 @@ public class DrawingShow {
             }
             System.out.println();
         }
-
     }
 
     static void printIsoscelesTriangle() {
