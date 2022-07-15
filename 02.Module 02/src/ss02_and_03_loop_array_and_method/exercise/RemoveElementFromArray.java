@@ -9,14 +9,18 @@ public class RemoveElementFromArray {
         int x;
         x = input.nextInt();
         int index;
+        int checkBreak;
         for (int i = 0; i < arr.length; i++) {
             if (x == arr[i]) {
                 index = i;
+                checkBreak = arr[i];
                 for (int j = index; j < arr.length - 1; j++) {
                     arr[j] = arr[j + 1];
+                    checkBreak += arr[j + 1];
                 }
                 arr[arr.length - 1] = 0;
                 i = -1;
+                if (checkBreak == 0) break;
             }
         }
         return arr;
