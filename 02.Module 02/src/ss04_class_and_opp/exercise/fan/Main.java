@@ -13,7 +13,7 @@ public class Main {
         fan2.setRadius(5);
         fan2.setColor("blue");
         System.out.println("Fan2: " + fan2.display());
-        Fan fan3 = new Fan();
-        System.out.println("Fan3: " + fan3.display());
+//        Fan fan3 = new Fan();
+//        System.out.println("Fan3: " + fan3.display());
     }
 }
