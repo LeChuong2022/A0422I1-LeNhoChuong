@@ -1,4 +1,5 @@
-package ss06_inheritance.practice.shape_object;
+package ss07_abstract_class_and_interface.exercise.interface_colorable_cho_cac_lop_hinh_hoc;
+
 
 public class Square extends Rectangle {
     public Square() {
@@ -33,6 +34,9 @@ public class Square extends Rectangle {
 
     @Override
     public String toString() {
-        return "A Square with side = " + getSide() + " which is a subclass of " + super.toString();
+        return "A Square with side = " + getSide() + " which is a subclass of " + "A Shape with color of "
+                + getColor()
+                + " and "
+                + (isFilled() ? "filled" : "not filled");
     }
 }

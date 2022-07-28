@@ -20,5 +20,9 @@ public class AbstractAndInterfaceTests {
         for (Fruit fruit : fruits) {
             System.out.println(fruit.howToEat());
         }
+
+//        Chicken chicken = new Chicken();
+//        System.out.println(chicken.makeSound());
+//        System.out.println(chicken.howToEat());
     }
 }

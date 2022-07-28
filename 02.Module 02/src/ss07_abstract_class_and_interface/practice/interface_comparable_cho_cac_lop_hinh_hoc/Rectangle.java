@@ -1,4 +1,4 @@
-package ss06_inheritance.practice.shape_object;
+package ss07_abstract_class_and_interface.practice.interface_comparable_cho_cac_lop_hinh_hoc;
 
 public class Rectangle extends Shape {
     private double width = 1.0;
@@ -44,6 +44,6 @@ public class Rectangle extends Shape {
 
     @Override
     public String toString() {
-        return "A Rectangle with width = " + width + " and length = " + length + ", which is a subclass of " + super.toString();
+        return "A Rectangle with width = " + width + " and length = " + length + ", which is a subclass of" + super.toString();
     }
 }

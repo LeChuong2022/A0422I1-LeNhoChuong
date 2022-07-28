@@ -1,4 +1,4 @@
-package ss06_inheritance.practice.shape_object;
+package ss07_abstract_class_and_interface.practice.interface_comparable_cho_cac_lop_hinh_hoc;
 
 public class Square extends Rectangle {
     public Square() {
@@ -17,8 +17,8 @@ public class Square extends Rectangle {
     }
 
     public void setSide(double side) {
-        super.setWidth(side);
-        super.setLength(side);
+        setWidth(side);
+        setLength(side);
     }
 
     @Override

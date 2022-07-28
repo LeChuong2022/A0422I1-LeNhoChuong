@@ -1,4 +1,4 @@
-package ss06_inheritance.practice.shape_object;
+package ss07_abstract_class_and_interface.exercise.interface_resizeable_cho_cac_lop_hinh_hoc;
 
 public class Rectangle extends Shape {
     private double width = 1.0;
@@ -35,15 +35,22 @@ public class Rectangle extends Shape {
     }
 
     public double getArea() {
-        return width * length;
+        return width * this.length;
     }
 
     public double getPerimeter() {
-        return (width + length) * 2;
+        return 2 * (width + this.length);
     }
 
     @Override
     public String toString() {
-        return "A Rectangle with width = " + width + " and length = " + length + ", which is a subclass of " + super.toString();
+        return "A Rectangle with width = "
+                + getWidth()
+                + " and length = "
+                + getLength()
+                + ", which is a subclass of "
+                + super.toString();
     }
 }
+
+
