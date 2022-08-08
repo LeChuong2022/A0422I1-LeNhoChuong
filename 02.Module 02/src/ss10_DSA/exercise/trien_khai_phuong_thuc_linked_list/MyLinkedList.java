@@ -2,7 +2,6 @@ package ss10_DSA.exercise.trien_khai_phuong_thuc_linked_list;
 
 public class MyLinkedList<E> {
     private Node head;
-    private Node tail;
     private int numNodes;
 
     public MyLinkedList() {
@@ -11,6 +10,7 @@ public class MyLinkedList<E> {
 
     public MyLinkedList(Object data) {
         head = new Node(data);
+        numNodes++;
     }
 
     public class Node {
@@ -26,16 +26,21 @@ public class MyLinkedList<E> {
         }
     }
 
-    public void add(int index, Object data) {
-        Node temp = head;
-        Node holder;
-        for (int i = 0; i < index - 1 && temp.next != null; i++) {
-            temp = temp.next;
+    public void add(int index, E data) {
+        if (index >= numNodes || index < 0)
+            throw new IndexOutOfBoundsException("Index: " + index + ", Size " + numNodes);
+        else if (index == 0)
+            addFirst(data);
+        else {
+            Node temp = head;
+            Node newNode = new Node(data);
+            for (int i = 0; i < index - 1 && temp.next != null; i++) {
+                temp = temp.next;
+            }
+            newNode.next = temp.next;
+            temp.next = newNode;
+            numNodes++;
         }
-        holder = temp.next;
-        temp.next = new Node(data);
-        temp.next.next = holder;
-        numNodes++;
     }
 
     public void addFirst(E data) {
@@ -43,21 +48,12 @@ public class MyLinkedList<E> {
         head = new Node(data);
         head.next = temp;
         numNodes++;
-
-        if (tail == null) {
-            tail = head;
-        }
     }
 
-    public void addLast(Object data) {
-        if (tail == null) {
-            head = tail = new Node(data);
-        } else {
-            tail.next = new Node(data);
-            tail = tail.next
-            tail.next = null;
-        }
+    public void addLast(E data) {
         numNodes++;
+        add(numNodes - 1, data);
+        numNodes--;
     }
 
     public E removeFirst() {
@@ -66,45 +62,24 @@ public class MyLinkedList<E> {
             Node temp = head;
             head = head.next;
             numNodes--;
-            if (head == null) tail = null;
             return (E) temp.data;
-        }
-    }
-
-    public E removeLast() {
-        if (numNodes == 0) return null;
-        else if (numNodes == 1) {
-            Node temp = head;
-            head = temp = null;
-            numNodes = 0;
-            return (E) temp.data;
-        } else {
-            Node temp = head;
-            for (int i = 0; i < numNodes - 2; i++) {
-                temp = temp.next;
-            }
-            Node holder = tail;
-            tail = temp;
-            tail.next = null;
-            numNodes--;
-            return (E) holder.data;
         }
     }
 
     public E remove(int index) {
-        if (index < 0 || index >= numNodes) return null;
+        if (index < 0 || index >= numNodes)
+            throw new IndexOutOfBoundsException("Index: " + index + ", Size " + numNodes);
         else if (index == 0) return removeFirst();
-        else if (index == numNodes - 1) return removeLast();
         else {
-            Node previous = head;
-            Node temp;
-            for (int i = 0; i < index - 1 && previous.next != null; i++) {
-                previous = previous.next;
+            Node temp = head;
+            Node valueRemove;
+            for (int i = 0; i < index - 1 && temp.next != null; i++) {
+                temp = temp.next;
             }
-            temp = previous.next;
-            previous.next = temp.next;
+            valueRemove = temp.next;
+            temp.next = valueRemove.next;
             numNodes--;
-            return (E) temp.data;
+            return (E) valueRemove.data;
         }
     }
 
@@ -120,16 +95,18 @@ public class MyLinkedList<E> {
     }
 
     public MyLinkedList<E> clone() {
-        MyLinkedList<E> clone = new MyLinkedList<E>();
+        MyLinkedList<E> clone = new MyLinkedList<>();
+        clone.numNodes++;
         for (int i = 0; i < numNodes; i++) {
-            clone.add(i, this.get(i));
+            clone.add(i, get(i));
         }
+        clone.numNodes--;
         return clone;
     }
 
     public boolean contains(E o) {
         for (int i = 0; i < numNodes; i++) {
-            if (o.equals(this.get(i)))
+            if (o.equals(get(i)))
                 return true;
         }
         return false;
@@ -137,7 +114,7 @@ public class MyLinkedList<E> {
 
     public int indexOf(E o) {
         for (int i = 0; i < numNodes; i++) {
-            if (o.equals(this.get(i)))
+            if (o.equals(get(i)))
                 return i;
         }
         return -1;
@@ -155,28 +132,27 @@ public class MyLinkedList<E> {
     }
 
     public E get(int index) {
+        if (index < 0 || index >= numNodes)
+            throw new IndexOutOfBoundsException("Index: " + index + ", Size " + numNodes);
         Node temp = head;
         for (int i = 0; i < index; i++) {
             temp = temp.next;
         }
-        return (E) temp;
+        return (E) temp.data;
     }
 
     public E getFirst() {
-        return (E) head;
+        return (E) head.data;
     }
 
     public E getLast() {
-        return (E) tail;
+        return (E) get(numNodes - 1);
     }
 
     public void clear() {
-        Node temp = head;
-        for (int i = 0; i < numNodes - 2; i++) {
-            temp = temp.next;
-            temp = null;
+        while (head != null) {
+            removeFirst();
         }
-        head = tail = null;
         numNodes = 0;
     }
 
@@ -187,5 +163,4 @@ public class MyLinkedList<E> {
             temp = temp.next;
         }
     }
-
 }
