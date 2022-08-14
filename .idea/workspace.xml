@@ -20,7 +20,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eaa458df-c6dc-4a45-b39d-206984239bc0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/02.Module 02/src/ss11_DSA_stack_queue/exercise/dao_nguoc_phan_tu_su_dung_stack/MyGenericStack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02.Module 02/src/ss11_DSA_stack_queue/exercise/dao_nguoc_phan_tu_su_dung_stack/TestGenericStack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02.Module 02/src/ss11_DSA_stack_queue/exercise/trien_khai_queue_su_dung_danh_sach_lien_ket_vong/Node.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02.Module 02/src/ss11_DSA_stack_queue/exercise/trien_khai_queue_su_dung_danh_sach_lien_ket_vong/Queue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02.Module 02/src/ss11_DSA_stack_queue/exercise/trien_khai_queue_su_dung_danh_sach_lien_ket_vong/Solution.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02.Module 02/src/ss11_DSA_stack_queue/practice/trien_khai_queue_ArrayList/MyQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02.Module 02/src/ss11_DSA_stack_queue/practice/trien_khai_queue_ArrayList/QueueClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02.Module 02/src/ss11_DSA_stack_queue/practice/trien_khai_queue_LinkedList/LinkedListQueueClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02.Module 02/src/ss11_DSA_stack_queue/practice/trien_khai_queue_LinkedList/MyLinkedListQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02.Module 02/src/ss11_DSA_stack_queue/practice/trien_khai_queue_LinkedList/Node.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02.Module 02/src/ss11_DSA_stack_queue/practice/trien_khai_stack_ArrayList/MyStack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02.Module 02/src/ss11_DSA_stack_queue/practice/trien_khai_stack_ArrayList/StackClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02.Module 02/src/ss11_DSA_stack_queue/practice/trien_khai_stack_LinkedList/GenericStackClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02.Module 02/src/ss11_DSA_stack_queue/practice/trien_khai_stack_LinkedList/MyGenericStack.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02.Module 02/out/production/module2/ss10_DSA/exercise/trien_khai_phuong_thuc_array_list/MyList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/02.Module 02/out/production/module2/ss10_DSA/exercise/trien_khai_phuong_thuc_array_list/MyListTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/02.Module 02/out/production/module2/ss10_DSA/exercise/trien_khai_phuong_thuc_linked_list/MyLinkedList$Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/02.Module 02/out/production/module2/ss10_DSA/exercise/trien_khai_phuong_thuc_linked_list/MyLinkedList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/02.Module 02/out/production/module2/ss10_DSA/exercise/trien_khai_phuong_thuc_linked_list/MyLinkedListTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/02.Module 02/out/production/module2/ss10_DSA/practice/trien_khai_lop_LinkedLlist_don_gian/MyLinkedList$Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/02.Module 02/out/production/module2/ss10_DSA/practice/trien_khai_lop_LinkedLlist_don_gian/MyLinkedList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/02.Module 02/out/production/module2/ss10_DSA/practice/trien_khai_lop_LinkedLlist_don_gian/TestMyLinkedList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/02.Module 02/out/production/module2/ss10_DSA/practice/trien_khai_lop_list_don_gian/MyList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/02.Module 02/out/production/module2/ss10_DSA/practice/trien_khai_lop_list_don_gian/MyListTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/02.Module 02/src/ss10_DSA/exercise/trien_khai_phuong_thuc_array_list/MyList.java" beforeDir="false" afterPath="$PROJECT_DIR$/02.Module 02/src/ss10_DSA_danh_sach/exercise/trien_khai_phuong_thuc_array_list/MyList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02.Module 02/src/ss10_DSA/exercise/trien_khai_phuong_thuc_array_list/MyListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/02.Module 02/src/ss10_DSA_danh_sach/exercise/trien_khai_phuong_thuc_array_list/MyListTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02.Module 02/src/ss10_DSA/exercise/trien_khai_phuong_thuc_linked_list/MyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/02.Module 02/src/ss10_DSA_danh_sach/exercise/trien_khai_phuong_thuc_linked_list/MyLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02.Module 02/src/ss10_DSA/exercise/trien_khai_phuong_thuc_linked_list/MyLinkedListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/02.Module 02/src/ss10_DSA_danh_sach/exercise/trien_khai_phuong_thuc_linked_list/MyLinkedListTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02.Module 02/src/ss10_DSA/practice/trien_khai_lop_LinkedLlist_don_gian/MyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/02.Module 02/src/ss10_DSA_danh_sach/practice/trien_khai_lop_LinkedLlist_don_gian/MyLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02.Module 02/src/ss10_DSA/practice/trien_khai_lop_LinkedLlist_don_gian/TestMyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/02.Module 02/src/ss10_DSA_danh_sach/practice/trien_khai_lop_LinkedLlist_don_gian/TestMyLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02.Module 02/src/ss10_DSA/practice/trien_khai_lop_list_don_gian/MyList.java" beforeDir="false" afterPath="$PROJECT_DIR$/02.Module 02/src/ss10_DSA_danh_sach/practice/trien_khai_lop_list_don_gian/MyList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02.Module 02/src/ss10_DSA/practice/trien_khai_lop_list_don_gian/MyListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/02.Module 02/src/ss10_DSA_danh_sach/practice/trien_khai_lop_list_don_gian/MyListTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,15 +83,13 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/02.Module 02" />
   </component>
   <component name="RunManager" selected="JavaScript Debug.04.GamePuzzle.html">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -118,6 +148,7 @@
       <workItem from="1653909209921" duration="2646000" />
       <workItem from="1658239980620" duration="177000" />
       <workItem from="1658240171092" duration="13000" />
+      <workItem from="1660225398156" duration="267000" />
     </task>
     <servers />
   </component>
