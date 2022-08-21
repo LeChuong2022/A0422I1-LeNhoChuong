@@ -16,7 +16,6 @@ public class Main {
                     maxString = stringSorted;
             } else
                 stringSorted = String.valueOf(string.charAt(i));
-
         }
         System.out.println("Max string: ");
         System.out.println(maxString);
