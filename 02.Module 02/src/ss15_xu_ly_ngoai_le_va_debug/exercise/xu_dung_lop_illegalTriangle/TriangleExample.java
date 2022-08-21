@@ -31,7 +31,7 @@ public class TriangleExample {
     }
 
     public static boolean checkTriangle(double a, double b, double c) throws IllegalTriangleException {
-        if (a < 0 || b < 0 || c < 0)
+        if (a <= 0 || b <= 0 || c <= 0)
             throw new IllegalTriangleException("Vui lòng nhap a, b, c >0. Vui lòng nhập lại: ");
         else if (a + b < c)
             throw new IllegalTriangleException("Vui lòng nhap a + b < c. Vui lòng nhập lại: ");
