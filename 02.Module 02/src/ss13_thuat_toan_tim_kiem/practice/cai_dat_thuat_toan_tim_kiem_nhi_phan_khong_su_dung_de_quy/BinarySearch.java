@@ -14,8 +14,7 @@ public class BinarySearch {
                 high = mid - 1;
             } else if (key > list[mid]) {
                 low = mid + 1;
-            }
-            else return mid;
+            } else return mid;
         }
         return -1;// Now high < low, key not found
     }

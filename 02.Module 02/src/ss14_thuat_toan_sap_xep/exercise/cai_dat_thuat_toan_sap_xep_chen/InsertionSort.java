@@ -18,7 +18,6 @@ public class InsertionSort {
         insertionSort(array);
         System.out.println("\nSorted array");
         printArray(array);
-
     }
 
     public static void insertionSort(int[] arr) {

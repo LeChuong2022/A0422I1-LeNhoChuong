@@ -16,14 +16,14 @@ public class Main {
         printArray(arrays);
         System.out.print("\nEnter value you want to find: ");
         int value = input.nextInt();
-        System.out.println("Vi tri can tim: " + binarySearch(arrays, 0, arrays.length-1, value));
-        System.out.println("Vi tri can tim (2): " + binarySearch(arrays, 0, arrays.length-1, 2));
-        System.out.println("Vi tri can tim: (3)" + binarySearch(arrays, 0, arrays.length-1, 3));
-        System.out.println("Vi tri can tim: (-5)" + binarySearch(arrays, 0, arrays.length-1, -5));
-        System.out.println("Vi tri can tim: (64)" + binarySearch(arrays, 0, arrays.length-1, 64));
-        System.out.println("Vi tri can tim: (95)" + binarySearch(arrays, 0, arrays.length-1, 95));
-        System.out.println("Vi tri can tim: (103)" + binarySearch(arrays, 0, arrays.length-1, 103));
-        System.out.println("Vi tri can tim: (37)" + binarySearch(arrays, 0, arrays.length-1, 37));
+        System.out.println("Vi tri can tim: " + binarySearch(arrays, 0, arrays.length - 1, value));
+        System.out.println("Vi tri can tim (2): " + binarySearch(arrays, 0, arrays.length - 1, 2));
+        System.out.println("Vi tri can tim: (3)" + binarySearch(arrays, 0, arrays.length - 1, 3));
+        System.out.println("Vi tri can tim: (-5)" + binarySearch(arrays, 0, arrays.length - 1, -5));
+        System.out.println("Vi tri can tim: (64)" + binarySearch(arrays, 0, arrays.length - 1, 64));
+        System.out.println("Vi tri can tim: (95)" + binarySearch(arrays, 0, arrays.length - 1, 95));
+        System.out.println("Vi tri can tim: (103)" + binarySearch(arrays, 0, arrays.length - 1, 103));
+        System.out.println("Vi tri can tim: (37)" + binarySearch(arrays, 0, arrays.length - 1, 37));
 
     }
 

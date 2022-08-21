@@ -12,12 +12,12 @@ public class AlgorithmComplexityTest {
             //Tìm vị trí tương ứng của ký tự trong bảng ASCII
             int ascii = (int) inputString.charAt(i);
             //Tăng giá trị tần suất
-            frequentChar[ascii] +=1 ;
+            frequentChar[ascii] += 1;
         }
         int max = 0;
         char character = (char) 255; /*empty character*/
         for (int i = 0; i < 255; i++) {
-            if (frequentChar[i] > max){
+            if (frequentChar[i] > max) {
                 max = frequentChar[i];
                 character = (char) i;
             }

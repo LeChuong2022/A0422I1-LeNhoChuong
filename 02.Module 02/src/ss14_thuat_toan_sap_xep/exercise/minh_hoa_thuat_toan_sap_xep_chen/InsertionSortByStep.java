@@ -19,7 +19,6 @@ public class InsertionSortByStep {
         insertionSort(array);
         System.out.println("\nSorted array");
         printArray(array);
-
     }
 
     public static void insertionSort(int[] arr) {
@@ -38,7 +37,6 @@ public class InsertionSortByStep {
             System.out.println("List after the " + i + "' sort");
             System.out.println(string);
             printArray(arr);
-
         }
     }
 

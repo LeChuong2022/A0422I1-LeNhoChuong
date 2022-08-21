@@ -28,7 +28,6 @@ public class TriangleExample {
             }
         }
         System.out.println("Nhập 3 cạnh tam giác hợp lệ.");
-
     }
 
     public static boolean checkTriangle(double a, double b, double c) throws IllegalTriangleException {

@@ -19,23 +19,24 @@ public class BubbleSortByStep {
         System.out.println("\nBegin sort processing ....");
         bubbleSortByStep(list);
     }
-    public static void bubbleSortByStep(int[] list){
+
+    public static void bubbleSortByStep(int[] list) {
         boolean needNextPass = true;
         for (int i = 1; i < list.length && needNextPass; i++) {
             needNextPass = false;
             for (int j = 0; j < list.length - i; j++) {
-                if (list[j] > list[j+1]){
+                if (list[j] > list[j + 1]) {
                     //swap list[i] with list [i+1]
-                    System.out.println("Swap " + list[j] + " with "+ list[j+1]);
+                    System.out.println("Swap " + list[j] + " with " + list[j + 1]);
                     int temp = list[j];
-                    list[j] = list[j+1];
-                    list[j+1] = temp;
+                    list[j] = list[j + 1];
+                    list[j + 1] = temp;
 
                     needNextPass = true; //Next pass still needed
                 }
             }
             /*Array may be sorted and next pass not needed*/
-            if (!needNextPass){
+            if (!needNextPass) {
                 System.out.println("Array may be sorted and next passs not needed");
                 break;
             }
