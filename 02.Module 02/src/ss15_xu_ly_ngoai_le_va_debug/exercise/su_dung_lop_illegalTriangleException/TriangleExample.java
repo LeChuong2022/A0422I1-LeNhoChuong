@@ -1,4 +1,4 @@
-package ss15_xu_ly_ngoai_le_va_debug.exercise.su_dung_lop_illegalTriangle;
+package ss15_xu_ly_ngoai_le_va_debug.exercise.su_dung_lop_illegalTriangleException;
 
 import java.util.Scanner;
 
