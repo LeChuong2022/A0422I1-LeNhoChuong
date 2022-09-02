@@ -1,4 +1,4 @@
-package ss19_string_and_regex.exericise.validate_do_dien_thoai;
+package ss19_string_and_regex.exericise.validate_so_dien_thoai;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
