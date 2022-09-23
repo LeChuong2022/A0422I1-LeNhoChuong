@@ -20,13 +20,13 @@ public class CrawlNews {
             //close scananer
             scanner.close();
             content = content.replaceAll("Báo điện tử Dân trí - Tin tức cập nhật liên tục 24/7", "");
-            content = content.replaceAll("&#34;", "'");
+//            content = content.replaceAll("&#34;", "\"");
             //regex
 
             Pattern p = Pattern.compile("alt=\"(.*?)\"");
             Matcher m = p.matcher(content);
             while (m.find()) {
-                System.out.println(m.group(1));
+                System.out.println(m.group(1).replaceAll("&#34;", "\""));
             }
         } catch (MalformedURLException e) {
             e.printStackTrace();
