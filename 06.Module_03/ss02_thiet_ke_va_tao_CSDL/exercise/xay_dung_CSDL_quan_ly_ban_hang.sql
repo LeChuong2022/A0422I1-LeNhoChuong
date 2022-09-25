@@ -11,7 +11,7 @@ oID varchar(10) not null primary key,
 cID varchar(10) not null,
 oDate datetime,
 oTotalPrice long,
-foreign key (cID) references customer(ciD)
+foreign key (cID) references customer(cID)
 );
 
 create table product(
