@@ -13,9 +13,26 @@ begin
 	delete from `message`;
     set so_luong = (select count(*) from hop_dong);
     insert into message
-    values (so_luong);     
+    values (so_luong);   
 end //
 delimiter ;
+
+-- Cách 2
+delimiter //
+create trigger tr_xoa_hop_dong1
+after delete on hop_dong for each row
+begin
+	declare so_luong int;
+	delete from `message`;
+    set so_luong = (select count(*) from hop_dong);
+	select so_luong into @arg;
+end //
+delimiter ;
+
+delete from hop_dong
+where ma_hop_dong = 7;
+select  @arg;
+
 
 -- xóa hợp đồng
 delete from hop_dong
