@@ -1,0 +1,112 @@
+html {
+    overflow: hidden;
+}
+body{
+    font-family: Tahoma;
+    background-color: black;
+    color: white;
+}
+.head {
+    background-color: black;
+    height: 10%;
+}
+
+.left {
+    background-color: black;
+}
+
+.o_center{
+    text-align: center;
+}
+
+.right {
+    background-color: black;
+    text-align: right;
+}
+
+.contain {
+    background-color: black;
+}
+
+.search{
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+
+.searchTerm{
+    width: 50%;
+    border: 3px solid #00B4CC;
+    padding: 5px;
+    height: 20%;
+    border-radius: 10px;
+    outline: none;
+    color: #9DBFAF;
+    vertical-align: bottom;
+
+}
+
+.iconFace{
+    width: 100%;
+    height: 100%;
+    vertical-align: center;
+}
+
+
+
+
+
+
+.row {
+    display: flex; /* nổi lên trên cùng 1 hàng*/
+    flex-wrap: wrap;
+    border: white solid;
+}
+
+.col-l-1 {
+    width: 8.33333%;
+}
+
+.col-l-2 {
+    width: 16.66667%;
+}
+
+.col-l-3 {
+    width: 25%;
+}
+
+.col-l-4 {
+    width: 33.33333%;
+}
+
+.col-l-5 {
+    width: 41.66667%;
+}
+
+.col-l-6 {
+    width: 50%;
+}
+
+.col-l-7 {
+    width: 58.33333%;
+}
+
+.col-l-8 {
+    width: 66.66667%;
+}
+
+.col-l-9 {
+    width: 75%;
+}
+
+.col-l-10 {
+    width: 83.33333%;
+}
+
+.col-l-11 {
+    width: 91.66667%;
+}
+
+.col-l-12 {
+    width: 100%;
+}
