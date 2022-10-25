@@ -7,8 +7,11 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+
 <html>
 <head>
+    <meta http–equiv=“Content-Type” content=“text/html; charset=UTF-8”>
     <title>Customer list</title>
 </head>
 <body>
@@ -23,11 +26,11 @@
     </tr>
     <c:forEach var="customer" items="${customerList}" varStatus="status">
         <tr>
-            <td>${status.getID}</td>
-            <td>${status.getName}</td>
-            <td>${status.getDayOfBirth}</td>
-            <td>${status.getAddress}</td>
-            <td>${status.getPicture}</td>
+            <td>${customer.getId()}</td>
+            <td>${customer.getName()}</td>
+            <td>${customer.getDayOfBirth()}</td>
+            <td>${customer.getAddress()}</td>
+            <td><img src="${customer.getPicture()}" width="50px" height="50px"></td>
         </tr>
     </c:forEach>
 </table>
