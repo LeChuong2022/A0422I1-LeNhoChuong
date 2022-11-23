@@ -1,0 +1,14 @@
+dictionary/service/IDictionaryService.java
+ dictionary.service.IDictionaryService
+dictionary/config/AppConfiguration.java
+ dictionary.config.AppConfiguration
+dictionary/controller/DictionaryController.java
+ dictionary.controller.DictionaryController
+dictionary/config/AppInitializer.java
+ dictionary.config.AppInitializer
+dictionary/repository/IDictionaryRepository.java
+ dictionary.repository.IDictionaryRepository
+dictionary/repository/DictionaryRepositoryImpl.java
+ dictionary.repository.DictionaryRepositoryImpl
+dictionary/service/DictionaryServiceImpl.java
+ dictionary.service.DictionaryServiceImpl

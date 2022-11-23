@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="97ab917b-0488-42e5-94d1-325bbde0250c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/java/config/FilterUTF8.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/java/controller/FuramaServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/css/animate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/css/animation/animation-custom.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/css/bootstrap-select/bootstrap-select.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/css/c3/c3.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/css/chosen/chosen-sprite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/css/chosen/chosen.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/css/code-editor/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/css/code-editor/ambiance.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/css/code-editor/codemirror.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/css/color-picker/farbtastic.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/css/color-picker/marker.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/css/color-picker/mask.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/css/color-picker/wheel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/css/cropper/cropper.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/css/datapicker/datepicker3.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/css/dialog/dialog.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/css/dialog/sweetalert2.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/css/dropzone/dropzone.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/css/jquery.dataTables.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/css/jvectormap/jquery-jvectormap-2.0.3.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/css/meanmenu/meanmenu.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/css/metisMenu/metisMenu-vertical.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/css/metisMenu/metisMenu.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/css/normalize.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/css/notification/notification.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/css/notika-custom-icon.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/css/owl.carousel.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/css/owl.theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/css/owl.transitions.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/css/responsive.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/css/scrollbar/jquery.mCustomScrollbar.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/css/summernote/summernote.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/css/themesaller-forms.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/css/wave/button.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/css/wave/waves.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/fonts/notika-icon.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/fonts/notika-icon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/fonts/notika-icon.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/fonts/notika-icon.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/images/select.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/images/sort_asc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/images/sort_asc_disabled.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/images/sort_both.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/images/sort_desc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/images/sort_desc_disabled.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/img/blog/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/img/chosen-sprite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/img/country/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/img/country/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/img/country/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/img/cropper/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/img/dialog/like.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/img/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/img/green1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/img/logo/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/img/logo/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/img/post/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/img/post/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/img/post/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/img/search-engines/baidu.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/img/search-engines/bing.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/img/search-engines/duckduckgo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/img/search-engines/google.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/img/search-engines/yahoo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/img/search-engines/yandex.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/img/widgets/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/img/widgets/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/img/widgets/6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/animation/animation-active.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/autosize.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/bootstrap-select/bootstrap-select.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/charts/Chart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/charts/area-chart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/charts/bar-chart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/charts/line-chart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/chat/jquery.chat.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/chat/moment.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/chosen/chosen.jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/code-editor/code-editor-active.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/code-editor/code-editor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/code-editor/codemirror.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/color-picker/color-picker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/color-picker/farbtastic.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/counterup/counterup-active.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/counterup/jquery.counterup.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/counterup/waypoints.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/cropper/cropper-actice.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/cropper/cropper.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/data-map/d3.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/data-map/data-maps-active.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/data-map/datamaps.all.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/data-map/topojson.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/data-table/data-table-act.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/data-table/jquery.dataTables.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/datapicker/bootstrap-datepicker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/datapicker/datepicker-active.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/dialog/dialog-active.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/dialog/sweetalert2.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/dropzone/dropzone.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/easytopie/jquery.easypiechart.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/easytopie/salvattore.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/flot/analtic-flot-active.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/flot/chart-tooltips.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/flot/curvedLines.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/flot/flot-active.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/flot/flot-widget-anatic-active.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/flot/jquery.flot.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/flot/jquery.flot.orderBars.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/flot/jquery.flot.pie.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/flot/jquery.flot.resize.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/flot/jquery.flot.time.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/flot/jquery.flot.tooltip.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/google.maps/google.maps-active.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/google.maps/google.maps2-active.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/icheck/icheck-active.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/icheck/icheck.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/jasny-bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/jquery-price-slider.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/jquery.scrollUp.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/jvectormap/jquery-jvectormap-2.0.2.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/jvectormap/jquery-jvectormap-world-mill-en.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/jvectormap/jvectormap-active.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/knob/jquery.appear.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/knob/jquery.knob.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/knob/knob-active.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/login/login-action.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/meanmenu/jquery.meanmenu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/metisMenu/metisMenu-active.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/metisMenu/metisMenu.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/notification/bootstrap-growl.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/notification/notification-active.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/owl.carousel.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/plugins.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/rangle-slider/jquery-ui-1.10.4.custom.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/rangle-slider/jquery-ui-touch-punch.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/rangle-slider/rangle-active.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/scrollbar/jquery.mCustomScrollbar.concat.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/sparkline/jquery.sparkline.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/sparkline/sparkline-active.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/summernote/summernote-active.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/summernote/summernote-updated.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/summernote/summernote.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/tawk-chat.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/todo/jquery.todo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/vendor/jquery-1.12.4.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/vendor/modernizr-2.8.3.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/wave/wave-active.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/wave/waves.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/wizard/jquery.bootstrap.wizard.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/wizard/wizard-active.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/template/js/wow.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/view/common/footer.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/view/common/header.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/view/home.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/view/template/css/animate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/view/template/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/view/template/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/view/template/css/jvectormap/jquery-jvectormap-2.0.3.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/view/template/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/view/template/css/meanmenu/meanmenu.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/view/template/css/normalize.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/view/template/css/notika-custom-icon.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/view/template/css/owl.carousel.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/view/template/css/owl.theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/view/template/css/owl.transitions.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/view/template/css/scrollbar/jquery.mCustomScrollbar.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/view/template/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/view/template/css/wave/waves.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FuramaResort/src/main/webapp/view/template/js/vendor/modernizr-2.8.3.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/.idea/libraries-with-intellij-classes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/.idea/webContexts.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/java/config/FilterUTF8.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/java/controller/EmployeeServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/java/controller/HomeServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/java/model/AbstractPersonModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/java/model/AttachServiceModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/java/model/ContractDetail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/java/model/ContractModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/java/model/CustomerModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/java/model/CustomerTypeModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/java/model/DivisionModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/java/model/EducationDegreeModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/java/model/EmployeeModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/java/model/PositionModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/java/model/RentTypeModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/java/model/RoleModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/java/model/ServiceModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/java/model/ServiceTypeModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/java/model/UserModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/java/model/UserRoleModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/java/repository/BaseRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/java/repository/IDivisionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/java/repository/IEducationDegreeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/java/repository/IEmployeeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/java/repository/IPositionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/java/repository/impl/DivisionRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/java/repository/impl/EducationDegreeRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/java/repository/impl/EmployeeRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/java/repository/impl/PositionRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/java/service/IDivisionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/java/service/IEducationDegreeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/java/service/IEmployeeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/java/service/IPositionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/java/service/impl/DivisionServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/java/service/impl/EducationDegreeServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/java/service/impl/EmployeeServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/java/service/impl/PositionServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/java/validate/Validation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/webapp/bootstrap-5.1.3-dist/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/webapp/bootstrap-5.1.3-dist/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/webapp/bootstrap-5.1.3-dist/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/webapp/bootstrap-5.1.3-dist/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/webapp/bootstrap-5.1.3-dist/css/bootstrap-grid.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/webapp/bootstrap-5.1.3-dist/css/bootstrap-grid.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/webapp/bootstrap-5.1.3-dist/css/bootstrap-grid.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/webapp/bootstrap-5.1.3-dist/css/bootstrap-grid.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/webapp/bootstrap-5.1.3-dist/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/webapp/bootstrap-5.1.3-dist/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/webapp/bootstrap-5.1.3-dist/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/webapp/bootstrap-5.1.3-dist/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/webapp/bootstrap-5.1.3-dist/css/bootstrap-reboot.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/webapp/bootstrap-5.1.3-dist/css/bootstrap-reboot.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/webapp/bootstrap-5.1.3-dist/css/bootstrap-reboot.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/webapp/bootstrap-5.1.3-dist/css/bootstrap-reboot.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/webapp/bootstrap-5.1.3-dist/css/bootstrap-utilities.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/webapp/bootstrap-5.1.3-dist/css/bootstrap-utilities.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/webapp/bootstrap-5.1.3-dist/css/bootstrap-utilities.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/webapp/bootstrap-5.1.3-dist/css/bootstrap-utilities.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/webapp/bootstrap-5.1.3-dist/css/bootstrap-utilities.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/webapp/bootstrap-5.1.3-dist/css/bootstrap-utilities.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/webapp/bootstrap-5.1.3-dist/css/bootstrap-utilities.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/webapp/bootstrap-5.1.3-dist/css/bootstrap-utilities.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/webapp/bootstrap-5.1.3-dist/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/webapp/bootstrap-5.1.3-dist/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/webapp/bootstrap-5.1.3-dist/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/webapp/bootstrap-5.1.3-dist/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/webapp/bootstrap-5.1.3-dist/css/bootstrap.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/webapp/bootstrap-5.1.3-dist/css/bootstrap.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/webapp/bootstrap-5.1.3-dist/css/bootstrap.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/webapp/bootstrap-5.1.3-dist/css/bootstrap.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/webapp/bootstrap-5.1.3-dist/js/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/webapp/bootstrap-5.1.3-dist/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/webapp/bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/webapp/bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/webapp/bootstrap-5.1.3-dist/js/bootstrap.esm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/webapp/bootstrap-5.1.3-dist/js/bootstrap.esm.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/webapp/bootstrap-5.1.3-dist/js/bootstrap.esm.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/webapp/bootstrap-5.1.3-dist/js/bootstrap.esm.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/webapp/bootstrap-5.1.3-dist/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/webapp/bootstrap-5.1.3-dist/js/bootstrap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/webapp/bootstrap-5.1.3-dist/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/webapp/bootstrap-5.1.3-dist/js/bootstrap.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/webapp/view/common/footer.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/webapp/view/common/header.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/webapp/view/employee/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/webapp/view/employee/edit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/webapp/view/employee/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07.CaseStudyM3/FuramaResortV02/src/main/webapp/view/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04.Module_03/ss13_jdbc_querying_and_transaction/exercise/user_manage/.gradle/6.8/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../04.Module_03/ss13_jdbc_querying_and_transaction/exercise/user_manage/.gradle/6.8/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04.Module_03/ss13_jdbc_querying_and_transaction/exercise/user_manage/.gradle/6.8/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../04.Module_03/ss13_jdbc_querying_and_transaction/exercise/user_manage/.gradle/6.8/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04.Module_03/ss13_jdbc_querying_and_transaction/exercise/user_manage/.gradle/6.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../04.Module_03/ss13_jdbc_querying_and_transaction/exercise/user_manage/.gradle/6.8/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04.Module_03/ss13_jdbc_querying_and_transaction/exercise/user_manage/.gradle/6.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../04.Module_03/ss13_jdbc_querying_and_transaction/exercise/user_manage/.gradle/6.8/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04.Module_03/ss13_jdbc_querying_and_transaction/exercise/user_manage/.gradle/6.8/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../04.Module_03/ss13_jdbc_querying_and_transaction/exercise/user_manage/.gradle/6.8/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04.Module_03/ss13_jdbc_querying_and_transaction/exercise/user_manage/.gradle/6.8/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../04.Module_03/ss13_jdbc_querying_and_transaction/exercise/user_manage/.gradle/6.8/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04.Module_03/ss13_jdbc_querying_and_transaction/exercise/user_manage/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../04.Module_03/ss13_jdbc_querying_and_transaction/exercise/user_manage/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04.Module_03/ss13_jdbc_querying_and_transaction/exercise/user_manage/build/classes/java/main/controller/UserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../04.Module_03/ss13_jdbc_querying_and_transaction/exercise/user_manage/build/classes/java/main/controller/UserServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04.Module_03/ss13_jdbc_querying_and_transaction/exercise/user_manage/build/classes/java/main/dao/IUserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/../04.Module_03/ss13_jdbc_querying_and_transaction/exercise/user_manage/build/classes/java/main/dao/IUserDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04.Module_03/ss13_jdbc_querying_and_transaction/exercise/user_manage/build/classes/java/main/dao/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/../04.Module_03/ss13_jdbc_querying_and_transaction/exercise/user_manage/build/classes/java/main/dao/UserDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04.Module_03/ss13_jdbc_querying_and_transaction/exercise/user_manage/build/libs/user_manage-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../04.Module_03/ss13_jdbc_querying_and_transaction/exercise/user_manage/build/libs/user_manage-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04.Module_03/ss13_jdbc_querying_and_transaction/practice/user_manage_ss13/DB/database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../04.Module_03/ss13_jdbc_querying_and_transaction/practice/user_manage_ss13/DB/database.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05.CaseStudyModule3/CaseStudyModule3.mwb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05.CaseStudyModule3/DB_Task01.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05.CaseStudyModule3/DB_Task02.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05.CaseStudyModule3/DB_Task03.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05.CaseStudyModule3/DB_Task04.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05.CaseStudyModule3/DB_Task05.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05.CaseStudyModule3/DB_Task06.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05.CaseStudyModule3/DB_Task07.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05.CaseStudyModule3/DB_Task08.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05.CaseStudyModule3/DB_Task09.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05.CaseStudyModule3/DB_Task10.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05.CaseStudyModule3/DB_Task11.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05.CaseStudyModule3/DB_Task12.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05.CaseStudyModule3/DB_Task13.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05.CaseStudyModule3/DB_Task14.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05.CaseStudyModule3/DB_Task15.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05.CaseStudyModule3/DB_Task16.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05.CaseStudyModule3/DB_Task17.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05.CaseStudyModule3/DB_Task18.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05.CaseStudyModule3/DB_Task19.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05.CaseStudyModule3/DB_Task20.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05.CaseStudyModule3/DB_Task21.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05.CaseStudyModule3/DB_Task22.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05.CaseStudyModule3/DB_Task23.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05.CaseStudyModule3/DB_Task24.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05.CaseStudyModule3/DB_Task25.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05.CaseStudyModule3/DB_Task26.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05.CaseStudyModule3/DB_Task27.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05.CaseStudyModule3/DB_Task28.sql" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2HRCs73ORBlOF7gBan38TEFSNrh" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="97ab917b-0488-42e5-94d1-325bbde0250c" name="Default Changelist" comment="" />
+      <created>1668238712637</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1668238712637</updated>
+      <workItem from="1668238713963" duration="10000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

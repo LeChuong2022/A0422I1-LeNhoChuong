@@ -69,4 +69,31 @@ insert into Permission(id, `name`) values(4, 'view');
 select * from users;
 select * from User_Permission;
 
+select * from employee;
 
+-- định nghĩa stored procedures udapte_user_by_id
+DELIMITER $$
+create procedure update_user_by_id(IN user_id INT, 
+IN user_name varchar(100), 
+IN user_email varchar(100),
+IN user_country varchar(100))
+begin
+update users set `name` = user_name,
+users.email = user_email,
+users.country = user_country
+where users.id = user_id;
+end $$
+DELIMITER ;
+
+call update_user_by_id(5, 'Long', 'longnx@gmail.com', 'Brazil');
+
+-- định nghĩa stored procedures delete_user_by_id
+DELIMITER $$
+create procedure delete_user_by_id(IN user_id INT)
+begin
+delete from users
+where users.id = user_id;
+end $$
+DELIMITER ;
+
+call delete_user_by_id(6);
