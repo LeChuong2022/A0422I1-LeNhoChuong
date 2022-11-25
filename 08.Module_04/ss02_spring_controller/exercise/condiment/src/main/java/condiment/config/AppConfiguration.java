@@ -1,4 +1,4 @@
-package dictionary.config;
+package condiment.config;
 
 
 import org.springframework.beans.BeansException;
@@ -14,7 +14,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan("dictionary")
+@ComponentScan("condiment")
 public class AppConfiguration extends WebMvcConfigurerAdapter implements ApplicationContextAware {
     private ApplicationContext applicationContext;
 

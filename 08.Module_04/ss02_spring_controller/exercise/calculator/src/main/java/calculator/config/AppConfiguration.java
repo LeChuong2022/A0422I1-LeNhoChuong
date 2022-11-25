@@ -1,4 +1,4 @@
-package dictionary.config;
+package calculator.config;
 
 
 import org.springframework.beans.BeansException;
@@ -14,7 +14,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan("dictionary")
+@ComponentScan("calculator")
 public class AppConfiguration extends WebMvcConfigurerAdapter implements ApplicationContextAware {
     private ApplicationContext applicationContext;
 

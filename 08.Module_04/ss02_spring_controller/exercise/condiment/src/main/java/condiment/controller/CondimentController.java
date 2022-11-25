@@ -1,6 +1,6 @@
 package condiment.controller;
 
-import condiment.service.IDictionaryService;
+import condiment.service.ICondimentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-public class DictionaryController {
+public class CondimentController {
     @Autowired
-    IDictionaryService dictionaryService;
+    ICondimentService condimentService;
 
     @GetMapping("/condiment")
     public String showDictionary(){
@@ -19,7 +19,8 @@ public class DictionaryController {
     }
     @PostMapping("/condiment")
     public String dictionary(Model model, @RequestParam("condiment") String[] condiment){
-//        model.addAttribute("result", dictionaryService.translateE(inputE));
+        model.addAttribute("result", condimentService.showCondiment(condiment));
+        model.addAttribute("condimentList", condiment);
 //        model.addAttribute("inputE", inputE);
         return "/condiment";
     }

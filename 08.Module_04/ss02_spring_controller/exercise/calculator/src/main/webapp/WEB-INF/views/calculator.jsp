@@ -2,15 +2,18 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Dictionary</title>
+    <title>Calculator</title>
 </head>
 <body>
-<h4>Từ điển Anh Việt</h4>
-<form method="post" action="/dictionary">
-<p><b> English: </b><input type="text" placeholder="Enter a world"  id="inputEnglishWord" name="inputE" value="${inputE}"></p>
-<input type="submit" value="Translate">
-<p id="vietnamese"><b> Vietnamese:</b></p>
-    <p>${result}</p>
+<h4>Calculator</h4>
+<form method="post" action="/calculator">
+<p><input type="text" placeholder="Enter a number"  name="number1" value="${number1}">
+    <input type="text" placeholder="Enter a number"  name="number2" value="${number2}"></p>
+<input type="submit" name="cal" value="Addition(+)">
+    <input type="submit" name="cal" value="Subtraction(-)">
+    <input type="submit" name="cal" value="Multiplication(*)">
+    <input type="submit" name="cal" value="Division(/)">
+<p><b> Result:</b> ${result}</p>
 </form>
 </body>
 </html>

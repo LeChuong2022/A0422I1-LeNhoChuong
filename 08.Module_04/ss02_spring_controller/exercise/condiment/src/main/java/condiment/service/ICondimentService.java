@@ -1,5 +1,5 @@
 package condiment.service;
 
-public interface IDictionaryService {
-    String translateE(String inputE);
+public interface ICondimentService {
+    String showCondiment(String[] condiment);
 }

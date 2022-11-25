@@ -1,4 +1,4 @@
-package dictionary.config;
+package calculator.config;
 
 import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
