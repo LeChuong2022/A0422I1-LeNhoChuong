@@ -34,7 +34,6 @@ public class StudentRepositoryImpl implements IStudentRepository {
 
     @Override
     public List<Student> findAll() {
-        System.out.println("ajlkasjdlajks");
         return new ArrayList<>(studentMap.values());
     }
 

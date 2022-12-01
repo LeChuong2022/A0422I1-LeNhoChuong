@@ -1,0 +1,16 @@
+product_management/bean/Product.java
+ product_management.bean.Product
+product_management/controller/ProductController.java
+ product_management.controller.ProductController
+product_management/repository/IProductRepository.java
+ product_management.repository.IProductRepository
+product_management/service/IProductService.java
+ product_management.service.IProductService
+product_management/service/ProductServiceImpl.java
+ product_management.service.ProductServiceImpl
+product_management/repository/ProductRepositoryImpl.java
+ product_management.repository.ProductRepositoryImpl
+product_management/config/AppConfiguration.java
+ product_management.config.AppConfiguration
+product_management/config/AppInitializer.java
+ product_management.config.AppInitializer

@@ -6,6 +6,8 @@
 </head>
 <body>
 <h1>List students</h1>
+<a href="/student/create">Create new student</a>
+<p>${mess}</p>
 <table border="1">
     <tr>
         <th>ID</th>
@@ -15,7 +17,7 @@
     </tr>
     <c:forEach items="${students}" var="student">
         <tr>
-            <td>${student.id}</td>
+            <td><a href="/student/edit?id=${student.id}" name="id">${student.id}</a></td>
             <td>${student.name}</td>
             <td>${student.age}</td>
             <td>${student.address}</td>

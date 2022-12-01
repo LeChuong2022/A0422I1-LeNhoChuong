@@ -21,7 +21,6 @@ public class CondimentController {
     public String dictionary(Model model, @RequestParam("condiment") String[] condiment){
         model.addAttribute("result", condimentService.showCondiment(condiment));
         model.addAttribute("condimentList", condiment);
-//        model.addAttribute("inputE", inputE);
         return "/condiment";
     }
 }

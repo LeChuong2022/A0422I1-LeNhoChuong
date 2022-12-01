@@ -7,14 +7,6 @@
 <body>
 <h4>Sandwich Condiments</h4>
 <form method="post" action="/condiment">
-    <c:if test="${condimentList == null}">
-        <p><input type="checkbox" name="condiment" value="Lettuce">Lettuce</p>
-        <p><input type="checkbox" name="condiment" value="Tomato">Tomato</p>
-        <p><input type="checkbox" name="condiment" value="Mustard">Mustard</p>
-        <p><input type="checkbox" name="condiment" value="Sprouts">Sprouts</p>
-    </c:if>
-    <c:if test="${condimentList != null}">
-
         <p><input type="checkbox" name="condiment" value="Lettuce"
         <c:forEach var="condiment" items="${condimentList}">
             ${condiment.equals("Lettuce") ? "checked='checked'" : ""}
@@ -38,7 +30,7 @@
             ${condiment.equals("Sprouts") ? "checked='checked'" : ""}
         </c:forEach>
         >Sprouts</p>
-    </c:if>
+
 
 <input type="submit" value="Save">
     <p><c:if test="${result!=null}">
