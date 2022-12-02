@@ -15,8 +15,7 @@ public class MedicalServiceImpl implements IMedicalService {
     @Autowired
     private IMedicalRepository medicalRepository;
 
-    @Override
-    public Map<String, String> save(InformationPeople informationPeople, Symptom symptom) {
+    Map<String, String> checkValidation (InformationPeople informationPeople, Symptom symptom){
         //Kiểm tra dữ liệu
         Map<String, String> errorMap = new HashMap<>();
         if ("".equals(informationPeople.getName())) {
@@ -28,69 +27,76 @@ public class MedicalServiceImpl implements IMedicalService {
         if ("".equals(informationPeople.getGender())) {
             errorMap.put("gender", "Giới tính không được để trống");
         }
-        if ("".equals(informationPeople.getNationality())){
+        if ("".equals(informationPeople.getNationality())) {
             errorMap.put("nationality", "Quốc tịch không được để trống");
         }
-        if ("".equals(informationPeople.getCreditId())){
+        if ("".equals(informationPeople.getCreditId())) {
             errorMap.put("creditId", "CMND(Hộ chiếu) không được để trống");
         }
-        if (informationPeople.getVehicle() == null){
+        if (informationPeople.getVehicle() == null) {
             errorMap.put("vehicle", "thông tin đi lại không được để trống");
         }
-        if (informationPeople.getDayStart() == null){
+        if (informationPeople.getDayStart() == null) {
             errorMap.put("dayStart", "Ngày khởi hành không được để trống");
         }
-        if (informationPeople.getDayEnd() == null){
+        if (informationPeople.getDayEnd() == null) {
             errorMap.put("dayEnd", "Ngày kết thúc không được để trống");
         }
-        if ("".equals(informationPeople.getCityTravel())){
+        if ("".equals(informationPeople.getCityTravel())) {
             errorMap.put("cityTravel", "không được để trống");
         }
-        if ("".equals(informationPeople.getCityAddress())){
+        if ("".equals(informationPeople.getCityAddress())) {
             errorMap.put("cityAddress", "không được để trống");
         }
-        if ("".equals(informationPeople.getDistrictAddress())){
+        if ("".equals(informationPeople.getDistrictAddress())) {
             errorMap.put("districtAddress", "không được để trống");
         }
-        if ("".equals(informationPeople.getWardAddress())){
+        if ("".equals(informationPeople.getWardAddress())) {
             errorMap.put("wardAddress", "không được để trống");
         }
-        if ("".equals(informationPeople.getAddress())){
+        if ("".equals(informationPeople.getAddress())) {
             errorMap.put("address", "không được để trống");
         }
-       if ("".equals(informationPeople.getPhone())){
+        if ("".equals(informationPeople.getPhone())) {
             errorMap.put("phone", "không được để trống");
         }
-       if (symptom.getFever() == null){
+        if (symptom.getFever() == null) {
             errorMap.put("fever", "không được để trống");
         }
-       if (symptom.getNausea() == null){
+        if (symptom.getNausea() == null) {
             errorMap.put("nausea", "không được để trống");
         }
-       if (symptom.getCough() == null){
+        if (symptom.getCough() == null) {
             errorMap.put("cough", "không được để trống");
         }
-       if (symptom.getDiarrhea() == null){
+        if (symptom.getDiarrhea() == null) {
             errorMap.put("diarrhea", "không được để trống");
         }
-       if (symptom.getShortnessOfBreath() == null){
+        if (symptom.getShortnessOfBreath() == null) {
             errorMap.put("shortnessOfBreath", "không được để trống");
         }
-       if (symptom.getSkinHemorrhage() == null){
+        if (symptom.getSkinHemorrhage() == null) {
             errorMap.put("skinHemorrhage", "không được để trống");
         }
-       if (symptom.getSoreThroat() == null){
+        if (symptom.getSoreThroat() == null) {
             errorMap.put("soreThroat", "không được để trống");
         }
-       if (symptom.getSkinRash() == null){
+        if (symptom.getSkinRash() == null) {
             errorMap.put("skinRash", "không được để trống");
         }
-       if (symptom.getTravelEpidemicPlace() == null){
+        if (symptom.getTravelEpidemicPlace() == null) {
             errorMap.put("travelEpidemicPlace", "không được để trống");
         }
-       if (symptom.getCloseContact() == null){
+        if (symptom.getCloseContact() == null) {
             errorMap.put("closeContact", "không được để trống");
         }
+        return errorMap;
+    }
+
+    @Override
+    public Map<String, String> save(InformationPeople informationPeople, Symptom symptom) {
+        Map<String, String> errorMap = new HashMap<>();
+        errorMap = checkValidation(informationPeople, symptom);
         if (errorMap.isEmpty()) {
             medicalRepository.save(informationPeople, symptom);
         }
@@ -107,5 +113,31 @@ public class MedicalServiceImpl implements IMedicalService {
         return null;
     }
 
+    @Override
+    public InformationPeople findInfoPeopleById(int id) {
+        return medicalRepository.findInfoPeopleById(id);
+    }
 
+    @Override
+    public Symptom findSymptomById(int id) {
+        return medicalRepository.findSymptomById(id);
+    }
+
+    @Override
+    public Map<String, String> update(InformationPeople informationPeople, Symptom symptom) {
+//        InformationPeople informationPeople1 = medicalRepository.findInfoPeopleById(id);
+//        Symptom symptom1 = medicalRepository.findSymptomById(id);
+        Map<String, String> errorMap = new HashMap<>();
+        errorMap = checkValidation(informationPeople, symptom);
+        if (errorMap.isEmpty()) {
+            medicalRepository.update(informationPeople, symptom);
+        }
+        return errorMap;
+    }
+
+    @Override
+    public void remove(int id){
+        medicalRepository.remove(id);
+    }
 }
+

@@ -16,9 +16,10 @@ public class InformationPeople {
     private String vehicle;
     private String numberVehicle;
     private String numberLocate;
-    @DateTimeFormat(pattern = "dd/mm/yyyy")
+//    @DateTimeFormat(pattern = "dd/mm/yyyy")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date dayStart;
-    @DateTimeFormat(pattern = "dd/mm/yyyy")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date dayEnd;
     private String cityTravel;
     private String cityAddress;

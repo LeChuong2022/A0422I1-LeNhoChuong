@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+</head>
+<body>
+
+<p th:text="${mess}"></p>
+<form th:action="@{/medical/update(id=*{id})}" method="get" th:object="${info}" class="row g-3">
+    <div class="col-md-12" style="text-align: center; font-weight: bold">
+        TỜ KHAI Y TẾ <br/>
+        ĐÂY LÀ TÀI LIỆU QUAN TRỌNG, THÔNG TIN CỦA ANH/CHỊ SẼ GIÚP CƠ QUAN Y TEES LIÊN LẠC KHI CẦN THIẾT ĐỂ ĐỀ
+        PHÒNG CHỐNG DỊCH BỆNH TRUYỀN NHIỄM <br/>
+        <p style="color: red">Khuyến cáo: Khai báo thông tin sai là vi phạm pháp luật Việt Nam và có thể xử
+            lý hình sự</p>
+    </div>
+    <div><h3 style="color: red">READONLY</h3></div>
+    <div class="col-12">
+        <a href="/medical/list">
+        <button type="button" class="btn btn-danger" style="vertical-align: center">Back List</button>
+        </a>
+    </div>
+
+    <div class="col-md-12">
+        <label class="form-label">Họ và tên (ghi chữ hoa) <span
+                style="color: red">(*)</span><span style="color: red; background-color: yellow"
+                                                   th:text="${name}"></span> </label>
+        <input type="text" class="form-control" th:field="*{name}" readonly>
+    </div>
+    <div class="col-md-4">
+        <label class="form-label">Năm Sinh <span
+                style="color: red">(*)</span>
+            <span style="color: red; background-color: yellow" th:text="${yearOfBirth}"></span>
+        </label>
+        <input type="text" class="form-control" th:field="*{yearOfBirth}" readonly>
+    </div>
+    <div class="col-md-4">
+        <label class="form-label">Giới tính <span
+                style="color: red">(*)</span>
+        </label>
+        <select th:field="*{gender}">
+            <option value="" th:hidden="${info.gender == ''} ? '' : 'hidden'">-Chọn</option>
+            <option value="Nam" th:hidden="${info.gender == 'Nam'} ? '' : 'hidden'">Nam</option>
+            <option value="Nữ" th:hidden="${info.gender == 'Nữ'} ? '' : 'hidden'">Nữ</option>
+            <option value="Khác" th:hidden="${info.gender == 'Khác'} ? '' : 'hidden'">Khác</option>
+        </select>
+        <span style="color: red; background-color: yellow" th:text="${gender}"></span>
+    </div>
+    <div class="col-md-4">
+        <label class="form-label">Quốc tịch <span
+                style="color: red">(*)</span>
+            <span style="color: red; background-color: yellow" th:text="${nationality}"></span>
+        </label>
+        <input type="text" class="form-control" th:field="*{nationality}" readonly>
+    </div>
+    <div class="col-md-12">
+        <label class="form-label">Số hộ chiếu hoặc số CMND hoặc giấy thông hành hợp pháp khác <span
+                style="color: red">(*)</span>
+            <span style="color: red; background-color: yellow" th:text="${creditId}"></span>
+        </label>
+        <input type="text" class="form-control" th:field="*{creditId}" readonly>
+    </div>
+    <div class="col-md-12">
+        <label class="form-label">Thông tin đi lại <span
+                style="color: red">(*)</span>
+        </label>
+        <input type="radio" th:field="*{vehicle}" name="vehicle" value="Tàu bay"
+               th:checked="${info.vehicle == 'Tàu bay'} ? 'checked' : ''"
+               th:disabled="${info.vehicle == 'Tàu bay'} ? '' : 'disabled'"
+               class="form-check-input"
+        > <label>Tàu bay</label>
+        <input type="radio" th:field="*{vehicle}" name="vehicle" value="Tàu thuyền"
+               th:checked="${info.vehicle == 'Tàu thuyền'} ? 'checked' : ''"
+               th:disabled="${info.vehicle == 'Tàu thuyền'} ? '' : 'disabled'"
+               class="form-check-input"
+        > <label>Tàu thuyền</label>
+        <input type="radio" th:field="*{vehicle}" name="vehicle" value="Ô tô"
+               th:checked="${info.vehicle == 'Ô tô'} ? 'checked' : ''"
+               th:disabled="${info.vehicle == 'Ô tô'} ? '' : 'disabled'"
+               class="form-check-input"
+        > <label>Ô tô</label>
+        <input type="radio" th:field="*{vehicle}" name="vehicle" value="Khác (ghi rõ)"
+               th:checked="${info.vehicle == 'Khác (ghi rõ)'} ? 'checked' : ''"
+               th:disabled="${info.vehicle == 'Khác (ghi rõ)'} ? '' : 'disabled'"
+               class="form-check-input"
+        > <label>Khác (ghi rõ)</label>
+<!--        <span th:text="*{vehicle}" th:field="*{vehicle}" hidden></span>-->
+        <span style="color: red; background-color: yellow" th:text="${vehicle}"></span>
+    </div>
+    <div class="col-md-6">
+        <label class="form-label">Số hiệu phương tiện </label>
+        <input type="text" class="form-control" th:field="*{numberVehicle}" readonly>
+    </div>
+    <div class="col-md-6">
+        <label class="form-label">Số ghế </label>
+        <input type="text" class="form-control" th:field="*{numberLocate}" readonly>
+    </div>
+    <div class="col-md-6">
+        <label class="form-label">Ngày khởi hành
+            <span style="color: red">(*)</span>
+            <span style="color: red; background-color: yellow" th:text="${dayStart}"></span>
+        </label>
+        <input type="date" class="form-control" th:field="*{dayStart}" readonly>
+    </div>
+    <div class="col-md-6">
+        <label class="form-label">Ngày kết thúc
+            <span style="color: red">(*)</span>
+            <span style="color: red; background-color: yellow" th:text="${dayEnd}"></span>
+        </label>
+        <input type="date" class="form-control" th:field="*{dayEnd}" readonly>
+    </div>
+    <div class="col-md-12">
+        <label class="form-label">Trong vòng 14 ngày qua, anh/chị có đến tỉnh/thành phố nào? <span
+                style="color: red">(*)</span>
+            <span style="color: red; background-color: yellow" th:text="${cityTravel}"></span>
+        </label>
+        <textarea class="form-control" th:field="*{cityTravel}" readonly> </textarea>
+    </div>
+    <div class="col-md-12">
+        <label class="form-label" style="font-weight: bold">Địa chỉ liên lạc </label>
+    </div>
+    <div class="col-md-4">
+        <label class="form-label">Tỉnh/Thành <span
+                style="color: red">(*)</span>
+            <span style="color: red; background-color: yellow" th:text="${cityAddress}"></span>
+        </label>
+        <input type="text" class="form-control" th:field="*{cityAddress}" readonly>
+    </div>
+    <div class="col-md-4">
+        <label class="form-label">Quận/Huyện <span
+                style="color: red">(*)</span>
+            <span style="color: red; background-color: yellow" th:text="${districtAddress}"></span>
+        </label>
+        <input type="text" class="form-control" th:field="*{districtAddress}" readonly>
+    </div>
+    <div class="col-md-4">
+        <label class="form-label">Phường/xã <span
+                style="color: red">(*)</span>
+            <span style="color: red; background-color: yellow" th:text="${wardAddress}"></span>
+        </label>
+        <input type="text" class="form-control" th:field="*{wardAddress}" readonly>
+    </div>
+    <div class="col-md-12">
+        <label class="form-label">Địa chỉ nơi ở <span
+                style="color: red">(*)</span>
+            <span style="color: red; background-color: yellow" th:text="${address}"></span>
+        </label>
+        <input type="text" class="form-control" th:field="*{address}" readonly>
+    </div>
+    <div class="col-md-6">
+        <label class="form-label">Điện thoại <span
+                style="color: red">(*)</span>
+            <span style="color: red; background-color: yellow" th:text="${phone}"></span>
+        </label>
+        <input type="text" class="form-control" th:field="*{phone}" readonly>
+    </div>
+    <div class="col-md-6">
+        <label class="form-label">Email </label>
+        <input type="text" class="form-control" th:field="*{email}" readonly>
+    </div>
+    <div class="col-md-12">
+        <label class="form-label" style="font-weight: bold">Trong vòng 14 ngày qua,
+            anh/chị có thấy xuất hiện dấu hiệu nào sau đây không?
+            <span style="color: red">(*)</span> </label>
+    </div>
+    <div class="col-md-12" th:object="${symptom}">
+        <table class="table table-bordered border-primary">
+            <tr style="background-color: antiquewhite">
+                <th style="width: 30%">Triệu chứng</th>
+                <th style="width: 10%">Có</th>
+                <th style="width: 10%">Không</th>
+                <th style="width: 30%">Triệu chứng</th>
+                <th style="width: 10%">Có</th>
+                <th style="width: 10%">Không</th>
+            </tr>
+            <tr>
+                <th style="width: 30%">Sốt <span style="color: red">(*)</span>
+                    <span style="color: red; background-color: yellow" th:text="${fever}"></span>
+                </th>
+                <th style="width: 10%"><input type="radio" th:field="*{fever}" name="fever" value="true"
+                                              th:checked="${symptom.fever} ? 'checked' : ''"
+                                              th:disabled="${symptom.fever} ? '' : 'disabled'"
+                                              class="form-check-input"
+                >
+                </th>
+                <th style="width: 10%"><input type="radio" th:field="*{fever}" name="fever" value="false"
+                                              th:checked="${symptom.fever == 'false'} ? 'checked' : ''"
+                                              th:disabled="${symptom.fever == 'false'} ? '' : 'disabled'"
+                                              class="form-check-input"
+                >
+                </th>
+<!--                <span th:text="*{fever}" th:field="*{fever}" hidden></span>-->
+
+                <th style="width: 30%">Nôn, buồn nôn <span style="color: red">(*)</span>
+                    <span style="color: red; background-color: yellow" th:text="${nausea}"></span>
+                </th>
+                <th style="width: 10%"><input type="radio" th:field="*{nausea}" name="nausea" value="true"
+                                              th:checked="${symptom.nausea} ? 'checked' : ''"
+                                              th:disabled="${symptom.nausea} ? '' : 'disabled'"
+                                              class="form-check-input"
+                >
+                </th>
+                <th style="width: 10%"><input type="radio" th:field="*{nausea}" name="nausea" value="false"
+                                              th:checked="${symptom.nausea == 'false'} ? 'checked' : ''"
+                                              th:disabled="${symptom.nausea == 'false'} ? '' : 'disabled'"
+                                              class="form-check-input"
+                ></th>
+            </tr>
+            <tr>
+                <th style="width: 30%">Ho <span style="color: red">(*)</span>
+                    <span style="color: red; background-color: yellow" th:text="${cough}"></span>
+                </th>
+                <th style="width: 10%"><input type="radio" th:field="*{cough}" name="cough" value="true"
+                                              th:checked="${symptom.cough} ? 'checked' : ''"
+                                              th:disabled="${symptom.cough} ? '' : 'disabled'"
+                                              class="form-check-input"
+                >
+                </th>
+                <th style="width: 10%"><input type="radio" th:field="*{cough}" name="cough" value="false"
+                                              th:checked="${symptom.cough == 'false'} ? 'checked' : ''"
+                                              th:disabled="${symptom.cough == 'false'} ? '' : 'disabled'"
+                                              class="form-check-input"
+                >
+                </th>
+                <th style="width: 30%">Tiêu chảy <span style="color: red">(*)</span>
+                    <span style="color: red; background-color: yellow" th:text="${diarrhea}"></span>
+                </th>
+                <th style="width: 10%"><input type="radio" th:field="*{diarrhea}" name="diarrhea" value="true"
+                                              th:checked="${symptom.diarrhea} ? 'checked' : ''"
+                                              th:disabled="${symptom.diarrhea} ? '' : 'disabled'"
+                                              class="form-check-input"
+                >
+                </th>
+                <th style="width: 10%"><input type="radio" th:field="*{diarrhea}" name="diarrhea" value="false"
+                                              th:checked="${symptom.diarrhea == 'false'} ? 'checked' : ''"
+                                              th:disabled="${symptom.diarrhea == 'false'} ? '' : 'disabled'"
+                                              class="form-check-input"
+                ></th>
+            </tr>
+            <tr>
+                <th style="width: 30%">Khó thở <span style="color: red">(*)</span>
+                    <span style="color: red; background-color: yellow" th:text="${shortnessOfBreath}"></span>
+                </th>
+                <th style="width: 10%"><input type="radio" th:field="*{shortnessOfBreath}"
+                                              name="shortnessOfBreath" value="true"
+                                              th:checked="${symptom.shortnessOfBreath} ? 'checked' : ''"
+                                              th:disabled="${symptom.shortnessOfBreath} ? '' : 'disabled'"
+                                              class="form-check-input"
+                ></th>
+                <th style="width: 10%"><input type="radio" th:field="*{shortnessOfBreath}"
+                                              name="shortnessOfBreath" value="false"
+                                              th:checked="${symptom.shortnessOfBreath == 'false'} ? 'checked' : ''"
+                                              th:disabled="${symptom.shortnessOfBreath == 'false'} ? '' : 'disabled'"
+                                              class="form-check-input"
+                ></th>
+                <th style="width: 30%">Xuất huyết ngoài da <span style="color: red">(*)</span>
+                    <span style="color: red; background-color: yellow" th:text="${skinHemorrhage}"></span>
+                </th>
+                <th style="width: 10%"><input type="radio" th:field="*{skinHemorrhage}"
+                                              name="skinHemorrhage" value="true"
+                                              th:checked="${symptom.skinHemorrhage} ? 'checked' : ''"
+                                              th:disabled="${symptom.skinHemorrhage} ? '' : 'disabled'"
+                                              class="form-check-input"
+                ></th>
+                <th style="width: 10%"><input type="radio" th:field="*{skinHemorrhage}"
+                                              name="skinHemorrhage" value="false"
+                                              th:checked="${symptom.skinHemorrhage  == 'false'} ? 'checked' : ''"
+                                              th:disabled="${symptom.skinHemorrhage  == 'false'} ? '' : 'disabled'"
+                                              class="form-check-input"
+                ></th>
+            </tr>
+            <tr>
+                <th style="width: 30%">Đau họng <span style="color: red">(*)</span>
+                    <span style="color: red; background-color: yellow" th:text="${soreThroat}"></span>
+                </th>
+                <th style="width: 10%"><input type="radio" th:field="*{soreThroat}" name="soreThroat" value="true"
+                                              th:checked="${symptom.soreThroat} ? 'checked' : ''"
+                                              th:disabled="${symptom.soreThroat} ? '' : 'disabled'"
+                                              class="form-check-input"
+                >
+                </th>
+                <th style="width: 10%"><input type="radio" th:field="*{soreThroat}" name="soreThroat"
+                                              value="false"
+                                              th:checked="${symptom.soreThroat == 'false'} ? 'checked' : ''"
+                                              th:disabled="${symptom.soreThroat  == 'false'} ? '' : 'disabled'"
+                                              class="form-check-input"
+                >
+                </th>
+                <th style="width: 30%">Nổi ban ngoài da <span style="color: red">(*)</span>
+                    <span style="color: red; background-color: yellow" th:text="${skinRash}"></span>
+                </th>
+                <th style="width: 10%"><input type="radio" th:field="*{skinRash}" name="skinRash" value="true"
+                                              th:checked="${symptom.skinRash} ? 'checked' : ''"
+                                              th:disabled="${symptom.skinRash} ? '' : 'disabled'"
+                                              class="form-check-input"
+                >
+                </th>
+                <th style="width: 10%"><input type="radio" th:field="*{skinRash}" name="skinRash"
+                                              value="false"
+                                              th:checked="${symptom.skinRash == 'false'} ? 'checked' : ''"
+                                              th:disabled="${symptom.skinRash == 'false'} ? '' : 'disabled'"
+                                              class="form-check-input"
+                >
+                </th>
+            </tr>
+        </table>
+
+        <div class="col-md-12">
+            <label class="form-label" style="font-weight: bold">Lịch sử phơi nhiễm: Trong vòng
+                14 ngày qua, Anh/chị có
+                <span style="color: red">(*)</span> </label>
+        </div>
+        <div class="col-md-12" th:object="${symptom}">
+            <table class="table table-bordered border-primary">
+                <tr style="background-color: antiquewhite">
+                    <th style="width: 80%"></th>
+                    <th style="width: 10%">Có</th>
+                    <th style="width: 10%">Không</th>
+                </tr>
+                <tr>
+                    <th style="width: 80%">Đến trang trại, chăn nuôi/chợ buôn bán động vật sống/ cơ sở giết mổ
+                        động vật/ tiếp xúc động vật <span style="color: red">(*)</span>
+                        <span style="color: red; background-color: yellow" th:text="${travelEpidemicPlace}"></span>
+                    </th>
+                    <th style="width: 10%"><input type="radio" th:field="*{travelEpidemicPlace}"
+                                                  name="travelEpidemicPlace" value="true"
+                                                  th:checked="${symptom.travelEpidemicPlace} ? 'checked' : ''"
+                                                  th:disabled="${symptom.travelEpidemicPlace} ? '' : 'disabled'"
+                                                  class="form-check-input"
+                    >
+                    </th>
+                    <th style="width: 10%"><input type="radio" th:field="*{travelEpidemicPlace}"
+                                                  name="travelEpidemicPlace" value="false"
+                                                  th:checked="${symptom.travelEpidemicPlace == 'false'} ? 'checked' : ''"
+                                                  th:disabled="${symptom.travelEpidemicPlace == 'false'} ? '' : 'disabled'"
+                                                  class="form-check-input"
+                    ></th>
+                </tr>
+                <tr>
+                    <th style="width: 80%">Tiếp xúc gần(<2m) với người mắt bệnh viêm nhiễm đường hô hấp do nCoV
+                        <span style="color: red">(*)</span>
+                        <span style="color: red; background-color: yellow" th:text="${closeContact}"></span>
+                    </th>
+                    <th style="width: 10%"><input type="radio" th:field="*{closeContact}"
+                                                  name="closeContact" value="true"
+                                                  th:checked="${symptom.closeContact} ? 'checked' : ''"
+                                                  th:disabled="${symptom.closeContact} ? '' : 'disabled'"
+                                                  class="form-check-input"
+                    ></th>
+                    <th style="width: 10%"><input type="radio" th:field="*{closeContact}"
+                                                  name="closeContact" value="false"
+                                                  th:checked="${symptom.closeContact == 'false'} ? 'checked' : ''"
+                                                  th:disabled="${symptom.closeContact == 'false'} ? '' : 'disabled'"
+                                                  class="form-check-input"
+
+                    ></th>
+                </tr>
+            </table>
+        </div>
+        <div class="col-md-12">
+            <label class="form-label" style="font-weight: bold">Dữ liệu bạn cung cấp hoàn toàn bảo mật
+                và chỉ phục vụ cho việc phòng chống dịch, thuộc quản lý của Ban chỉ đạo quốc gia về
+                Phòng chống dịch Covid-19. </br>
+                Khi bạn nhấn nút "Gửi" là bạn đã hiểu và đồng ý</label>
+        </div>
+
+
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary" style="vertical-align: center">Sửa tờ khai</button>
+        </div>
+    </div>
+    <div hidden>
+    <input th:text="${info.id}" th:field="${info.id}">
+    <input th:text="${info.id}" th:field="${symptom.id}">
+    </div>
+</form>
+</body>
+</html>

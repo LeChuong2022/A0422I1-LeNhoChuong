@@ -10,4 +10,8 @@ public interface IMedicalRepository {
 
     List<InformationPeople> findInfoPeopleAll();
     List<Symptom> findSymptomAll();
+    InformationPeople findInfoPeopleById(int id);
+    Symptom findSymptomById(int id);
+    void update(InformationPeople informationPeople, Symptom symptom);
+    void remove(int id);
 }
