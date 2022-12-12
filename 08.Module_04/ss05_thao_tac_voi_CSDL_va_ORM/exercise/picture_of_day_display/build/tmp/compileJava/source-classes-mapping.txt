@@ -1,0 +1,16 @@
+picture_day/config/AppConfiguration.java
+ picture_day.config.AppConfiguration
+picture_day/config/AppInitializer.java
+ picture_day.config.AppInitializer
+picture_day/repository/IPictureRepository.java
+ picture_day.repository.IPictureRepository
+picture_day/bean/PictureRate.java
+ picture_day.bean.PictureRate
+picture_day/controller/PictureController.java
+ picture_day.controller.PictureController
+picture_day/service/IPictureService.java
+ picture_day.service.IPictureService
+picture_day/service/impl/PictureServiceImpl.java
+ picture_day.service.impl.PictureServiceImpl
+picture_day/repository/impl/PictureRepositoryImpl.java
+ picture_day.repository.impl.PictureRepositoryImpl
