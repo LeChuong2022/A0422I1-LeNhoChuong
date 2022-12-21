@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 public class ProductController {
     @Autowired
-    IProductService productService;
+    private IProductService productService;
 
     @RequestMapping(value = {"/list"}, method = RequestMethod.GET)
     public String displayList(Model model) {

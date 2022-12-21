@@ -14,7 +14,7 @@ import java.util.List;
 @Controller
 public class PictureController {
     @Autowired
-    IPictureService pictureService;
+    private IPictureService pictureService;
 
     @GetMapping("/view")
     public String displayPicture(Model model){

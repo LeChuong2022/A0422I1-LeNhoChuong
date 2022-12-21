@@ -10,9 +10,9 @@ codegym/vn/repository/ISongRepository.java
  codegym.vn.repository.ISongRepository
 codegym/vn/validate/Validation.java
  codegym.vn.validate.Validation
-codegym/vn/controller/SongController.java
- codegym.vn.controller.SongController
-codegym/vn/service/impl/SongServiceImpl.java
- codegym.vn.service.impl.SongServiceImpl
 codegym/vn/repository/impl/SongRepositoryImpl.java
  codegym.vn.repository.impl.SongRepositoryImpl
+codegym/vn/service/impl/SongServiceImpl.java
+ codegym.vn.service.impl.SongServiceImpl
+codegym/vn/controller/SongController.java
+ codegym.vn.controller.SongController

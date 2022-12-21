@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f047543f-0c5a-4641-bc7f-f22123f0d331" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../ss07_spring_data_repository/exercise/blog-expanse/src/main/java/com/example/blogexpanse/controller/BlogController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss07_spring_data_repository/exercise/blog-expanse/src/main/java/com/example/blogexpanse/entity/Blog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss07_spring_data_repository/exercise/blog-expanse/src/main/java/com/example/blogexpanse/entity/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss07_spring_data_repository/exercise/blog-expanse/src/main/java/com/example/blogexpanse/repository/IBlogRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss07_spring_data_repository/exercise/blog-expanse/src/main/java/com/example/blogexpanse/repository/ICategoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss07_spring_data_repository/exercise/blog-expanse/src/main/java/com/example/blogexpanse/service/IBlogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss07_spring_data_repository/exercise/blog-expanse/src/main/java/com/example/blogexpanse/service/ICategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss07_spring_data_repository/exercise/blog-expanse/src/main/java/com/example/blogexpanse/service/impl/BlogServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss07_spring_data_repository/exercise/blog-expanse/src/main/java/com/example/blogexpanse/service/impl/CategoryServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss07_spring_data_repository/exercise/blog-expanse/src/main/resources/static/brand/bootstrap-logo-white.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss07_spring_data_repository/exercise/blog-expanse/src/main/resources/static/brand/bootstrap-logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss07_spring_data_repository/exercise/blog-expanse/src/main/resources/static/css/blog.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss07_spring_data_repository/exercise/blog-expanse/src/main/resources/static/css/blog.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss07_spring_data_repository/exercise/blog-expanse/src/main/resources/static/css/starter-template.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss07_spring_data_repository/exercise/blog-expanse/src/main/resources/static/dist/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss07_spring_data_repository/exercise/blog-expanse/src/main/resources/static/dist/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss07_spring_data_repository/exercise/blog-expanse/src/main/resources/static/dist/css/bootstrap.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss07_spring_data_repository/exercise/blog-expanse/src/main/resources/static/dist/css/bootstrap.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss07_spring_data_repository/exercise/blog-expanse/src/main/resources/static/dist/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss07_spring_data_repository/exercise/blog-expanse/src/main/resources/static/dist/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss07_spring_data_repository/exercise/blog-expanse/src/main/resources/templates/blog/category.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss07_spring_data_repository/exercise/blog-expanse/src/main/resources/templates/blog/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss07_spring_data_repository/exercise/blog-expanse/src/main/resources/templates/blog/detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss07_spring_data_repository/exercise/blog-expanse/src/main/resources/templates/blog/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss07_spring_data_repository/exercise/blog-expanse/src/main/resources/templates/blog/index-paging.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss07_spring_data_repository/exercise/blog-expanse/src/main/resources/templates/blog/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss08_validation/exercise/form-login/src/main/java/com/example/formlogin/controller/AccountController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss08_validation/exercise/form-login/src/main/java/com/example/formlogin/entity/Account.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss08_validation/exercise/form-login/src/main/java/com/example/formlogin/repository/IAccountRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss08_validation/exercise/form-login/src/main/java/com/example/formlogin/service/IAccountService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss08_validation/exercise/form-login/src/main/java/com/example/formlogin/service/impl/AccountServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss08_validation/exercise/form-login/src/main/java/com/example/formlogin/validate/AccountValidate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss08_validation/exercise/form-login/src/main/resources/messages.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss08_validation/exercise/form-login/src/main/resources/static/assets/brand/bootstrap-logo-white.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss08_validation/exercise/form-login/src/main/resources/static/assets/brand/bootstrap-logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss08_validation/exercise/form-login/src/main/resources/static/assets/dist/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss08_validation/exercise/form-login/src/main/resources/static/assets/dist/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss08_validation/exercise/form-login/src/main/resources/static/assets/dist/css/bootstrap.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss08_validation/exercise/form-login/src/main/resources/static/assets/dist/css/bootstrap.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss08_validation/exercise/form-login/src/main/resources/static/assets/dist/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss08_validation/exercise/form-login/src/main/resources/static/assets/dist/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss08_validation/exercise/form-login/src/main/resources/templates/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss08_validation/exercise/form-login/src/main/resources/templates/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../practice/blog-expanse/src/main/java/com/example/blogexpanse/aspect/BlogAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../practice/blog-expanse/src/main/java/com/example/blogexpanse/handler/CustomExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../practice/blog-expanse/src/main/resources/templates/blog/error.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../practice/blog-expanse/src/main/resources/templates/blog/error2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../07.CaseStudyM3/FuramaResortV02/.gradle/6.8/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../07.CaseStudyM3/FuramaResortV02/.gradle/6.8/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../07.CaseStudyM3/FuramaResortV02/.gradle/6.8/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../07.CaseStudyM3/FuramaResortV02/.gradle/6.8/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../07.CaseStudyM3/FuramaResortV02/.gradle/6.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../07.CaseStudyM3/FuramaResortV02/.gradle/6.8/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../07.CaseStudyM3/FuramaResortV02/.gradle/6.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../07.CaseStudyM3/FuramaResortV02/.gradle/6.8/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../07.CaseStudyM3/FuramaResortV02/.gradle/6.8/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../07.CaseStudyM3/FuramaResortV02/.gradle/6.8/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../07.CaseStudyM3/FuramaResortV02/.gradle/6.8/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../07.CaseStudyM3/FuramaResortV02/.gradle/6.8/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../07.CaseStudyM3/FuramaResortV02/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../07.CaseStudyM3/FuramaResortV02/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss01_tong_quan_spring_MVC/practice/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss01_tong_quan_spring_MVC/practice/customer-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/form_medical/.gradle/6.8/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/form_medical/.gradle/6.8/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/form_medical/.gradle/6.8/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/form_medical/.gradle/6.8/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/form_medical/.gradle/6.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/form_medical/.gradle/6.8/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/form_medical/.gradle/6.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/form_medical/.gradle/6.8/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/form_medical/.gradle/6.8/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/form_medical/.gradle/6.8/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/form_medical/.gradle/6.8/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/form_medical/.gradle/6.8/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/form_medical/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/form_medical/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/form_medical/build/classes/java/main/medical/controller/MedicalController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/form_medical/build/classes/java/main/medical/controller/MedicalController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/form_medical/build/libs/form_medical-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/form_medical/build/libs/form_medical-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/form_medical/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/form_medical/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/form_medical/src/main/java/medical/controller/MedicalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/form_medical/src/main/java/medical/controller/MedicalController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/setting_mail/.gradle/6.8/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/setting_mail/.gradle/6.8/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/setting_mail/.gradle/6.8/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/setting_mail/.gradle/6.8/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/setting_mail/.gradle/6.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/setting_mail/.gradle/6.8/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/setting_mail/.gradle/6.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/setting_mail/.gradle/6.8/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/setting_mail/.gradle/6.8/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/setting_mail/.gradle/6.8/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/setting_mail/.gradle/6.8/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/setting_mail/.gradle/6.8/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/setting_mail/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/setting_mail/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/setting_mail/build/classes/java/main/setting_mail/controller/MailController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/setting_mail/build/classes/java/main/setting_mail/controller/MailController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/setting_mail/build/libs/setting_mail-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/setting_mail/build/libs/setting_mail-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/setting_mail/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/setting_mail/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/setting_mail/src/main/java/setting_mail/controller/MailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/setting_mail/src/main/java/setting_mail/controller/MailController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/upload_song/.gradle/6.8/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/upload_song/.gradle/6.8/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/upload_song/.gradle/6.8/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/upload_song/.gradle/6.8/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/upload_song/.gradle/6.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/upload_song/.gradle/6.8/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/upload_song/.gradle/6.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/upload_song/.gradle/6.8/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/upload_song/.gradle/6.8/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/upload_song/.gradle/6.8/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/upload_song/.gradle/6.8/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/upload_song/.gradle/6.8/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/upload_song/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/upload_song/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/upload_song/build/classes/java/main/codegym/vn/controller/SongController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/upload_song/build/classes/java/main/codegym/vn/controller/SongController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/upload_song/build/libs/upload_song-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/upload_song/build/libs/upload_song-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/upload_song/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/upload_song/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/upload_song/src/main/java/codegym/vn/controller/SongController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss03_data_binding_and_form/exercise/upload_song/src/main/java/codegym/vn/controller/SongController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss04_views_and_thymeleaf/exercise/product_management/.gradle/6.8/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss04_views_and_thymeleaf/exercise/product_management/.gradle/6.8/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss04_views_and_thymeleaf/exercise/product_management/.gradle/6.8/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss04_views_and_thymeleaf/exercise/product_management/.gradle/6.8/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss04_views_and_thymeleaf/exercise/product_management/.gradle/6.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss04_views_and_thymeleaf/exercise/product_management/.gradle/6.8/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss04_views_and_thymeleaf/exercise/product_management/.gradle/6.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss04_views_and_thymeleaf/exercise/product_management/.gradle/6.8/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss04_views_and_thymeleaf/exercise/product_management/.gradle/6.8/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss04_views_and_thymeleaf/exercise/product_management/.gradle/6.8/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss04_views_and_thymeleaf/exercise/product_management/.gradle/6.8/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss04_views_and_thymeleaf/exercise/product_management/.gradle/6.8/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss04_views_and_thymeleaf/exercise/product_management/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss04_views_and_thymeleaf/exercise/product_management/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss04_views_and_thymeleaf/exercise/product_management/build/classes/java/main/product_management/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss04_views_and_thymeleaf/exercise/product_management/build/classes/java/main/product_management/controller/ProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss04_views_and_thymeleaf/exercise/product_management/build/libs/product_management-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss04_views_and_thymeleaf/exercise/product_management/build/libs/product_management-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss04_views_and_thymeleaf/exercise/product_management/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss04_views_and_thymeleaf/exercise/product_management/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss04_views_and_thymeleaf/exercise/product_management/src/main/java/product_management/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss04_views_and_thymeleaf/exercise/product_management/src/main/java/product_management/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss05_thao_tac_voi_CSDL_va_ORM/demo/springDemo/.gradle/7.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss05_thao_tac_voi_CSDL_va_ORM/demo/springDemo/.gradle/7.4/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss05_thao_tac_voi_CSDL_va_ORM/demo/springDemo/.gradle/7.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss05_thao_tac_voi_CSDL_va_ORM/demo/springDemo/.gradle/7.4/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss05_thao_tac_voi_CSDL_va_ORM/demo/springDemo/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss05_thao_tac_voi_CSDL_va_ORM/demo/springDemo/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss05_thao_tac_voi_CSDL_va_ORM/demo/springDemo/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss05_thao_tac_voi_CSDL_va_ORM/demo/springDemo/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss05_thao_tac_voi_CSDL_va_ORM/exercise/picture_of_day_display/src/main/java/picture_day/controller/PictureController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss05_thao_tac_voi_CSDL_va_ORM/exercise/picture_of_day_display/src/main/java/picture_day/controller/PictureController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss05_thao_tac_voi_CSDL_va_ORM/practice/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss05_thao_tac_voi_CSDL_va_ORM/practice/customer-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss05_thao_tac_voi_CSDL_va_ORM/practice/quan_ly_danh_sach_khach_hang/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss05_thao_tac_voi_CSDL_va_ORM/practice/quan_ly_danh_sach_khach_hang/customer-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss06_JPA/exercise/blog/.gradle/6.8/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss06_JPA/exercise/blog/.gradle/6.8/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss06_JPA/exercise/blog/.gradle/6.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss06_JPA/exercise/blog/.gradle/6.8/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss06_JPA/exercise/blog/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss06_JPA/exercise/blog/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="2JDpF2xhLEXnmvAS5L4TBweKkXn" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f047543f-0c5a-4641-bc7f-f22123f0d331" name="Default Changelist" comment="" />
+      <created>1671622400857</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1671622400857</updated>
+      <workItem from="1671622401986" duration="154000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

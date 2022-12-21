@@ -6,8 +6,8 @@ setting_mail/repository/impl/MailRepositoryImpl.java
  setting_mail.repository.impl.MailRepositoryImpl
 setting_mail/service/impl/SettingMailServiceImpl.java
  setting_mail.service.impl.SettingMailServiceImpl
-setting_mail/controller/MailController.java
- setting_mail.controller.MailController
+setting_mail/config/AppInitializer.java
+ setting_mail.config.AppInitializer
 setting_mail/repository/ISettingMailRepository.java
  setting_mail.repository.ISettingMailRepository
 setting_mail/service/IMailService.java
@@ -22,5 +22,5 @@ setting_mail/repository/impl/SettingMailRepositoryImpl.java
  setting_mail.repository.impl.SettingMailRepositoryImpl
 setting_mail/service/impl/MailServiceImpl.java
  setting_mail.service.impl.MailServiceImpl
-setting_mail/config/AppInitializer.java
- setting_mail.config.AppInitializer
+setting_mail/controller/MailController.java
+ setting_mail.controller.MailController

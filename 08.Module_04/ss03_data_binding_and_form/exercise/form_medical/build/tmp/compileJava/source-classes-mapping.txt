@@ -12,7 +12,7 @@ medical/service/MedicalServiceImpl.java
  medical.service.MedicalServiceImpl
 medical/service/IMedicalService.java
  medical.service.IMedicalService
-medical/controller/MedicalController.java
- medical.controller.MedicalController
 medical/repository/MedicalRepositoryImpl.java
  medical.repository.MedicalRepositoryImpl
+medical/controller/MedicalController.java
+ medical.controller.MedicalController

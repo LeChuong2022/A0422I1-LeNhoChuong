@@ -14,7 +14,7 @@ import java.util.Map;
 @RequestMapping("/song")
 public class SongController {
     @Autowired
-    ISongService songService;
+    private ISongService songService;
 
     @RequestMapping(method = RequestMethod.GET, value = {"/list"})
     public String displayList(Model model) {

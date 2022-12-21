@@ -15,10 +15,10 @@ import java.util.Map;
 @RequestMapping("/mail")
 public class MailController {
     @Autowired
-    IMailService mailService;
+    private IMailService mailService;
 
     @Autowired
-    ISettingMailService settingMailService;
+    private ISettingMailService settingMailService;
 
     @RequestMapping(method = RequestMethod.GET, value = {"/list"})
     public String displayList(Model model) {

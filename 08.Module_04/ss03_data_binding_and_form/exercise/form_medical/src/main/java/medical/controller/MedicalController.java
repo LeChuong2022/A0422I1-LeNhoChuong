@@ -14,7 +14,7 @@ import java.util.Map;
 @RequestMapping("/medical")
 public class MedicalController {
     @Autowired
-    IMedicalService medicalService;
+    private IMedicalService medicalService;
 
     @GetMapping("/list")
     public String displayList(Model model){
