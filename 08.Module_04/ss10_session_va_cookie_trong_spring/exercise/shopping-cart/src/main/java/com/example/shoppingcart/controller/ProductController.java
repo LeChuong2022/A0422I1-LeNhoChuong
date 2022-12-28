@@ -32,7 +32,6 @@ public class ProductController {
     @GetMapping("detail/{id}")
     public String detail(Model model, @PathVariable("id") Long id) {
         model.addAttribute("product", productService.findById(id).get());
-        System.out.println("ákjdhk");
         return "/detail";
     }
 
