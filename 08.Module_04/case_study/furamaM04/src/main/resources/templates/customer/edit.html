@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create customer</title>
+    <div th:insert="~{index::link}"></div>
+
+</head>
+<body>
+<div th:insert="~{common/header :: header}"></div>
+<h1>Edit customer</h1>
+<th:block th:if="${message}">
+    <span th:text="${message}" style="color: red"></span>
+</th:block>
+<form th:action="@{/customer/edit}" method="post" th:object="${customer}">
+    <input type="hidden" th:field="*{id}">
+    <table>
+        <tr>
+            <th style="text-align: left">Customer's name:</th>
+            <td><input type="text" th:field="*{name}"></td>
+        </tr>
+        <tr>
+            <th style="text-align: left">Customer's type:</th>
+            <td>
+                <select th:field="*{customerType}">
+                    <option th:each="cu : ${customerTypes}" th:value="${cu.id}"
+                            th:text="${cu.name}"></option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th style="text-align: left">Customer's birthday:</th>
+            <td><input type="date" th:field="*{customerBirthday}"></td>
+        </tr>
+        <tr>
+            <th style="text-align: left">Customer's gender:</th>
+            <td>
+                <select th:field="*{gender}">
+                    <option th:value="0">Female</option>
+                    <option th:value="1">Male</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th style="text-align: left">Customer's id card:</th>
+            <td><input type="text" th:field="*{idCard}"></td>
+        </tr>
+       <tr>
+            <th style="text-align: left">Customer's phone:</th>
+            <td><input type="text" th:field="*{phone}"></td>
+        </tr>
+       <tr>
+            <th style="text-align: left">Customer's email:</th>
+            <td><input type="text" th:field="*{email}"></td>
+        </tr>
+       <tr>
+            <th style="text-align: left">Customer's address:</th>
+            <td><input type="text" th:field="*{address}"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Edit"></td>
+        </tr>
+    </table>
+
+
+</form>
+
+
+<div th:insert="~{common/footer :: footer}"></div>
+
+</body>
+</html>

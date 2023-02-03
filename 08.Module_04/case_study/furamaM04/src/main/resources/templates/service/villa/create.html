@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create customer</title>
+    <div th:insert="~{index::link}"></div>
+
+</head>
+<body>
+<div th:insert="~{common/header :: header}"></div>
+<form th:action="@{/service/create}" method="get" th:object="${service}">
+
+    <table>
+        <tr>
+            <th>Serivce:</th>
+            <td>
+                <select th:field="*{serviceType}">
+                    <option th:each="service : ${serviceTypes}" th:value="${service.id}"
+                            th:text="${service.name}"></option>
+                </select>
+            </td>
+            <td><input type="submit" value="Show"></td>
+        </tr>
+    </table>
+</form>
+<h1>Create new service - Villa</h1>
+<th:block th:if="${message}">
+    <span th:text="${message}" style="color: red"></span>
+</th:block>
+<form th:action="@{/service/create}" method="post" th:object="${service}">
+        <div hidden="hidden">
+            <select th:field="*{serviceType}">
+                <option th:each="service : ${serviceTypes}" th:value="${service.id}"
+                        th:text="${service.name}"></option>
+            </select>
+        </div>
+    <table>
+        <tr>
+            <th style="text-align: left">Service's name:</th>
+            <td><input type="text" th:field="*{name}"></td>
+        </tr>
+        <tr>
+            <th style="text-align: left">Service's area:</th>
+            <td><input type="text" th:field="*{serviceArea}"></td>
+        </tr>
+        <tr>
+            <th style="text-align: left">Service's cost:</th>
+            <td><input type="text" th:field="*{serviceCost}"></td>
+        </tr>
+        <tr>
+            <th style="text-align: left">Max people:</th>
+            <td><input type="text" th:field="*{serviceMaxPeople}"></td>
+        </tr>
+        <tr>
+            <th style="text-align: left">Standard Room:</th>
+            <td><input type="text" th:field="*{standardRoom}"></td>
+        </tr>
+        <tr>
+            <th style="text-align: left">Description Other Convenience:</th>
+            <td><input type="text" th:field="*{descriptionOtherConvenience}"></td>
+        </tr>
+        <tr>
+            <th style="text-align: left">Pool Area:</th>
+            <td><input type="text" th:field="*{poolArea}"></td>
+        </tr>
+        <tr>
+            <th style="text-align: left">Number Of Floors:</th>
+            <td><input type="text" th:field="*{numberOfFloors}"></td>
+        </tr>
+        <tr>
+            <th style="text-align: left">Rent type:</th>
+            <td>
+                <select th:field="*{rentType}">
+                    <option th:each="rent : ${rentTypes}" th:value="${rent.id}"
+                            th:text="${rent.name}"></option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Create"></td>
+        </tr>
+    </table>
+
+
+</form>
+
+
+<div th:insert="~{common/footer :: footer}"></div>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <div th:insert="~{index::link}"></div>
+    <div th:insert="~{index::script}"></div>
+</head>
+<body>
+<div th:insert="~{common/header :: header}"></div>
+<h1>Service List</h1>
+<th:block th:if="${message}">
+    <span th:text="${message}" style="color: red"></span>
+</th:block>
+<a class="link-secondary" th:href="@{/service/create}">Create new service</a>
+<table class="table table-striped">
+    <tr>
+        <th>STT</th>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Area</th>
+        <th>Cost</th>
+        <th>Max People</th>
+        <th>Standard Room</th>
+        <th>Description Other Convenience</th>
+        <th>Pool Area</th>
+        <th>Number Of Floors</th>
+        <th>Rent Type</th>
+        <th>Service Type</th>
+    </tr>
+    <tr th:each="s, iter : ${services}" th:object="${s}">
+      <td th:text="${iter.count}"></td>
+      <td th:text="*{id}"></td>
+      <td th:text="*{name}"></td>
+      <td th:text="*{serviceArea}"></td>
+      <td th:text="*{serviceCost}"></td>
+      <td th:text="*{serviceMaxPeople}"></td>
+      <td th:text="*{standardRoom}"></td>
+      <td th:text="*{descriptionOtherConvenience}"></td>
+      <td th:text="*{poolArea}"></td>
+      <td th:text="*{numberOfFloors}"></td>
+      <td th:text="*{rentType.name}"></td>
+      <td th:text="*{serviceType.name}"></td>
+    </tr>
+
+</table>
+
+<div th:insert="~{common/footer :: footer}"></div>
+
+</body>
+</html>

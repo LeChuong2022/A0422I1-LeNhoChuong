@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create customer</title>
+    <div th:insert="~{index::link}"></div>
+
+</head>
+<body>
+<div th:insert="~{common/header :: header}"></div>
+<h1>Create new employee</h1>
+<th:block th:if="${message}">
+    <span th:text="${message}" style="color: red"></span>
+</th:block>
+<form th:action="@{/employee/create}" method="post" th:object="${employee}">
+    <table>
+        <tr>
+            <th style="text-align: left">Employee's name:</th>
+            <td><input type="text" th:field="*{name}"></td>
+        </tr>
+
+        <tr>
+            <th style="text-align: left">Employee's birthday:</th>
+            <td><input type="date" th:field="*{employeeBirthday}"></td>
+        </tr>
+        <tr>
+            <th style="text-align: left">Employee's id card:</th>
+            <td><input type="text" th:field="*{idCard}"></td>
+        </tr>
+        <tr>
+            <th style="text-align: left">Salary:</th>
+            <td><input type="text" th:field="*{salary}"></td>
+        </tr>
+        <tr>
+            <th style="text-align: left">Employee's phone:</th>
+            <td><input type="text" th:field="*{phone}"></td>
+        </tr>
+        <tr>
+            <th style="text-align: left">Employee's email:</th>
+            <td><input type="text" th:field="*{email}"></td>
+        </tr>
+        <tr>
+            <th style="text-align: left">Employee's address:</th>
+            <td><input type="text" th:field="*{address}"></td>
+        </tr>
+        <tr>
+            <th style="text-align: left">Position:</th>
+            <td>
+                <select th:field="*{position}">
+                    <option th:each="p : ${positions}" th:value="${p.id}"
+                            th:text="${p.name}"></option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th style="text-align: left">Education Degree:</th>
+            <td>
+                <select th:field="*{educationDegree}">
+                    <option th:each="e : ${educationDegrees}" th:value="${e.id}"
+                            th:text="${e.name}"></option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th style="text-align: left">Division:</th>
+            <td>
+                <select th:field="*{division}">
+                    <option th:each="d : ${divisions}" th:value="${d.id}"
+                            th:text="${d.name}"></option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th style="text-align: left">User:</th>
+            <td><input type="text" th:field="${account.accountName}"></td>
+        </tr>
+        <tr>
+            <th style="text-align: left">Password:</th>
+            <td><input type="password" th:field="${account.password}"></td>
+        </tr>
+
+
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Create"></td>
+        </tr>
+    </table>
+
+
+</form>
+
+
+<div th:insert="~{common/footer :: footer}"></div>
+
+</body>
+</html>
