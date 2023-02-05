@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Contract detail</title>
+    <div th:insert="~{index::link}"></div>
+    <div th:insert="~{index::script}"></div>
+</head>
+<body>
+<div th:insert="~{common/header :: header}"></div>
+<div th:insert="~{common/common :: navSearch}"></div>
+
+<h1>Contract detail</h1>
+<th:block th:if="${message}">
+    <span th:text="${message}" style="color: red"></span>
+</th:block>
+
+<a class="link-secondary" th:href="@{/customer/customerContract}">
+    <input type="submit" value="Display: Customers are using service"/>
+</a>
+<br/>
+<a class="link-secondary" th:href="@{/contract/create}">Create new contract</a>
+<table class="table table-striped" th:object="${contract}">
+    <tr>
+        <th>Id</th>
+        <td th:text="*{id}"></td>
+    </tr>
+    <tr>
+        <th>String Id</th>
+        <td th:text="*{stringId}"></td>
+    </tr>
+    <tr>
+        <th>Contract start date</th>
+        <td th:text="*{#dates.format(contractStartDate, 'dd-MMM-yyyy')}"></td>
+    </tr>
+    <tr>
+        <th>Contract end date</th>
+        <td th:text="*{#dates.format(contractEndDate, 'dd-MMM-yyyy')}"></td>
+    </tr>
+    <tr>
+        <th>Contract deposit</th>
+        <td th:text="*{contractDeposit}"></td>
+    </tr>
+    <tr>
+        <th>Contract total money</th>
+        <td th:text="*{contractTotalMoney}"></td>
+    </tr>
+    <tr>
+        <th>Employee's name</th>
+        <td th:text="*{employee.name}"></td>
+    </tr>
+    <tr>
+        <th>Customer's name</th>
+        <td th:text="*{customer.name}"></td>
+    </tr>
+    <tr>
+        <th>Service's name</th>
+        <td th:text="*{service.name}"></td>
+    </tr>
+    </tr>
+    <tr>
+        <th>ContractDetails:</th>
+        <td>
+            <div th:each="coD, iter:*{contractDetails}" th:object="${coD}">
+                <span th:text="${coD.stringId}"></span><span>: </span><span
+                    th:text="${coD.attachService.name}"></span><br/>
+            </div>
+        </td>
+    </tr>
+    <!--    tính năng-->
+    <td><a th:href="@{/contract/edit/{id}(id=*{id})}">
+        <button class="btn btn-warning">Edit</button>
+    </a></td>
+    <td>
+        <button class="btn btn-danger" data-bs-toggle="modal" th:attr="data-bs-target='#exampleModal'+*{id}">
+            Delete
+        </button>
+    </td>
+
+    <!-- Modal -->
+    <div class="modal fade"
+         th:attr="id='exampleModal'+*{id}"
+         tabindex="-1" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Delete Contract</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <span>Do you want remove </span><span style="color: red" th:text="*{stringId}"></span>
+                    <span>?</span>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close
+                    </button>
+                    <a th:href="@{/contract/delete/{id}(id=*{id})}">
+                        <button type="button" class="btn btn-primary">Delete</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </tr>
+</table>
+
+
+<div th:insert="~{common/footer :: footer}"></div>
+
+</body>
+</html>

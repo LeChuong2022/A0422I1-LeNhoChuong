@@ -4,9 +4,12 @@ import com.furamam04.entity.Service;
 import com.furamam04.service.IRentTypeService;
 import com.furamam04.service.IServiceService;
 import com.furamam04.service.IServiceTypeService;
+import com.furamam04.validate.ServiceValidate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -49,15 +52,31 @@ public class ServiceController {
     }
 
     @PostMapping("create")
-    public String doCreate(Model model, @ModelAttribute("service") Service service) {
+    public String doCreate(Model model, @Validated @ModelAttribute("service") Service service,
+                           BindingResult bindingResult) {
+//        Check nguyên dương
+        ServiceValidate validate = new ServiceValidate();
+        validate.validate(service, bindingResult);
+//        CHeck nguyên dương
+        Service service1 = new Service();
+        service1.setServiceType(service.getServiceType());
+        if (bindingResult.hasErrors()){
+            model.addAttribute("rentTypes", rentTypeService.findAll());
+            model.addAttribute("serviceTypes", serviceTypeService.findAll());
+            if (service1.getServiceType().getName().equals("House"))
+                return "service/house/create";
+            else if (service1.getServiceType().getName().equals("Room"))
+                return "service/room/create";
+            else
+                return "service/villa/create";
+        }
         serviceService.save(service);
         model.addAttribute("service", new Service());
         model.addAttribute("rentTypes", rentTypeService.findAll());
         model.addAttribute("serviceTypes", serviceTypeService.findAll());
         model.addAttribute("message", "Create new service successful");
 
-        Service service1 = new Service();
-        service1.setServiceType(service.getServiceType());
+
         if (service1.getServiceType().getName().equals("House"))
             return "service/house/create";
         else if (service1.getServiceType().getName().equals("Room"))

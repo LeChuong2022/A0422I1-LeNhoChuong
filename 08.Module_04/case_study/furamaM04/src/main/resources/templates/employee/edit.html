@@ -8,12 +8,15 @@
 </head>
 <body>
 <div th:insert="~{common/header :: header}"></div>
+<div th:insert="~{common/common :: navNoSearch}"></div>
+
 <h1>Edit employee</h1>
 <th:block th:if="${message}">
     <span th:text="${message}" style="color: red"></span>
 </th:block>
 <form th:action="@{/employee/edit}" method="post" th:object="${employee}">
     <input type="text" th:field="*{id}" hidden/>
+    <input type="text" th:field="*{stringId}" hidden>
     <table>
         <tr>
             <th style="text-align: left">Employee's name:</th>
@@ -22,11 +25,15 @@
 
         <tr>
             <th style="text-align: left">Employee's birthday:</th>
-            <td><input type="date" th:field="*{employeeBirthday}"></td>
+            <td><input type="date" th:field="*{employeeBirthday}">
+                <span th:if="${#fields.hasErrors('employeeBirthday')}" th:errors="*{employeeBirthday}" style="color: red"></span>
+            </td>
         </tr>
         <tr>
             <th style="text-align: left">Employee's id card:</th>
-            <td><input type="text" th:field="*{idCard}"></td>
+            <td><input type="text" th:field="*{idCard}">
+                <span th:if="${#fields.hasErrors('idCard')}" th:errors="*{idCard}" style="color: red"></span>
+            </td>
         </tr>
         <tr>
             <th style="text-align: left">Salary:</th>
@@ -34,11 +41,15 @@
         </tr>
         <tr>
             <th style="text-align: left">Employee's phone:</th>
-            <td><input type="text" th:field="*{phone}"></td>
+            <td><input type="text" th:field="*{phone}">
+                <span th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}" style="color: red"></span>
+            </td>
         </tr>
         <tr>
             <th style="text-align: left">Employee's email:</th>
-            <td><input type="text" th:field="*{email}"></td>
+            <td><input type="text" th:field="*{email}">
+                <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}" style="color: red"></span>
+            </td>
         </tr>
         <tr>
             <th style="text-align: left">Employee's address:</th>

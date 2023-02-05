@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create new contract</title>
+    <div th:insert="~{index::link}"></div>
+
+</head>
+<body>
+<div th:insert="~{common/header :: header}"></div>
+<div th:insert="~{common/common :: navNoSearch}"></div>
+
+<h1>Create new contract</h1>
+<th:block th:if="${message}">
+    <span th:text="${message}" style="color: red"></span>
+</th:block>
+<form th:action="@{/contract/edit}" method="post" th:object="${contract}">
+    <input type="text" th:field="*{id}" hidden/>
+    <table>
+        <tr>
+            <th style="text-align: left">String id: <span style="color: red">read only</span></th>
+            <td><input type="text" th:field="*{stringId}" readonly style="color: red">
+                <span th:if="${#fields.hasErrors('stringId')}" th:errors="*{stringId}" style="color: red"></span>
+            </td>
+
+        </tr>
+
+        <tr>
+            <th style="text-align: left">Contract start date:</th>
+            <td><input type="date" th:field="*{contractStartDate}">
+                <span th:if="${#fields.hasErrors('contractStartDate')}" th:errors="*{contractStartDate}"
+                      style="color: red"></span>
+            </td>
+        </tr>
+        <tr>
+            <th style="text-align: left">Contract end date:</th>
+            <td><input type="date" th:field="*{contractEndDate}">
+                <span th:if="${#fields.hasErrors('contractEndDate')}" th:errors="*{contractEndDate}"
+                      style="color: red"></span>
+            </td>
+        </tr>
+        <tr>
+            <th style="text-align: left">Deposit:</th>
+            <td><input type="text" th:field="*{contractDeposit}">
+                <span th:if="${#fields.hasErrors('contractDeposit')}" th:errors="*{contractDeposit}"
+                      style="color: red"></span>
+            </td>
+        </tr>
+        <tr>
+            <th style="text-align: left">Total Money:</th>
+            <td><input type="text" th:field="*{contractTotalMoney}">
+                <span th:if="${#fields.hasErrors('contractTotalMoney')}" th:errors="*{contractTotalMoney}"
+                      style="color: red"></span>
+            </td>
+        </tr>
+
+        <tr>
+            <th style="text-align: left">Employee's name:</th>
+            <td>
+                <select th:field="*{employee}">
+                    <option th:each="e : ${employees}" th:value="${e.id}"
+                            th:text="${e.name}"></option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th style="text-align: left">Customer's name:</th>
+            <td>
+                <select th:field="*{customer}">
+                    <option th:each="cu : ${customers}" th:value="${cu.id}"
+                            th:text="${cu.name}"></option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th style="text-align: left">Service's name:</th>
+            <td>
+                <select th:field="*{service}">
+                    <option th:each="s : ${services}" th:value="${s.id}"
+                            th:text="${s.name}"></option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th>ContractDetails:</th>
+            <td>
+                <div th:each="coD, iter:*{contractDetails}" th:object="${coD}">
+                    <span th:text="${coD.stringId}"></span><span>: </span><span
+                        th:text="${coD.attachService.name}"></span>
+                    <!--                    delete start-->
+                    <a th:href="@{/contractDetail/delete-contract-side/{id}(id=${coD.id})}">
+                        <button type="button" class="btn btn-primary">Delete</button>
+                    </a>
+
+                    <br/>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Edit"></td>
+        </tr>
+    </table>
+</form>
+<div th:insert="~{common/footer :: footer}"></div>
+
+</body>
+</html>

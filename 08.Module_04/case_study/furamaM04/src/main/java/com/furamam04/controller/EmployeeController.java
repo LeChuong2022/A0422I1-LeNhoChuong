@@ -2,12 +2,16 @@ package com.furamam04.controller;
 
 import com.furamam04.entity.*;
 import com.furamam04.service.*;
+import com.furamam04.validate.EmployeeValidate;
+import com.furamam04.validate.ServiceValidate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -113,12 +117,25 @@ public class EmployeeController {
     }
 
     @PostMapping("create")
-    public String doCreate(Model model, @ModelAttribute("employee") Employee employee,
-                           @ModelAttribute("account") Account account) {
-        employee.setAccount(account);
+    public String doCreate(Model model, @Validated @ModelAttribute("employee") Employee employee,
+//                           @Validated @ModelAttribute("account") Account account,
+                           BindingResult bindingResult) {
+        //        Check nguyên dương
+//        EmployeeValidate validate = new EmployeeValidate();
+//        validate.validate(employee, bindingResult);
+//        CHeck nguyên dương
+        // không sài account do validate bị lỗi
+        if (bindingResult.hasErrors()) {
+//            model.addAttribute("account", account);
+            model.addAttribute("positions", positionService.findAll());
+            model.addAttribute("educationDegrees", educationDegreeService.findAll());
+            model.addAttribute("divisions", divisionService.findAll());
+            return "employee/create";
+        }
+//        employee.setAccount(account);
         employeeService.save(employee);
         model.addAttribute("employee", new Employee());
-        model.addAttribute("account", new Account());
+//        model.addAttribute("account", new Account());
         model.addAttribute("positions", positionService.findAll());
         model.addAttribute("educationDegrees", educationDegreeService.findAll());
         model.addAttribute("divisions", divisionService.findAll());

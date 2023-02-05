@@ -8,12 +8,21 @@
 </head>
 <body>
 <div th:insert="~{common/header :: header}"></div>
+<div th:insert="~{common/common :: navNoSearch}"></div>
+
 <h1>Create new customer</h1>
 <th:block th:if="${message}">
     <span th:text="${message}" style="color: red"></span>
 </th:block>
 <form th:action="@{/customer/create}" method="post" th:object="${customer}">
     <table>
+        <tr>
+            <th style="text-align: left">String id:</th>
+            <td><input type="text" th:field="*{stringId}">
+                <span th:if="${#fields.hasErrors('stringId')}" th:errors="*{stringId}" style="color: red"></span>
+            </td>
+
+        </tr>
         <tr>
             <th style="text-align: left">Customer's name:</th>
             <td><input type="text" th:field="*{name}"></td>
@@ -29,7 +38,9 @@
         </tr>
         <tr>
             <th style="text-align: left">Customer's birthday:</th>
-            <td><input type="date" th:field="*{customerBirthday}"></td>
+            <td><input type="date" th:field="*{customerBirthday}">
+                <span th:if="${#fields.hasErrors('customerBirthday')}" th:errors="*{customerBirthday}" style="color: red"></span>
+            </td>
         </tr>
         <tr>
             <th style="text-align: left">Customer's gender:</th>
@@ -42,17 +53,23 @@
         </tr>
         <tr>
             <th style="text-align: left">Customer's id card:</th>
-            <td><input type="text" th:field="*{idCard}"></td>
+            <td><input type="text" th:field="*{idCard}">
+                <span th:if="${#fields.hasErrors('idCard')}" th:errors="*{idCard}" style="color: red"></span>
+            </td>
         </tr>
-       <tr>
+        <tr>
             <th style="text-align: left">Customer's phone:</th>
-            <td><input type="text" th:field="*{phone}"></td>
+            <td><input type="text" th:field="*{phone}">
+                <span th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}" style="color: red"></span>
+            </td>
         </tr>
-       <tr>
+        <tr>
             <th style="text-align: left">Customer's email:</th>
-            <td><input type="text" th:field="*{email}"></td>
+            <td><input type="text" th:field="*{email}">
+                <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}" style="color: red"></span>
+            </td>
         </tr>
-       <tr>
+        <tr>
             <th style="text-align: left">Customer's address:</th>
             <td><input type="text" th:field="*{address}"></td>
         </tr>

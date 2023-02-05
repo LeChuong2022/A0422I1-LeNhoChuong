@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit contract detail</title>
+    <div th:insert="~{index::link}"></div>
+
+</head>
+<body>
+<div th:insert="~{common/header :: header}"></div>
+<div th:insert="~{common/common :: navNoSearch}"></div>
+
+<h1>Edit contract detail</h1>
+<th:block th:if="${message}">
+    <span th:text="${message}" style="color: red"></span>
+</th:block>
+<form th:action="@{/contractDetail/edit}" method="post" th:object="${contractDetail}">
+    <input th:field="*{id}" hidden="hidden">
+    <table>
+        <tr>
+            <th style="text-align: left">String id:</th>
+            <td><input type="text" th:field="*{stringId}" readonly style="color: red">
+                <span th:if="${#fields.hasErrors('stringId')}" th:errors="*{stringId}" style="color: red"></span>
+            </td>
+        </tr>
+        <tr>
+            <th style="text-align: left">Contract's name:</th>
+            <td>
+                <select th:field="*{contract}">
+                    <option th:each="c : ${contracts}" th:value="${c.id}"
+                            th:text="${c.stringId}"></option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th style="text-align: left">Attach_service:</th>
+            <td>
+                <select th:field="*{attachService}">
+                    <option th:each="a : ${attachServices}" th:value="${a.id}"
+                            th:text="${a.name}"></option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th style="text-align: left">Quantity:</th>
+            <td><input type="text" th:field="*{quantity}">
+                <span th:if="${#fields.hasErrors('quantity')}" th:errors="*{quantity}" style="color: red"></span>
+            </td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Edit"></td>
+        </tr>
+    </table>
+</form>
+<div th:insert="~{common/footer :: footer}"></div>
+
+</body>
+</html>

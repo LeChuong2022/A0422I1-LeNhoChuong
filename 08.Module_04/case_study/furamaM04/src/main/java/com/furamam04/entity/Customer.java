@@ -3,6 +3,9 @@ package com.furamam04.entity;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.Past;
+import javax.validation.constraints.Pattern;
 import java.util.Date;
 import java.util.Set;
 
@@ -13,9 +16,15 @@ public class Customer {
     @Column(name = "customer_id")
     private Long id;
 
+    @Pattern(regexp = "(KH)[-][\\d]{4}", message = "{customerId}")
+    @Column(name = "customer_string_id")
+    private String stringId;
+
+
     @Column(name = "customer_name", length = 45, nullable = false)
     private String name;
 
+    @Past
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     @Column(name = "customer_birthday", nullable = false)
     private Date customerBirthday;
@@ -23,12 +32,15 @@ public class Customer {
     @Column(name = "customer_gender", nullable = false)
     private Boolean gender;
 
+    @Pattern(regexp = "[\\d]{9}|[\\d]{12}", message = "{idCard}")
     @Column(name = "customer_id_card", nullable = false, length = 45)
     private String idCard;
 
+    @Pattern(regexp = "(090)[\\d]{7}|(091)[\\d]{7}|\\(84\\)\\+90[\\d]{7}|\\(84\\)\\+91[\\d]{7}", message = "{phone}")
     @Column(name = "customer_phone", nullable = false, length = 45)
     private String phone;
 
+    @Email(message = "{email}")
     @Column(name = "customer_email", length = 45)
     private String email;
 
@@ -130,5 +142,21 @@ public class Customer {
 
     public void setCustomerType(CustomerType customerType) {
         this.customerType = customerType;
+    }
+
+    public String getStringId() {
+        return stringId;
+    }
+
+    public void setStringId(String stringId) {
+        this.stringId = stringId;
+    }
+
+    public Set<Contract> getContracts() {
+        return contracts;
+    }
+
+    public void setContracts(Set<Contract> contracts) {
+        this.contracts = contracts;
     }
 }

@@ -36,7 +36,11 @@
         <td th:text="${iter.count + (pageCount - 1)*sizeCount}"></td>
         <td th:text="*{id}"></td>
         <td th:text="*{stringId}"></td>
-        <td th:text="*{name}"></td>
+        <td>
+            <a th:href="@{/customer/detail/{id}(id=*{id})}">
+                <span th:text="*{name}" style="color: #20c997"></span>
+            </a>
+        </td>
         <td th:text="*{customerType.name}"></td>
         <td th:text="*{#dates.format(customerBirthday, 'dd-MMM-yyyy')}"></td>
         <td th:text="*{gender ? 'Male' : 'Female'}"></td>
@@ -47,7 +51,7 @@
         <td th:text="*{address}"></td>
         <td><a th:href="@{/customer/edit/{id}(id=*{id})}">
             <button class="btn btn-warning">Edit</button>
-        </a> </td>
+        </a></td>
         <td>
             <button class="btn btn-danger" data-bs-toggle="modal" th:attr="data-bs-target='#exampleModal'+${cu.id}">
                 Delete

@@ -1,6 +1,8 @@
 package com.furamam04.entity;
 
 import javax.persistence.*;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.Pattern;
 import java.util.Set;
 
 @Entity
@@ -9,6 +11,11 @@ public class Service {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "service_id")
     private Long id;
+
+    @Pattern(regexp = "(DV)[-][\\d]{4}", message = "{serviceId}")
+    @Column(name = "service_string_id")
+    private String stringId;
+
 
     @Column(name = "service_name", length = 45, nullable = false)
     private String name;
@@ -19,6 +26,7 @@ public class Service {
     @Column(name = "service_cost", nullable = false)
     private Double serviceCost;
 
+    @Min(value = 1, message = "{integer}")
     @Column(name = "service_max_people")
     private Integer serviceMaxPeople;
 
@@ -31,6 +39,7 @@ public class Service {
     @Column(name = "pool_area")
     private Double poolArea;
 
+    @Min(value = 1L, message = "{integer}")
     @Column(name = "number_of_floors")
     private Integer numberOfFloors;
 
@@ -147,5 +156,11 @@ public class Service {
         this.rentType = rentType;
     }
 
+    public String getStringId() {
+        return stringId;
+    }
 
+    public void setStringId(String stringId) {
+        this.stringId = stringId;
+    }
 }

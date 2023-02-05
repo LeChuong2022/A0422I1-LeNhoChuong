@@ -4,6 +4,7 @@ package com.furamam04.entity;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
+import javax.validation.constraints.*;
 import java.util.Date;
 import java.util.Set;
 
@@ -20,19 +21,24 @@ public class Employee {
     @Column(name = "employee_name", nullable = false, length = 45)
     private String name;
 
+    @Past
     @Column(name = "employee_birthday", nullable = false)
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date employeeBirthday;
 
+    @Pattern(regexp = "[\\d]{9}|[\\d]{12}", message = "{idCard}")
     @Column(name = "employee_id_card", nullable = false, length = 45)
     private String idCard;
 
+    @Positive(message = "{positiveNumber}")
     @Column(name = "employee_salary", nullable = false)
     private Double salary;
 
+    @Pattern(regexp = "(090)[\\d]{7}|(091)[\\d]{7}|\\(84\\)\\+90[\\d]{7}|\\(84\\)\\+91[\\d]{7}", message = "{phone}")
     @Column(name = "employee_phone", nullable = false, length = 45)
     private String phone;
 
+    @Email(message = "{email}")
     @Column(name = "employee_email", length = 45)
     private String email;
 
@@ -55,7 +61,8 @@ public class Employee {
     @JoinColumn(name = "division_id", referencedColumnName = "division_id", nullable = false)
     private Division division;
 
-    @ManyToOne(cascade = CascadeType.ALL) // thêm cái này thì xóa luôn bên bảng quan hệ kia
+    @ManyToOne
+            (cascade = CascadeType.ALL) // thêm cái này thì xóa luôn bên bảng quan hệ kia
     @JoinColumn(name = "accountname", referencedColumnName = "account_name")
     private Account account;
 

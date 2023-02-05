@@ -2,12 +2,14 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Create customer</title>
+    <title>Create new service - Room</title>
     <div th:insert="~{index::link}"></div>
 
 </head>
 <body>
 <div th:insert="~{common/header :: header}"></div>
+<div th:insert="~{common/common :: navNoSearch}"></div>
+
 <form th:action="@{/service/create}" method="get" th:object="${service}">
     <table>
         <tr>
@@ -35,6 +37,13 @@
     </div>
     <table>
         <tr>
+            <th style="text-align: left">String id:</th>
+            <td><input type="text" th:field="*{stringId}">
+                <span th:if="${#fields.hasErrors('stringId')}" th:errors="*{stringId}" style="color: red"></span>
+            </td>
+        </tr>
+
+        <tr>
             <th style="text-align: left">Service's name:</th>
             <td><input type="text" th:field="*{name}"></td>
         </tr>
@@ -48,7 +57,9 @@
         </tr>
         <tr>
             <th style="text-align: left">Max people:</th>
-            <td><input type="text" th:field="*{serviceMaxPeople}"></td>
+            <td><input type="text" th:field="*{serviceMaxPeople}">
+                <span th:if="${#fields.hasErrors('serviceMaxPeople')}" th:errors="*{serviceMaxPeople}" style="color: red"></span>
+            </td>
         </tr>
 
         <tr>

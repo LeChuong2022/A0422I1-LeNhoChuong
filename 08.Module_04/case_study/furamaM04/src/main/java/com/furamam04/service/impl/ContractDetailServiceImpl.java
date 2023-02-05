@@ -32,4 +32,9 @@ public class ContractDetailServiceImpl implements IContractDetailService {
     public ContractDetail findById(Long id) {
         return contractDetailRepository.findById(id).orElse(null);
     }
+
+    @Override
+    public void deleteAllByContract_Id(Long id) {
+        contractDetailRepository.deleteAllByContract_Id(id);
+    }
 }

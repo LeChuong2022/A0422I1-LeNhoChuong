@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create customer</title>
+    <div th:insert="~{index::link}"></div>
+    <div th:insert="~{index::script}"></div>
+</head>
+<body>
+<div th:insert="~{common/header :: header}"></div>
+<div th:insert="~{common/common :: navSearch}"></div>
+
+<h1>Customer List</h1>
+<th:block th:if="${message}">
+    <span th:text="${message}" style="color: red"></span>
+</th:block>
+
+<a class="link-secondary" th:href="@{/customer/create}">Create new customer</a>
+<table class="table table-striped" th:object="${customer}">
+    <tr>
+        <th>Id</th>
+        <td th:text="*{id}"></td>
+    </tr>
+    <tr>
+        <th>String Id</th>
+        <td th:text="*{stringId}"></td>
+    </tr>
+    <tr>
+        <th>Name</th>
+        <td th:text="*{name}"></td>
+    </tr>
+    <tr>
+        <th>Customer's type</th>
+        <td th:text="*{customerType.name}"></td>
+    </tr>
+    <tr>
+        <th>Birthday</th>
+        <td th:text="*{#dates.format(customerBirthday, 'dd-MMM-yyyy')}"></td>
+    </tr>
+    <tr>
+        <th>Gender</th>
+        <td th:text="*{gender ? 'Male' : 'Female'}"></td>
+    </tr>
+    <tr>
+        <th>Id card</th>
+        <td th:text="*{idCard}"></td>
+    </tr>
+    <tr>
+        <th>Phone</th>
+        <td th:text="*{phone}"></td>
+    </tr>
+    <tr>
+        <th>Email</th>
+        <td th:text="*{email}"></td>
+    </tr>
+    <tr>
+        <th>Address</th>
+        <td th:text="*{address}"></td>
+    </tr>
+    <tr>
+        <th>Contracts:</th>
+        <td>
+            <div th:each="co, iter:*{contracts}" th:object="${co}">
+                <a th:href="@{/contract/detail/{id}(id=${co.id})}">
+                    <span th:text="${co.stringId}"></span><br/>
+                </a>
+            </div>
+        </td>
+    </tr>
+        <tr>
+            <th>ContractDetails:</th>
+            <td>
+                <div th:each="co, iter:*{contracts}" th:object="${co}">
+                    <div th:each="coD, iter:${co.contractDetails}" th:object="${coD}">
+                        <span th:text="${coD.stringId}"></span><span>: </span><span th:text="${coD.attachService.name}"></span><br/>
+                    </div>
+                </div>
+
+            </td>
+        </tr>
+</table>
+
+
+<div th:insert="~{common/footer :: footer}"></div>
+
+</body>
+</html>

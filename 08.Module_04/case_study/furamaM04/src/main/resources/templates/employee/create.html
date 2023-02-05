@@ -8,6 +8,8 @@
 </head>
 <body>
 <div th:insert="~{common/header :: header}"></div>
+<div th:insert="~{common/common :: navNoSearch}"></div>
+
 <h1>Create new employee</h1>
 <th:block th:if="${message}">
     <span th:text="${message}" style="color: red"></span>
@@ -21,23 +23,33 @@
 
         <tr>
             <th style="text-align: left">Employee's birthday:</th>
-            <td><input type="date" th:field="*{employeeBirthday}"></td>
+            <td><input type="date" th:field="*{employeeBirthday}">
+                <span th:if="${#fields.hasErrors('employeeBirthday')}" th:errors="*{employeeBirthday}" style="color: red"></span>
+            </td>
         </tr>
         <tr>
             <th style="text-align: left">Employee's id card:</th>
-            <td><input type="text" th:field="*{idCard}"></td>
+            <td><input type="text" th:field="*{idCard}">
+                <span th:if="${#fields.hasErrors('idCard')}" th:errors="*{idCard}" style="color: red"></span>
+            </td>
         </tr>
         <tr>
             <th style="text-align: left">Salary:</th>
-            <td><input type="text" th:field="*{salary}"></td>
+            <td><input type="text" th:field="*{salary}">
+                <span th:if="${#fields.hasErrors('salary')}" th:errors="*{salary}" style="color: red"></span>
+            </td>
         </tr>
         <tr>
             <th style="text-align: left">Employee's phone:</th>
-            <td><input type="text" th:field="*{phone}"></td>
+            <td><input type="text" th:field="*{phone}">
+                <span th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}" style="color: red"></span>
+            </td>
         </tr>
         <tr>
             <th style="text-align: left">Employee's email:</th>
-            <td><input type="text" th:field="*{email}"></td>
+            <td><input type="text" th:field="*{email}">
+                <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}" style="color: red"></span>
+            </td>
         </tr>
         <tr>
             <th style="text-align: left">Employee's address:</th>
@@ -72,11 +84,11 @@
         </tr>
         <tr>
             <th style="text-align: left">User:</th>
-            <td><input type="text" th:field="${account.accountName}"></td>
+            <td><input type="text" th:field="*{account.accountName}"></td>
         </tr>
         <tr>
             <th style="text-align: left">Password:</th>
-            <td><input type="password" th:field="${account.password}"></td>
+            <td><input type="password" th:field="*{account.password}"></td>
         </tr>
 
 

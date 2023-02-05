@@ -19,5 +19,11 @@ public interface ICustomerService {
 
     Customer findById(Long id);
 
+    Page<Customer> findAllJoinContract(Pageable pageable);
+
+    Page<Customer> findAllJoinContractWithSearch(String search, Pageable pageable);
+
+    List<Double>  calTotal();
+
 
 }

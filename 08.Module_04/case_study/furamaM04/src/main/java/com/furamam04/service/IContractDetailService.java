@@ -12,4 +12,6 @@ public interface IContractDetailService {
     List<ContractDetail> findAll();
 
     ContractDetail findById(Long id);
+
+    void deleteAllByContract_Id(Long id);
 }

@@ -8,6 +8,8 @@
 </head>
 <body>
 <div th:insert="~{common/header :: header}"></div>
+<div th:insert="~{common/common :: navNoSearch}"></div>
+
 <h1>Service List</h1>
 <th:block th:if="${message}">
     <span th:text="${message}" style="color: red"></span>
@@ -16,6 +18,7 @@
 <table class="table table-striped">
     <tr>
         <th>STT</th>
+        <th>StringId</th>
         <th>Id</th>
         <th>Name</th>
         <th>Area</th>
@@ -30,6 +33,7 @@
     </tr>
     <tr th:each="s, iter : ${services}" th:object="${s}">
       <td th:text="${iter.count}"></td>
+      <td th:text="*{stringId}"></td>
       <td th:text="*{id}"></td>
       <td th:text="*{name}"></td>
       <td th:text="*{serviceArea}"></td>

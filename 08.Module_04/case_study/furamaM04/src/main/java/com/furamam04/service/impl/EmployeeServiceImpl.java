@@ -25,12 +25,15 @@ public class EmployeeServiceImpl implements IEmployeeService {
 //        if (e != null)
 //            idLastRecord = e.getId();
             if (idLastRecord < 10)
-                employee.setStringId("NV00" + idLastRecord);
+                employee.setStringId("NV-000" + idLastRecord);
             else if (idLastRecord < 100)
-                employee.setStringId("NV0" + idLastRecord);
+                employee.setStringId("NV-00" + idLastRecord);
+            else if (idLastRecord < 1000)
+                employee.setStringId("NV-0" + idLastRecord);
             else
-                employee.setStringId("NV" + idLastRecord);
+                employee.setStringId("NV-" + idLastRecord);
         }
+//        nếu có id thì edit, còn ko có id thì update lại do phía trên save
         employeeRepository.save(employee);
     }
 
