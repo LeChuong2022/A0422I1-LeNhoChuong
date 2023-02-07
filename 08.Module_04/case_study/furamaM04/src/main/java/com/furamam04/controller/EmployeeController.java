@@ -121,8 +121,8 @@ public class EmployeeController {
 //                           @Validated @ModelAttribute("account") Account account,
                            BindingResult bindingResult) {
         //        Check nguyên dương
-//        EmployeeValidate validate = new EmployeeValidate();
-//        validate.validate(employee, bindingResult);
+        EmployeeValidate validate = new EmployeeValidate();
+        validate.validate(employee, bindingResult);
 //        CHeck nguyên dương
         // không sài account do validate bị lỗi
         if (bindingResult.hasErrors()) {

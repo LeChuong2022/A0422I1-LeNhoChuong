@@ -5,44 +5,7 @@
     <title>Title</title>
 </head>
 <body>
-<!--Navbar search-->
-<div th:fragment="navSearch">
-    <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #0f5132">
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/home" style="color: white">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/employee" style="color: white">Employee</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/customer" style="color: white">Customer</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/service" style="color: white">Service</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/contract" style="color: white">Contract</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/contractDetail" style="color: white">Contract-Detail</a>
-                </li>
-               <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/customer/customerContract" style="color: white">Customer-using-service</a>
-                </li>
-
-            </ul>
-            <form class="d-flex" th:action="@{/contract/search}" method="get">
-                <input th:value="${search}" name="search" class="form-control me-2" type="search" placeholder="Search"
-                       aria-label="Search">
-                <button class="btn btn-outline-success" type="submit" style="color: white">Search</button>
-            </form>
-        </div>
-    </nav>
-</div>
-<!--Nav search end-->
 <!--Navbar search-->
 <div th:fragment="navNoSearch">
     <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #0f5132">

@@ -78,10 +78,25 @@ values	('Nguyễn Thị Hào', '1970-11-07', 0, '643431213', '0945423362', 'thih
         -- lấy giá trị cuối cùng
         select customer_id from customer ORDER BY customer_id DESC LIMIT 1;
         
-        select e.id from Employee as e order by e.id desc limit 1
-        
-        
-        
+        -- lấy giá trị cuối cùng
+        select e.id from Employee as e order by e.id desc limit 1;
+       
+       -- lấy giá trị auto_increment tiếp theo
+SELECT AUTO_INCREMENT
+FROM information_schema.TABLES
+WHERE TABLE_SCHEMA = "furama_module4"
+AND TABLE_NAME = "employee"  ;      
+
+-- lấy giá trị khách hàng có sử dụng dịch vụ
+select * from customer as cu right join contract as co on cu.customer_id = co.customer_id group by cu.customer_id;
+select * from contract as co left join customer as cu on cu.customer_id = co.customer_id group by cu.customer_id;
+
+-- tính tổng tiền
+select * from contract as co left join customer as cu on cu.customer_id = co.customer_id 
+left join contract_detail as coD on coD.contract_id = co.contract_id
+left join attach_service as `at` on `at`.attach_service_id = coD.attach_service_id
+group by cu.customer_id;
+         
         
         
         
