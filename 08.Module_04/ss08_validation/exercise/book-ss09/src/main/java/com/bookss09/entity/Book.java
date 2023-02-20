@@ -10,17 +10,20 @@ public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long bookId;
-    private long quantity;
+//    private long quantity;
     private String describe;
-    private Long bookLoanCode;
+//    private Long bookLoanCode;
 
     public Book() {
     }
 
-    public Book(long quantity, String describe, Long bookLoanCode) {
-        this.quantity = quantity;
+    public Book(String describe) {
         this.describe = describe;
-        this.bookLoanCode = bookLoanCode;
+    }
+
+    public Book(Long bookId, String describe) {
+        this.bookId = bookId;
+        this.describe = describe;
     }
 
     public Long getBookId() {
@@ -31,27 +34,11 @@ public class Book {
         this.bookId = bookId;
     }
 
-    public long getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(long quantity) {
-        this.quantity = quantity;
-    }
-
     public String getDescribe() {
         return describe;
     }
 
     public void setDescribe(String describe) {
         this.describe = describe;
-    }
-
-    public Long getBookLoanCode() {
-        return bookLoanCode;
-    }
-
-    public void setBookLoanCode(Long bookLoanCode) {
-        this.bookLoanCode = bookLoanCode;
     }
 }

@@ -1,4 +1,4 @@
-package com.example.phone_management.model;
+package com.phone_management.model;
 
 import javax.persistence.*;
 

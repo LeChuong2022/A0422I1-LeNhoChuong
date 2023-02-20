@@ -1,6 +1,11 @@
-package com.example.phone_management.repository;
+package com.phone_management.repository;
 
+import com.phone_management.model.Smartphone;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
-public interface ISmartphoneRepository extends JpaRepository<Smartphone> {
+@Repository
+@Transactional
+public interface ISmartphoneRepository extends JpaRepository<Smartphone, Long> {
 }

@@ -11,7 +11,7 @@ import java.util.List;
 @Service
 public class CategoryServiceImpl implements ICategoryService {
     @Autowired
-    ICategoryRepository categoryRepository;
+    private ICategoryRepository categoryRepository;
 
     @Override
     public void save(Category c) {

@@ -1,0 +1,11 @@
+<p>calculator works!</p>
+
+<input type="number" #input1>
+<input type="number" #input2>
+<br>
+<button class="btn btn-info" (click)="calculation(input1.value, input2.value, 'plus')">Plus</button>
+<button class="btn btn-info" (click)="calculation(input1.value, input2.value, 'sub')">Sub</button>
+<button class="btn btn-info" (click)="calculation(input1.value, input2.value, 'mul')">Mul</button>
+<button class="btn btn-info" (click)="calculation(input1.value, input2.value, 'div')">Div</button>
+<br>
+<span>Result: {{result}}</span>
