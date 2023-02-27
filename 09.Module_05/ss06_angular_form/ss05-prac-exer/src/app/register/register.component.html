@@ -1,0 +1,122 @@
+<p>Create form</p>
+
+<!--Dung ngModel-->
+<!--<form #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)">-->
+<form [formGroup]="register" (ngSubmit)="onSubmit()" novalidate>
+  <div class="mb-3 row">
+    <label for="email" class="col-sm-2 col-form-label">Email</label>
+    <div class="col-sm-5">
+      <input
+        formControlName="email"
+        name="email"
+        type="text" class="form-control" id="email" value="email@example.com">
+    </div>
+    <div *ngIf="!register.controls.email?.valid && (register.controls.email?.dirty || register.controls.email?.touched)">
+      <div *ngIf="register.controls.email.hasError('email')">
+        <p style="color: red"> Email is not valid. </p>
+      </div>
+    </div>
+  </div>
+  <div class="mb-3 row">
+    <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+    <div class="col-sm-5">
+      <input
+        formControlName="inputPassword"
+        name="inputPassword"
+        type="password" class="form-control" id="inputPassword">
+    </div>
+    <div *ngIf="!register.controls.inputPassword?.valid && (register.controls.inputPassword?.dirty || register.controls.inputPassword?.touched)">
+      <div *ngIf="register.controls.inputPassword.hasError('minlength')">
+        <p style="color: red"> More than 6 words. </p>
+      </div>
+    </div>
+  </div>
+  <div class="mb-3 row">
+    <label for="confirmInputPassword" class="col-sm-2 col-form-label">Confirm Password</label>
+    <div class="col-sm-5">
+      <input
+        formControlName="confirmInputPassword"
+        name="confirmInputPassword"
+        type="password" class="form-control" id="confirmInputPassword">
+    </div>
+    <div *ngIf="!register.controls.confirmInputPassword?.valid && (register.controls.confirmInputPassword?.dirty || register.controls.confirmInputPassword?.touched)">
+      <div *ngIf="register.controls.confirmInputPassword.hasError('minlength')">
+        <p style="color: red"> More than 6 words. </p>
+      </div>
+    </div>
+    <div *ngIf="register.hasError('passwordNotMatch')">
+      <p style="color: red"> Password does not match. </p>
+    </div>
+  </div>
+  <div class="mb-3 row">
+    <label class="col-sm-2 col-form-label">Country</label>
+    <div class="col-sm-5">
+      <select class="form-select" aria-label="Default select example"
+              formControlName="country"
+              name="country"
+      >
+        <option selected value="">Open this select menu</option>
+        <option value="1">USA</option>
+        <option value="2">China</option>
+        <option value="3">Viet Nam</option>
+      </select></div>
+  </div>
+  <div class="mb-3 row">
+    <label for="age" class="col-sm-2 col-form-label">Age</label>
+    <div class="col-sm-5">
+      <input
+        formControlName="age"
+        name="age"
+        type="text"
+        class="form-control" id="age">
+    </div>
+    <div *ngIf="!register.controls.age?.valid && (register.controls.age?.dirty || register.controls.age?.touched)">
+      <div *ngIf="register.controls.age.hasError('min')">
+        <p style="color: red"> More than 18. </p>
+      </div>
+    </div>
+  </div>
+  <div class="mb-3 row">
+    <label class="col-sm-2 col-form-label">Gender</label>
+    <div class="col-sm-5>" style="width: 50%">
+      <div class="form-check" style="float: left">
+        <input class="form-check-input" type="radio"
+               formControlName="gender"
+               name="gender" id="gender"
+               value="male">
+        <label class="form-check-label" for="gender">
+          Male
+        </label>
+      </div>
+      <div class="form-check" style="float: left; margin-left: 20px">
+        <input class="form-check-input" type="radio"
+               formControlName="gender"
+               name="gender" id="gender"
+               value="female">
+        <label class="form-check-label" for="gender">
+          Female
+        </label>
+      </div>
+    </div>
+    <div *ngIf="!register.controls.gender?.valid && (register.controls.gender?.dirty || register.controls.gender?.touched)">
+      <div *ngIf="register.controls.gender.hasError('required')">
+        <p style="color: red"> Not empty </p>
+      </div>
+    </div>
+  </div>
+  <div class="mb-3 row">
+    <label for="phone" class="col-sm-2 col-form-label">Phone</label>
+    <div class="col-sm-5">
+      <input
+        formControlName="phone"
+        name="phone"
+        type="text" class="form-control" id="phone">
+    </div>
+    <div *ngIf="!register.controls.phone?.valid && (register.controls.phone?.dirty || register.controls.phone?.touched)">
+      <div *ngIf="register.controls.phone.hasError('pattern')">
+        <p style="color: red"> Not valid </p>
+      </div>
+    </div>
+  </div>
+  <button class="btn btn-primary" type="submit" [disabled]="!register.valid">Submit</button>
+</form>
