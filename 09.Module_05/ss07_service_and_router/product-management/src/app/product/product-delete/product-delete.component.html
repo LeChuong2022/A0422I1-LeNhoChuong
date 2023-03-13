@@ -1,0 +1,53 @@
+<div class="col-6">
+  <div class="card border-info mt-4">
+    <h3 class="card-header bg-info">Child Component</h3>
+    <!--  <img class="card-img-top" src="holder.js/100x180/" alt="">-->
+    <div class="card-body">
+      <h4 class="card-title">Student detail</h4>
+      <div *ngIf="productDetail; else noData">
+        <div>
+          <div>id: {{productDetail.id}}</div>
+        </div>
+        <div>
+          <div>Name: {{productDetail.name}}</div>
+        </div>
+        <div>
+          <div>Price: {{productDetail.price}}</div>
+        </div>
+        <div>
+          <div>Description: {{productDetail.description}}</div>
+        </div>
+      </div>
+      <ng-template #noData>
+        <p style="color: red">No data</p>
+      </ng-template>
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Delete
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+           aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Do you want to remove this product?
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" (click)="delete(productDetail.id)">
+                Delete
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

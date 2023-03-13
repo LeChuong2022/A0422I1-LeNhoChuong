@@ -1,0 +1,18 @@
+<div class="col-6">
+  <div class="card border-info mt-4">
+    <h3 class="card-header bg-info">Student detail</h3>
+    <div class="card-body">
+      <div *ngIf="dictionaryDetail; else noData">
+        <div>
+          <div>English word: {{dictionaryDetail.englishWord}}</div>
+        </div>
+        <div>
+          <div>Vietname word: {{dictionaryDetail.vietnamWord}}</div>
+        </div>
+
+      </div>
+      <ng-template #noData>
+        <p style="color: red">No data</p>
+      </ng-template>
+    </div>
+  </div>
