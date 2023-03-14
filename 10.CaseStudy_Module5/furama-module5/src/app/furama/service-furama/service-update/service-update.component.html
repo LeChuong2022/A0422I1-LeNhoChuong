@@ -1,0 +1,98 @@
+<div class="row mt-4">
+  <div class="col-6">
+    <div class="card border-success">
+      <h3 class="card-header bg-success">Update Service</h3>
+      <div class="card-body">
+        <form [formGroup]="rfService" (ngSubmit)="onSubmit(service.id)">
+          <div class="form-group">
+            <label hidden>ID: </label>
+            <input  type="number" class="form-group" formControlName="id">
+          </div>
+          <div class="form-group">
+            <label>Name: </label>
+            <input type="text" class="form-group" formControlName="name">
+            <span *ngIf="rfService.controls.name.touched
+                    && rfService.controls.name.errors?.required" style="color: red;">Required input</span>
+            <span *ngIf="rfService.controls.name.dirty
+                    && rfService.controls.name.errors?.minlength" style="color: red;">Min length: 5</span>
+          </div>
+          <div class="form-group mt-4">
+            <label>Service Area: </label>
+            <input type="number" class="form-group" formControlName="serviceArea">
+          </div>
+          <div class="form-group mt-4">
+            <label>Service Cost: </label>
+            <input type="number" class="form-group" formControlName="serviceCost">
+          </div>
+          <div class="form-group mt-4">
+            <label>Service Max People: </label>
+            <input type="number" class="form-group" formControlName="serviceMaxPeople">
+          </div>
+          <div class="form-group mt-4">
+            <label>Standard Room: </label>
+            <input type="text" class="form-group" formControlName="standardRoom">
+          </div>
+
+          <div class="form-group mt-4">
+            <label>Description Other Convenience: </label>
+            <input type="text" class="form-group" formControlName="descriptionOtherConvenience">
+          </div>
+
+          <div class="form-group mt-4">
+            <label>Pool Area: </label>
+            <input type="number" class="form-group" formControlName="poolArea">
+          </div>
+          <div class="form-group mt-4">
+            <label>Number Of Floors: </label>
+            <input type="number" class="form-group" formControlName="numberOfFloors">
+          </div>
+          <div class="form-group mt-4">
+            <label>Service type: </label>
+            <select class="form-select select-modal-addNew" formControlName="serviceType"
+                    name="serviceType"
+                    [(ngModel)]="service.serviceType"
+            >
+              <option [ngValue]="service.serviceType">{{service.serviceType.name}}</option>
+              <option selected *ngFor="let item of serviceTypes"
+                      [ngValue]="item"
+                      [hidden]="item.name === service.serviceType.name"
+              >{{item.name}}</option>
+            </select>
+          </div>
+          <div class="form-group mt-4">
+            <label>Rent type: </label>
+            <select class="form-select select-modal-addNew" formControlName="rentType"
+                    name="rentType"
+                    [(ngModel)]="service.rentType"
+            >
+              <option [ngValue]="service.rentType">{{service.rentType.name}}</option>
+              <option selected *ngFor="let item of rentTypes"
+                      [ngValue]="item"
+                      [hidden]="item.name === service.rentType.name"
+              >{{item.name}}</option>
+            </select>
+          </div>
+          <!--          <div class="form-group mt-4" [hidden]="service.serviceType.name != 'Room'">-->
+          <div>
+            <label>Accompanied Service: </label>
+            <select class="form-select select-modal-addNew" formControlName="accompaniedService"
+                    name="accompaniedService"
+                    [(ngModel)]="service.accompaniedService"
+            >
+              <option [ngValue]="service.accompaniedService">{{service.accompaniedService.name}}</option>
+              <option selected *ngFor="let item of accompaniedServices"
+                      [ngValue]="item"
+                      [hidden]="item.name === service.accompaniedService.name"
+              >{{item.name}}</option>
+            </select>
+          </div>
+
+          <button class="mt-4 btn bg-primary" type="submit"
+                  [disabled]="rfService.invalid"
+          >Update
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,88 @@
+<div class="row mt-4">
+  <div class="col-6">
+    <div class="card border-success">
+      <h3 class="card-header bg-success">Create Service</h3>
+      <div class="card-body">
+        <form [formGroup]="rfService" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label hidden>ID: </label>
+            <input hidden type="text" class="form-group" formControlName="id">
+          </div>
+          <div class="form-group">
+            <label>Name: </label>
+            <input type="text" class="form-group" formControlName="name">
+            <span *ngIf="rfService.controls.name.touched
+        && rfService.controls.name.errors?.required" style="color: red;">Required input</span>
+            <span *ngIf="rfService.controls.name.dirty
+        && rfService.controls.name.errors?.minlength" style="color: red;">Min length: 5</span>
+          </div>
+          <div class="form-group mt-4">
+            <label>Service Area: </label>
+            <input type="text" class="form-group" formControlName="serviceArea">
+          </div>
+          <div class="form-group mt-4">
+            <label>Service Cost: </label>
+            <input type="text" class="form-group" formControlName="serviceCost">
+          </div>
+          <div class="form-group mt-4">
+            <label>Service Max People: </label>
+            <input type="text" class="form-group" formControlName="serviceMaxPeople">
+          </div>
+          <div class="form-group mt-4">
+            <label>Standard Room: </label>
+            <input type="text" class="form-group" formControlName="standardRoom">
+          </div>
+
+          <div class="form-group mt-4">
+            <label>Description Other Convenience: </label>
+            <input type="text" class="form-group" formControlName="descriptionOtherConvenience">
+          </div>
+
+          <div class="form-group mt-4">
+            <label>Pool Area: </label>
+            <input type="text" class="form-group" formControlName="poolArea">
+          </div>
+          <div class="form-group mt-4">
+            <label>Number Of Floors: </label>
+            <input type="text" class="form-group" formControlName="numberOfFloors">
+          </div>
+          <div class="form-group mt-4">
+            <label>Service type: </label>
+            <select class="form-select select-modal-addNew" formControlName="serviceType"
+                    name="customerType"
+            >
+              <option selected *ngFor="let item of serviceTypes"
+                      [ngValue]="item"
+              >{{item.name}}</option>
+            </select>
+          </div>
+          <div class="form-group mt-4">
+            <label>Rent type: </label>
+            <select class="form-select select-modal-addNew" formControlName="rentType"
+                    name="customerType"
+            >
+              <option selected *ngFor="let item of rentTypes"
+                      [ngValue]="item"
+              >{{item.name}}</option>
+            </select>
+          </div>
+          <div>
+            <label>Accompanied Service: </label>
+            <select class="form-select select-modal-addNew" formControlName="accompaniedService"
+                    name="accompaniedService"
+            >
+              <option selected *ngFor="let item of accompaniedServices"
+                      [ngValue]="item"
+              >{{item.name}}</option>
+            </select>
+          </div>
+
+          <button class="mt-4 btn bg-primary" type="submit"
+                  [disabled]="rfService.invalid"
+          >Create
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

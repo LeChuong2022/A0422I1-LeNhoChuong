@@ -1,0 +1,440 @@
+{
+  "customers": [
+    {
+      "id": 18,
+      "name": "4234234234",
+      "dayOfBirth": "2023-02-27",
+      "gender": "0",
+      "idCard": "13",
+      "phone": "0935477349",
+      "email": "lenhochuong@gmail.com",
+      "customerType": {
+        "id": 2,
+        "name": "Platinium"
+      },
+      "address": "17 thanh hai1"
+    },
+    {
+      "name": "nho chuong le4",
+      "dayOfBirth": "2023-01-01",
+      "gender": "1",
+      "idCard": "1313131",
+      "phone": "0935477349",
+      "email": "lenhochuong@gmail.com",
+      "customerType": {
+        "id": 2,
+        "name": "Platinium"
+      },
+      "address": "17 thanh hai",
+      "id": 19
+    },
+    {
+      "name": "nho chuong le5",
+      "dayOfBirth": "2023-02-26",
+      "gender": "0",
+      "idCard": "12525",
+      "phone": "0935477349",
+      "email": "lenhochuong@gmail.com",
+      "customerType": {
+        "id": 5,
+        "name": "Member"
+      },
+      "address": "17 thanh hai",
+      "id": 20
+    },
+    {
+      "name": "nho chuong le6",
+      "dayOfBirth": "2023-02-28",
+      "gender": "0",
+      "idCard": "234234234",
+      "phone": "0935477349",
+      "email": "lenhochuong@gmail.com",
+      "customerType": {
+        "id": 2,
+        "name": "Platinium"
+      },
+      "address": "17 thanh hai",
+      "id": 21
+    },
+    {
+      "name": "nho chuong le6",
+      "dayOfBirth": "2023-02-28",
+      "gender": "0",
+      "idCard": "234234234",
+      "phone": "0935477349",
+      "email": "lenhochuong@gmail.com",
+      "customerType": {
+        "id": 2,
+        "name": "Platinium"
+      },
+      "address": "17 thanh hai",
+      "id": 22
+    },
+    {
+      "name": "nho chuong le124124124142",
+      "dayOfBirth": "2023-02-27",
+      "gender": "0",
+      "idCard": "534534",
+      "phone": "0935477349",
+      "email": "lenhochuong@gmail.com",
+      "customerType": {
+        "id": 2,
+        "name": "Platinium"
+      },
+      "address": "17 thanh hai",
+      "id": 24
+    },
+    {
+      "name": "nho chuong le2023",
+      "dayOfBirth": "2023-03-07",
+      "gender": "0",
+      "idCard": "32423",
+      "phone": "0935477349",
+      "email": "lenhochuong@gmail.com",
+      "customerType": {
+        "id": 2,
+        "name": "Platinium"
+      },
+      "address": "17 thanh hai",
+      "id": 25
+    },
+    {
+      "name": "nho chuong le9",
+      "dayOfBirth": "2023-02-28",
+      "gender": "0",
+      "idCard": "11313",
+      "phone": "0935477349",
+      "email": "lenhochuong@gmail.com",
+      "customerType": {
+        "id": 2,
+        "name": "Platinium"
+      },
+      "address": "17 thanh hai",
+      "id": 26
+    },
+    {
+      "name": "huy cho 13",
+      "dayOfBirth": "2023-02-27",
+      "gender": 1,
+      "idCard": "13",
+      "phone": "142",
+      "email": "124",
+      "customerType": {
+        "id": 2,
+        "name": "Platinium"
+      },
+      "address": "4124",
+      "id": 28
+    },
+    {
+      "name": "nho chuong le5511",
+      "dayOfBirth": "2023-02-26",
+      "gender": "0",
+      "idCard": "1551",
+      "phone": "0935477349",
+      "email": "lenhochuong@gmail.com",
+      "customerType": {
+        "id": 4,
+        "name": "Silver"
+      },
+      "address": "17 thanh hai",
+      "id": 29
+    },
+    {
+      "name": "daddđ",
+      "dayOfBirth": "2023-02-27",
+      "gender": "0",
+      "idCard": "1313",
+      "phone": "13",
+      "email": "13",
+      "customerType": {
+        "id": 1,
+        "name": "Diamond"
+      },
+      "address": "133113",
+      "id": 30
+    }
+  ],
+  "customerTypes": [
+    {
+      "id": 1,
+      "name": "Diamond"
+    },
+    {
+      "id": 2,
+      "name": "Platinium"
+    },
+    {
+      "id": 3,
+      "name": "Gold"
+    },
+    {
+      "id": 4,
+      "name": "Silver"
+    },
+    {
+      "id": 5,
+      "name": "Member"
+    }
+  ],
+  "services": [
+    {
+      "id": 1,
+      "name": "this.service.name",
+      "serviceArea": 5,
+      "serviceCost": 100,
+      "serviceMaxPeople": 5,
+      "standardRoom": "vip",
+      "descriptionOtherConvenience": "Bếp nướng",
+      "poolArea": 20,
+      "numberOfFloors": 3,
+      "rentType": {
+        "id": 1,
+        "name": "Year"
+      },
+      "accompaniedService": {
+        "id": 3,
+        "name": "food",
+        "unit": "portion",
+        "priceAccService": "20"
+      },
+      "serviceType": {
+        "id": 1,
+        "name": "Villa"
+      }
+    },
+    {
+      "id": 2,
+      "name": "this.service.name",
+      "serviceArea": 10000,
+      "serviceCost": "132",
+      "serviceMaxPeople": "132",
+      "standardRoom": "312",
+      "descriptionOtherConvenience": "321",
+      "poolArea": "321",
+      "numberOfFloors": "231",
+      "rentType": {
+        "id": 2,
+        "name": "Month"
+      },
+      "accompaniedService": {
+        "id": 3,
+        "name": "food",
+        "unit": "portion",
+        "priceAccService": "20"
+      },
+      "serviceType": {
+        "id": 3,
+        "name": "Room"
+      }
+    },
+    {
+      "name": "casdasdas",
+      "serviceArea": "14124",
+      "serviceCost": "12412",
+      "serviceMaxPeople": "123123",
+      "standardRoom": "312",
+      "descriptionOtherConvenience": "3213123",
+      "poolArea": "132321",
+      "numberOfFloors": "123312",
+      "rentType": {
+        "id": 2,
+        "name": "Month"
+      },
+      "accompaniedService": {
+        "id": 2,
+        "name": "karaoke",
+        "unit": "hour",
+        "priceAccService": "300"
+      },
+      "serviceType": {
+        "id": 2,
+        "name": "House"
+      },
+      "id": 3
+    },
+    {
+      "name": "rooom4",
+      "serviceArea": "13",
+      "serviceCost": "13",
+      "serviceMaxPeople": "31",
+      "standardRoom": "13",
+      "descriptionOtherConvenience": "421",
+      "poolArea": "142",
+      "numberOfFloors": "142",
+      "rentType": {
+        "id": 2,
+        "name": "Month"
+      },
+      "accompaniedService": {
+        "id": 5,
+        "name": "car",
+        "unit": "hour",
+        "priceAccService": "15"
+      },
+      "serviceType": {
+        "id": 3,
+        "name": "Room"
+      },
+      "id": 4
+    }
+  ],
+  "rentTypes": [
+    {
+      "id": 1,
+      "name": "Year"
+    },
+    {
+      "id": 2,
+      "name": "Month"
+    },
+    {
+      "id": 3,
+      "name": "Day"
+    },
+    {
+      "id": 4,
+      "name": "Hour"
+    }
+  ],
+  "accompaniedServiceS": [
+    {
+      "id": 1,
+      "name": "massage",
+      "unit": "hour",
+      "priceAccService": "200"
+    },
+    {
+      "id": 2,
+      "name": "karaoke",
+      "unit": "hour",
+      "priceAccService": "300"
+    },
+    {
+      "id": 3,
+      "name": "food",
+      "unit": "portion",
+      "priceAccService": "20"
+    },
+    {
+      "id": 4,
+      "name": "water",
+      "unit": "lit",
+      "priceAccService": "5"
+    },
+    {
+      "id": 5,
+      "name": "car",
+      "unit": "hour",
+      "priceAccService": "15"
+    }
+  ],
+  "serviceTypes": [
+    {
+      "id": 1,
+      "name": "Villa"
+    },
+    {
+      "id": 2,
+      "name": "House"
+    },
+    {
+      "id": 3,
+      "name": "Room"
+    }
+  ],
+  "contracts": [
+    {
+      "codeContract": "1313113",
+      "customer": {
+        "name": "nho chuong le4",
+        "dayOfBirth": "2023-01-01",
+        "gender": "1",
+        "idCard": "1313131",
+        "phone": "0935477349",
+        "email": "lenhochuong@gmail.com",
+        "customerType": {
+          "id": 2,
+          "name": "Platinium"
+        },
+        "address": "17 thanh hai",
+        "id": 19
+      },
+      "service": {
+        "id": 1,
+        "name": "this.service.name",
+        "serviceArea": 5,
+        "serviceCost": 100,
+        "serviceMaxPeople": 5,
+        "standardRoom": "vip",
+        "descriptionOtherConvenience": "Bếp nướng",
+        "poolArea": 20,
+        "numberOfFloors": 3,
+        "rentType": {
+          "id": 1,
+          "name": "Year"
+        },
+        "accompaniedService": {
+          "id": 3,
+          "name": "food",
+          "unit": "portion",
+          "priceAccService": "20"
+        },
+        "serviceType": {
+          "id": 1,
+          "name": "Villa"
+        }
+      },
+      "dateStart": "1111-11-11",
+      "dateEnd": "0111-03-13",
+      "deposits": "3",
+      "id": 3
+    },
+    {
+      "codeContract": "hd-021313",
+      "customer": {
+        "name": "nho chuong le4",
+        "dayOfBirth": "2023-01-01",
+        "gender": "1",
+        "idCard": "1313131",
+        "phone": "0935477349",
+        "email": "lenhochuong@gmail.com",
+        "customerType": {
+          "id": 2,
+          "name": "Platinium"
+        },
+        "address": "17 thanh hai",
+        "id": 19
+      },
+      "service": {
+        "name": "casdasdas",
+        "serviceArea": "14124",
+        "serviceCost": "12412",
+        "serviceMaxPeople": "123123",
+        "standardRoom": "312",
+        "descriptionOtherConvenience": "3213123",
+        "poolArea": "132321",
+        "numberOfFloors": "123312",
+        "rentType": {
+          "id": 2,
+          "name": "Month"
+        },
+        "accompaniedService": {
+          "id": 2,
+          "name": "karaoke",
+          "unit": "hour",
+          "priceAccService": "300"
+        },
+        "serviceType": {
+          "id": 2,
+          "name": "House"
+        },
+        "id": 3
+      },
+      "dateStart": "2023-03-06",
+      "dateEnd": "2023-03-22",
+      "deposits": "131",
+      "id": 4
+    }
+  ]
+}

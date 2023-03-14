@@ -1,0 +1,94 @@
+<!--Search-->
+<div class="row mt-4 mb-4" style="width: 100%">
+</div>
+
+<span style="color: red" *ngIf="message">{{message}}</span>
+
+<div class="row mt-4 mb-4" style="width: 100%">
+  <div class="">
+    <div class="card border-primary">
+      <h3 class="card-header bg-primary">Service List</h3>
+      <div class="card-body">
+        <table class="table">
+          <thead>
+          <tr>
+            <th>No</th>
+            <th>Name</th>
+            <th>Service Area</th>
+            <th>Service Cost</th>
+            <th>Service Max People</th>
+            <th>Standard Room</th>
+            <th>Description Other Convenience</th>
+            <th>Pool Area</th>
+            <th>Number Of Floors</th>
+            <th>Service Type</th>
+            <th>Rent Type</th>
+            <th>Accompanied Service</th>
+            <th>Update</th>
+            <th>Delete</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let item of services; let i = index">
+            <td>{{i + 1}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.serviceArea}}</td>
+            <td>{{item.serviceCost}}</td>
+            <td>{{item.serviceMaxPeople}}</td>
+            <td>{{item.standardRoom}}</td>
+            <td>{{item.descriptionOtherConvenience}}</td>
+            <td>{{item.poolArea}}</td>
+            <td>{{item.numberOfFloors}}</td>
+            <td>{{item.serviceType.name}}</td>
+            <td>{{item.rentType.name}}</td>
+            <td>{{item.accompaniedService.name}}</td>
+            <td>
+              <button class="btn btn-primary" [routerLink]="['/service/update', item.id]">Edit</button>
+            </td>
+            <td>
+              <!-- Button trigger modal -->
+              <button type="button" class="btn btn-danger" data-bs-toggle="modal" (click)="sendId(item.id, item.name)"
+                      data-bs-target="#exampleModal">
+                Delete
+              </button>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="col-6 mt-4">
+    <a class="btn btn-primary" routerLink="/service/create" role="button">Create Service</a>
+  </div>
+
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        {{nameDelete}}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="delete(idDelete)">Delete
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->

@@ -1,0 +1,60 @@
+<div class="row mt-4">
+  <div class="col-6">
+    <div class="card border-success">
+      <h3 class="card-header bg-success">Create Contract</h3>
+      <div class="card-body">
+        <form [formGroup]="rfContract" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label hidden>ID: </label>
+            <input hidden type="text" class="form-group" formControlName="id">
+          </div>
+          <div class="form-group">
+            <label>Code Contract: </label>
+            <input type="text" class="form-group" formControlName="codeContract">
+            <span *ngIf="rfContract.controls.codeContract.touched
+        && rfContract.controls.codeContract.errors?.required" style="color: red;">Required input</span>
+            <span *ngIf="rfContract.controls.codeContract.dirty
+        && rfContract.controls.codeContract.errors?.minlength" style="color: red;">Min length: 5</span>
+          </div>
+
+          <div class="form-group mt-4">
+            <label>Customer: </label>
+            <select class="form-select select-modal-addNew" formControlName="customer">
+              <option selected *ngFor="let item of customers"
+                      [ngValue]="item">{{item.name}}</option>
+            </select>
+          </div>
+           <div class="form-group mt-4">
+            <label>Service: </label>
+            <select class="form-select select-modal-addNew" formControlName="service">
+              <option selected *ngFor="let item of services"
+                      [ngValue]="item">{{item.name}}</option>
+            </select>
+          </div>
+
+
+          <div class="form-group mt-4">
+            <label>Date Start: </label>
+            <input type="date" class="form-group" formControlName="dateStart">
+          </div>
+
+           <div class="form-group mt-4">
+            <label>Date End: </label>
+            <input type="date" class="form-group" formControlName="dateEnd">
+          </div>
+
+          <div class="form-group mt-4">
+            <label>Deposits: </label>
+            <input type="text" class="form-group" formControlName="deposits">
+          </div>
+
+
+          <button class="mt-4 bg-primary" type="submit"
+                  [disabled]="rfContract.invalid"
+          >Create
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

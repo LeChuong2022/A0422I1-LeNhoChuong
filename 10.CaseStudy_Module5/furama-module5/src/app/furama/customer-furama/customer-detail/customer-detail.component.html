@@ -1,0 +1,41 @@
+<div class="col-6 mb-4">
+  <div class="card border-info mt-4">
+    <h3 class="card-header bg-info">Child Component</h3>
+    <!--  <img class="card-img-top" src="holder.js/100x180/" alt="">-->
+    <div class="card-body">
+      <h4 class="card-title">Student detail</h4>
+      <div *ngIf="customer; else noData">
+        <div>
+          <div>Name: {{customer.name}}</div>
+        </div>
+        <div>
+          <div>Date Of Birth:: {{customer.dayOfBirth}}</div>
+        </div>
+        <div>
+          <div [ngSwitch]="customer.gender">
+            <span *ngSwitchCase="0">Gender: Female</span>
+            <span *ngSwitchCase="1">Gender: Male</span>
+          </div>
+        </div>
+        <div>
+          <div>ID card: {{customer.idCard}}</div>
+        </div>
+        <div>
+          <div>Phone: {{customer.phone}}</div>
+        </div>
+        <div>
+          <div>Email: {{customer.email}}</div>
+        </div>
+        <div>
+          <div>Customer type: {{customer.customerType.name}}</div>
+        </div>
+        <div>
+          <div>Address: {{customer.address}}</div>
+        </div>
+      </div>
+      <ng-template #noData>
+        <p style="color: red">No data</p>
+      </ng-template>
+    </div>
+  </div>
+</div>

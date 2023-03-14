@@ -1,0 +1,67 @@
+{{customer.customerType.name}}
+
+<div class="row mt-4">
+  <div class="col-6">
+    <div class="card border-success">
+      <h3 class="card-header bg-success">Update Customer</h3>
+      <div class="card-body">
+        <form [formGroup]="rfCustomer" (ngSubmit)="onSubmit(customer.id)">
+          <div class="form-group">
+            <label hidden>ID: </label>
+            <input hidden type="text" class="form-group" formControlName="id">
+          </div>
+          <div class="form-group">
+            <label>Name: </label>
+            <input type="text" class="form-group" formControlName="name">
+            <span *ngIf="rfCustomer.controls.name.touched
+        && rfCustomer.controls.name.errors?.required" style="color: red;">Required input</span>
+            <span *ngIf="rfCustomer.controls.name.dirty
+        && rfCustomer.controls.name.errors?.minlength" style="color: red;">Min length: 5</span>
+          </div>
+          <div class="form-group mt-4">
+            <label>Date Of Birth: </label>
+            <input type="date" class="form-group" formControlName="dayOfBirth">
+          </div>
+          <div class="form-group mt-4">
+            <label>Gender: </label>
+            <input type="radio" class="form-group" formControlName="gender" value="0">Female
+            <input type="radio" class="form-group" formControlName="gender" value="1">Male
+          </div>
+          <div class="form-group mt-4">
+            <label>ID card: </label>
+            <input type="text" class="form-group" formControlName="idCard">
+          </div>
+          <div class="form-group mt-4">
+            <label>Phone: </label>
+            <input type="text" class="form-group" formControlName="phone">
+          </div>
+          <div class="form-group mt-4">
+            <label>Email: </label>
+            <input type="text" class="form-group" formControlName="email">
+          </div>
+          <div class="form-group mt-4">
+            <label>Customer type: </label>
+            <select class="form-select select-modal-addNew" formControlName="customerType"
+                    name="customerType"
+                    [(ngModel)]="customer.customerType"
+            >
+              <option [ngValue]="customer.customerType">{{customer.customerType.name}}</option>
+              <option selected *ngFor="let item of customerTypes"
+                      [ngValue]="item"
+                      [hidden]="item.name === customer.customerType.name"
+              >{{item.name}}</option>
+            </select>
+          </div>
+          <div class="form-group mt-4">
+            <label>Address: </label>
+            <input type="text" class="form-group" formControlName="address">
+          </div>
+          <button class="mt-4 btn bg-primary" type="submit"
+                  [disabled]="rfCustomer.invalid"
+          >Update
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

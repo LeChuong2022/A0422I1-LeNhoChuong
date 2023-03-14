@@ -1,0 +1,116 @@
+<!--Search-->
+<div class="row mt-4 mb-4" style="width: 100%">
+
+  <form #searchForm="ngForm" (ngSubmit)="search(searchForm)">
+    <div class="form-group input-group mb-3">
+      <div class="input-group-prepend">
+        <label>Name: </label>
+                <input type="text" class="form-group" [(ngModel)]="contentSearch.name" #name="ngModel" name="txtName">
+        <button class="btn bg-primary ms-4" type="submit">Search
+        </button>
+      </div>
+
+    </div>
+  </form>
+
+<!--  Cach 2 - sai k dc-->
+<!--  <div class="form-group input-group mb-3">-->
+<!--    <div class="input-group-prepend">-->
+<!--      <label>Name: </label>-->
+<!--      <input type="text" class="form-group" [(ngModel)]="contentSearch.name" #nameSearch="ngModel" name="txtName">-->
+<!--      <button class="btn bg-primary ms-4" type="button" (click)="search(nameSearch.value)">Search-->
+<!--      </button>-->
+<!--    </div>-->
+
+<!--  </div>-->
+
+</div>
+
+<span style="color: red" *ngIf="message">{{message}}</span>
+
+<div class="row mt-4 mb-4" style="width: 100%">
+  <div class="">
+    <div class="card border-primary">
+      <h3 class="card-header bg-primary">Customer List</h3>
+      <div class="card-body">
+        <table class="table">
+          <thead>
+          <tr>
+            <th>No</th>
+            <th>Name</th>
+            <th>Day Of Birth</th>
+            <th>Gender</th>
+            <th>Id card</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Customer Type</th>
+            <th>Address</th>
+            <th>Update</th>
+            <th>Delete</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let item of customers; let i = index">
+            <td>{{i + 1}}</td>
+            <td><a [routerLink]="['/customer/detail',item.id]">{{item.name}}</a></td>
+            <td>{{item.dayOfBirth}}</td>
+            <td [ngSwitch]="item.gender">
+              <span *ngSwitchCase="0">Female</span>
+              <span *ngSwitchCase="1">Male</span>
+              <span *ngSwitchDefault>LGBT</span>
+            </td>
+            <td>{{item.idCard}}</td>
+            <td>{{item.phone}}</td>
+            <td>{{item.email}}</td>
+            <td>{{item.customerType.name}}</td>
+            <td>{{item.address}}</td>
+            <td>
+              <button class="btn btn-primary" [routerLink]="['/customer/update', item.id]">Edit</button>
+            </td>
+            <td>
+              <!-- Button trigger modal -->
+              <button type="button" class="btn btn-danger" data-bs-toggle="modal" (click)="sendId(item.id, item.name)"
+                      data-bs-target="#exampleModal">
+                Delete
+              </button>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="col-6 mt-4">
+    <a class="btn btn-primary" routerLink="/customer/create" role="button">Create Customer</a>
+  </div>
+
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        {{nameCustomer}}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="delete(idDelete)">Delete
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
