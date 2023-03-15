@@ -6,11 +6,12 @@
         <form [formGroup]="rfService" (ngSubmit)="onSubmit(service.id)">
           <div class="form-group">
             <label hidden>ID: </label>
-            <input  type="number" class="form-group" formControlName="id">
+            <input  type="number" class="form-group" formControlName="id" ngModel="{{service.id}}" >
           </div>
           <div class="form-group">
             <label>Name: </label>
-            <input type="text" class="form-group" formControlName="name">
+<!--            Nếu bắt ko được thì thêm ngModel-->
+            <input type="text" class="form-group" formControlName="name" ngModel="{{service.name}}" >
             <span *ngIf="rfService.controls.name.touched
                     && rfService.controls.name.errors?.required" style="color: red;">Required input</span>
             <span *ngIf="rfService.controls.name.dirty

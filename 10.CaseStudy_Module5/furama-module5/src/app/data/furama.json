@@ -180,7 +180,7 @@
   "services": [
     {
       "id": 1,
-      "name": "this.service.name",
+      "name": "123123123123",
       "serviceArea": 5,
       "serviceCost": 100,
       "serviceMaxPeople": 5,
@@ -205,9 +205,9 @@
     },
     {
       "id": 2,
-      "name": "this.service.name",
-      "serviceArea": 10000,
-      "serviceCost": "132",
+      "name": "house 2 rooms",
+      "serviceArea": 10000123213,
+      "serviceCost": 443534123213,
       "serviceMaxPeople": "132",
       "standardRoom": "312",
       "descriptionOtherConvenience": "321",
@@ -218,10 +218,10 @@
         "name": "Month"
       },
       "accompaniedService": {
-        "id": 3,
-        "name": "food",
-        "unit": "portion",
-        "priceAccService": "20"
+        "id": 1,
+        "name": "massage",
+        "unit": "hour",
+        "priceAccService": "200"
       },
       "serviceType": {
         "id": 3,
@@ -229,6 +229,7 @@
       }
     },
     {
+      "id": 3,
       "name": "casdasdas",
       "serviceArea": "14124",
       "serviceCost": "12412",
@@ -250,8 +251,7 @@
       "serviceType": {
         "id": 2,
         "name": "House"
-      },
-      "id": 3
+      }
     },
     {
       "name": "rooom4",
